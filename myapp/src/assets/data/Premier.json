@@ -7,7 +7,7 @@
       "stadium": "Emirates Stadium",
       "founded": 1886,
       "country": "England",
-      "image":"image/arsenal.png"
+      "image": "/image/arsenal.png"
     },
     {
       "id": 2,
@@ -16,8 +16,7 @@
       "stadium": "Villa Park",
       "founded": 1874,
       "country": "England",
-      "image":"image/astonvilla.png"
-
+      "image": "/image/astonvilla.png"
     },
     {
       "id": 3,
@@ -26,7 +25,7 @@
       "stadium": "Vitality Stadium",
       "founded": 1899,
       "country": "England",
-      "image":"image/bournemouth.png"
+      "image": "/image/bournemouth.png"
     },
     {
       "id": 4,
@@ -35,7 +34,7 @@
       "stadium": "Gtech Community Stadium",
       "founded": 1889,
       "country": "England",
-      "image":"image/brentford.png"
+      "image": "/image/brentford.png"
     },
     {
       "id": 5,
@@ -44,7 +43,7 @@
       "stadium": "Amex Stadium",
       "founded": 1901,
       "country": "England",
-      "image":"image/brighton.png"
+      "image": "/image/brighton.png"
     },
     {
       "id": 6,
@@ -53,7 +52,7 @@
       "stadium": "Stamford Bridge",
       "founded": 1905,
       "country": "England",
-      "image": "image/chelsea.png"
+      "image": "/image/chelsea.png"
     },
     {
       "id": 7,
@@ -62,7 +61,7 @@
       "stadium": "Selhurst Park",
       "founded": 1905,
       "country": "England",
-      "image":"image/crystalpalace.png"
+      "image": "/image/crystalpalace.png"
     },
     {
       "id": 8,
@@ -71,7 +70,7 @@
       "stadium": "Goodison Park",
       "founded": 1878,
       "country": "England",
-      "image":"image/everton.png"
+      "image": "/image/everton.png"
     },
     {
       "id": 9,
@@ -80,7 +79,7 @@
       "stadium": "Craven Cottage",
       "founded": 1879,
       "country": "England",
-      "image":"image/fulham.png"
+      "image": "/image/fullham.png"
     },
     {
       "id": 10,
@@ -89,7 +88,7 @@
       "stadium": "Anfield",
       "founded": 1892,
       "country": "England",
-      "image":"image/liverpool.png"
+      "image": "/image/liverpool.png"
     },
     {
       "id": 11,
@@ -98,7 +97,7 @@
       "stadium": "Etihad Stadium",
       "founded": 1880,
       "country": "England",
-      "image":"image/manchestercity.png"
+      "image": "/image/manchestercity.png"
     },
     {
       "id": 12,
@@ -107,7 +106,7 @@
       "stadium": "Old Trafford",
       "founded": 1878,
       "country": "England",
-      "image":"image/manchesterunited.png"
+      "image": "/image/manchesterunited.png"
     },
     {
       "id": 13,
@@ -116,7 +115,7 @@
       "stadium": "St James' Park",
       "founded": 1892,
       "country": "England",
-      "image":"image/newcastle.png"
+      "image": "/image/newcastle.png"
     },
     {
       "id": 14,
@@ -125,7 +124,7 @@
       "stadium": "City Ground",
       "founded": 1865,
       "country": "England",
-      "image":"image/nottinghamforest.png"
+      "image": "/image/nottinghamforest.png"
     },
     {
       "id": 15,
@@ -134,7 +133,7 @@
       "stadium": "St Mary's Stadium",
       "founded": 1885,
       "country": "England",
-      "image":"image/southampton.png"
+      "image": "/image/southampton.png"
     },
     {
       "id": 16,
@@ -143,7 +142,7 @@
       "stadium": "Tottenham Hotspur Stadium",
       "founded": 1882,
       "country": "England",
-      "image":"image/tottenham.png"
+      "image": "/image/tottenham.png"
     },
     {
       "id": 17,
@@ -152,7 +151,7 @@
       "stadium": "London Stadium",
       "founded": 1895,
       "country": "England",
-      "image":"image/westham.png"
+      "image": "/image/westham.png"
     },
     {
       "id": 18,
@@ -161,7 +160,25 @@
       "stadium": "Molineux Stadium",
       "founded": 1877,
       "country": "England",
-      "image":"image/wolverhampton.png"
+      "image": "/image/wolverhampton.png"
+    },
+    {
+      "id": 19,
+      "name": "Luton Town",
+      "shortName": "LUT",
+      "stadium": "Kenilworth Road",
+      "founded": 1885,
+      "country": "England",
+      "image": "/image/lutontown.png"
+    },
+    {
+      "id": 20,
+      "name": "Sheffield United",
+      "shortName": "SHU",
+      "stadium": "Bramall Lane",
+      "founded": 1889,
+      "country": "England",
+      "image": "/image/sheffield.png"
     }
   ]
 }
