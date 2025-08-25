@@ -6,7 +6,7 @@ import "../styles/home.css";
 function Homepage() {
   const { premier_league_teams } = teamsData;
 
-  // Chia nhóm 4 logo / slide
+  
   const chunkSize = 4;
   const slides = [];
   for (let i = 0; i < premier_league_teams.length; i += chunkSize) {
