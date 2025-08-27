@@ -12,7 +12,7 @@ return (
     <Routes location={location} key={location.pathname}>
     <Route path="/" element={<Navigate to="/home" replace />} />
     <Route path="/home" element={<Homepage />} />
-    <Route path="/team/:teamId" element={<TeamDetail />} /> {/* Thêm đường dẫn mới */}
+    <Route path="/team/:teamId" element={<TeamDetail />} /> 
     </Routes>
     </AnimatePresence>
 );
