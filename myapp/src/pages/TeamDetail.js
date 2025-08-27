@@ -1,4 +1,4 @@
-// src/pages/TeamDetail.js
+
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
