@@ -16,20 +16,20 @@ function Homepage() {
 
   return (
     <div className="homepage-container">
+      
       <Container fluid>
-
+        <h2 className="text-center text-black mb-4 fw-bold">Welcome to NextStar League</h2>
         <Carousel interval={3000} indicators={true} controls={true}>
           {slides.map((group, idx) => (
             <Carousel.Item key={idx} className="custom-slide">
               <Container>
-                <h3 className="slide-title">Premier League Clubs</h3>
                 <Row className="justify-content-center">
                   {group.map((team) => (
                     <Col
                       key={team.id}
                       xs={6}
                       md={3}
-                      className="d-flex flex-column align-items-center mb-4"
+                      className="d-flex flex-column align-items-center mb-3"
                     >
                       <Link to={`/team/${team.id}`} className="club-link">
                         <div className="club-logo-wrapper">
