@@ -1,6 +1,7 @@
 /* Nền chính */
 .homepage-container {
-  margin-top: 50px;
+  min-height: 100vh;
+  margin-top:0;
   background: url('https://m.media-amazon.com/images/M/MV5BZGE3MWQyYzYtYzI3My00OWViLWEzMDQtYjY5MjFjNDJkNDYxXkEyXkFqcGc@._V1_.jpg')
     no-repeat center center fixed;
   background-size: cover;
