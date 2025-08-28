@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Homepage() {
   const { premier_league_teams } = teamsData;
 
-  // Tách thành nhóm 4 đội / slide
+
   const chunkSize = 4;
   const slides = [];
   for (let i = 0; i < premier_league_teams.length; i += chunkSize) {
