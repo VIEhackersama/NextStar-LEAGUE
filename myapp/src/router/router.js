@@ -3,7 +3,8 @@ import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
 import Homepage from "../pages/homepage";
-import TeamDetail from "../pages/TeamDetail"; // Import component mới
+import TeamDetail from "../pages/TeamDetail";
+import Header from "../components/header"; // Import component mới
 
 const Routers = () => {
 const location = useLocation(); 
