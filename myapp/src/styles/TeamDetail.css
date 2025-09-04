@@ -1,77 +1,168 @@
-/* src/styles/TeamDetail.css */
+.team-detail-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d0d1a; 
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
 
-/* General container styling */
+.background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../../public/image/image.png');
+  filter: blur(8px) brightness(0.3) saturate(0.8);
+  z-index: 1;
+}
+
 .team-detail-container {
-  margin-top: 50px;
-  text-align: center;
-  padding: 20px;
-  background-color: #f8f9fa;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
 }
 
-/* Main information card */
-.detail-card {
-  background: white;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
   padding: 30px;
-  border-radius: 15px;
-  display: inline-block;
-  max-width: 600px;
-  position: relative; /* Thêm position relative */
-  padding-bottom: 80px; /* Thêm padding dưới để tạo khoảng trống cho nút */
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
-/* Team logo styling */
+.logo-section {
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
 .team-logo-large {
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
-  padding: 15px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 2px solid #ddd;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  object-fit: contain;
+  background-color: white;
+  padding: 10px;
+  transition: transform 0.3s ease;
 }
 
-/* Team name styling */
+.team-logo-large:hover {
+  transform: scale(1.05);
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
 .team-detail-name {
-  margin-top: 20px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* Styling for detail paragraphs */
-.detail-card p {
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.info-list p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 10px;
-  text-align: left; /* Căn lề trái cho nội dung chữ */
 }
 
-/* Back button styling */
+.info-list p strong {
+  color: #92bce4;
+  font-weight: 600;
+  margin-right: 15px;
+  white-space: nowrap;
+}
+
+.info-list p span {
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: right;
+  flex-grow: 1;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-bottom: 20px;
+}
 .back-button {
-  position: absolute; /* Sử dụng position absolute để di chuyển nút */
-  bottom: 25px; /* Đặt cách đáy 25px */
-  left: 50%; /* Di chuyển từ trái sang 50% của container */
-  transform: translateX(-50%); /* Dịch chuyển ngược lại 50% chiều rộng của nút để căn giữa */
-  background-color: #0d6efd;
-  border-color: #0d6efd;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: white;
+  background-color: rgba(0, 0, 0, 0.6); 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff; 
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
 .back-button:hover {
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.3); 
 }
-
-/* Not found message styling */
 .not-found {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 1.5rem;
-  color: #dc3545;
+  color: #888;
+}
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-section {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .info-section {
+    align-items: center;
+    text-align: center;
+  }
 }
