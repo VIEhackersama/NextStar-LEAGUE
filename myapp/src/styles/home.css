@@ -107,3 +107,12 @@
 .club-link {
   text-decoration: none;
 }
+.card-gradient {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-gradient:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
