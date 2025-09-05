@@ -1,12 +1,13 @@
 import React from "react";
-import { Carousel, Container, Row, Col } from "react-bootstrap";
+import { Carousel, Container, Row, Col, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Trophy, People, Star } from "react-bootstrap-icons";
+import { motion } from "framer-motion";
 import teamsData from "../assets/data/Premier.json";
 import "../styles/home.css";
-import { Link } from "react-router-dom";
 
 function Homepage() {
   const { premier_league_teams } = teamsData;
-
 
   const chunkSize = 4;
   const slides = [];
@@ -15,14 +16,22 @@ function Homepage() {
   }
 
   return (
-    <div className="homepage-container">
-      
+    <motion.div
+      className="homepage-container"
+      initial={{ opacity: 0, y: 30 }}   // lúc bắt đầu
+      animate={{ opacity: 1, y: 0 }}    // khi hiển thị
+      exit={{ opacity: 0, y: -30 }}     // khi rời trang
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+    >
       <Container fluid>
-        <h2 className="text-center text-black mb-4 fw-bold">Welcome to NextStar League</h2>
-        <Carousel interval={3000} indicators={true} controls={true}>
+        
+        <Carousel interval={3000} indicators controls>
           {slides.map((group, idx) => (
             <Carousel.Item key={idx} className="custom-slide">
               <Container>
+                <h2 className="text-center text-black mb-4 fw-bold">
+                  Welcome to NextStar League
+                </h2>
                 <Row className="justify-content-center">
                   {group.map((team) => (
                     <Col
@@ -44,8 +53,56 @@ function Homepage() {
             </Carousel.Item>
           ))}
         </Carousel>
+
+       
+        <h3 className="text-center text-white mt-5 mb-4 fw-bold">
+          Premier League Information
+        </h3>
+        <Row className="g-4 px-3">
+          <Col md={4}>
+            <Link to="/history" className="text-decoration-none">
+              <Card className="shadow-lg border-0 rounded-4 h-100 card-gradient">
+                <Card.Body className="text-center">
+                  <Trophy size={40} className="text-warning mb-3" />
+                  <Card.Title className="fw-bold text-dark">Lịch sử</Card.Title>
+                  <Card.Text className="text-muted">
+                    Premier League thành lập năm 1992, là giải bóng đá hấp dẫn nhất hành tinh.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Link>
+          </Col>
+
+          <Col md={4}>
+            <Link to="/clubs" className="text-decoration-none">
+              <Card className="shadow-lg border-0 rounded-4 h-100 card-gradient">
+                <Card.Body className="text-center">
+                  <People size={40} className="text-primary mb-3" />
+                  <Card.Title className="fw-bold text-dark">Đội bóng nổi bật</Card.Title>
+                  <Card.Text className="text-muted">
+                    Manchester United, Liverpool, Chelsea, Arsenal, Man City...
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Link>
+          </Col>
+
+          <Col md={4}>
+            <Link to="/stars" className="text-decoration-none">
+              <Card className="shadow-lg border-0 rounded-4 h-100 card-gradient">
+                <Card.Body className="text-center">
+                  <Star size={40} className="text-danger mb-3" />
+                  <Card.Title className="fw-bold text-dark">Ngôi sao</Card.Title>
+                  <Card.Text className="text-muted">
+                    Erling Haaland, Mohamed Salah, Kevin De Bruyne, Bruno Fernandes...
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Link>
+          </Col>
+        </Row>
       </Container>
-    </div>
+    </motion.div>
   );
 }
 
