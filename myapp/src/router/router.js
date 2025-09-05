@@ -9,6 +9,7 @@ import HistoryPage from "../pages/HistoryPage";
 import ClubsPage from "../pages/ClubsPage";     
 import StarsPage from "../pages/StarsPage"; 
 
+
 const Routers = () => {
 const location = useLocation(); 
 return (
