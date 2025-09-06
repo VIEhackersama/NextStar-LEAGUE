@@ -8,6 +8,7 @@ import Header from "../components/header";
 import HistoryPage from "../pages/HistoryPage";   
 import ClubsPage from "../pages/ClubsPage";     
 import StarsPage from "../pages/StarsPage"; 
+import NewsPage from '../pages/newPage';
 
 
 const Routers = () => {
@@ -21,6 +22,7 @@ return (
     <Route path="/history" element={<HistoryPage />} />
     <Route path="/clubs" element={<ClubsPage />} />
     <Route path="/stars" element={<StarsPage />} />
+    <Route path="/news" element={<NewsPage/>} />
     </Routes>
     </AnimatePresence>
 );
