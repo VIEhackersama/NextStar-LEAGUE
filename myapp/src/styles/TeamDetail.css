@@ -1,224 +1,232 @@
-/* Nền chính */
+/* NỀN VÀ KHUNG CHUNG */
 .team-detail-page {
- position: relative;
- width: 100%;
- min-height: 100vh;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- background-color: #0d0d1a;
- overflow: hidden;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- color: #fff;
- animation: fadeIn 0.8s ease-in-out; /* Hiệu ứng mờ dần khi tải trang */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d0d1a;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Hiệu ứng mờ dần */
 @keyframes fadeIn {
- from {
-  opacity: 0;
- }
- to {
-  opacity: 1;
- }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Lớp phủ mờ nền */
 .background-image-container {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background-size: cover;
- background-position: center;
- background-image: url('https://m.media-amazon.com/images/M/MV5BZGE3MWQyYzYtYzI3My00OWViLWEzMDQtYjY5MjFjNDJkNDYxXkEyXkFqcGc@._V1_.jpg');
- filter: blur(8px) brightness(0.3) saturate(0.8);
- z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url('https://m.media-amazon.com/images/M/MV5BZGE3MWQyYzYtYzI3My00OWViLWEzMDQtYjY5MjFjNDJkNDYxXkEyXkFqcGc@._V1_.jpg');
+  filter: blur(8px) brightness(0.3) saturate(0.8);
+  z-index: 1;
 }
 
-/* Container chứa nội dung chi tiết */
 .team-detail-container {
- position: relative;
- z-index: 2;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- width: 100%;
- max-width: 900px;
- min-height: 100vh;
- padding: 40px;
- box-sizing: border-box;
- animation: slideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Hiệu ứng trượt lên cho nội dung */
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+  animation: slideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Hiệu ứng trượt lên */
 @keyframes slideUp {
- from {
-  transform: translateY(20px);
-  opacity: 0;
- }
- to {
-  transform: translateY(0);
-  opacity: 1;
- }
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
-/* Khung chứa logo và thông tin */
+/* KHUNG CHÍNH CHỨA NỘI DUNG */
 .content-wrapper {
- display: flex;
- align-items: center;
- width: 100%;
- margin-bottom: 2rem;
- padding: 30px;
- background-color: rgba(0, 0, 0, 0.4);
- backdrop-filter: blur(10px);
- border-radius: 20px;
- box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
- box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  flex-grow: 1;
+  margin-bottom: 20px;
 }
 
-/* Phần logo */
+/* TIÊU ĐỀ TÊN CÂU LẠC BỘ */
+.team-detail-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* KHUNG CHỨA LOGO VÀ THÔNG TIN TRÊN CÙNG */
+.info-top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* PHẦN LOGO */
 .logo-section {
- flex-shrink: 0;
- margin-right: 40px;
+  flex-shrink: 0;
+  margin-right: 40px;
 }
 
 .team-logo-large {
- width: 150px;
- height: 150px;
- border-radius: 50%;
- box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
- object-fit: contain;
- background-color: white;
- padding: 10px;
- transition: transform 0.3s ease;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  object-fit: contain;
+  background-color: white;
+  padding: 10px;
+  transition: transform 0.3s ease;
 }
 
 .team-logo-large:hover {
- transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-/* Phần thông tin */
+/* PHẦN THÔNG TIN CHI TIẾT CÂU LẠC BỘ */
 .info-section {
- display: flex;
- flex-direction: column;
- justify-content: flex-start;
- align-items: flex-start;
- width: 100%;
-}
-
-.team-detail-name {
- font-size: 3.5rem;
- font-weight: 700;
- margin-bottom: 20px;
- color: #fff;
- text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
- text-transform: uppercase;
- letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .info-list {
- display: flex;
- flex-direction: column;
- gap: 15px;
- font-size: 1.2rem;
- width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.2rem;
+  width: 100%;
 }
 
-/* Đảm bảo chữ thẳng hàng */
 .info-item {
- display: flex;
- justify-content: space-between;
- align-items: center;
- width: 100%;
- white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .info-item strong {
- color: #92bce4;
- font-weight: 600;
- margin-right: 15px;
+  color: #92bce4;
+  font-weight: 600;
+  margin-right: 5px;
 }
 
 .info-item span {
- font-size: 1.2rem;
- color: #fff;
- text-align: right;
- flex-grow: 1;
- overflow: hidden;
- text-overflow: ellipsis;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: right;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Container nút bấm */
+/* PHẦN LỊCH SỬ */
+.history-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.history-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.history-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d1d1d1;
+}
+
+/* NÚT QUAY LẠI */
 .button-container {
- display: flex;
- justify-content: center;
- margin-top: auto;
- padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding-bottom: 20px;
 }
 
-/* Nút quay lại */
 .back-button {
- background-color: rgba(0, 0, 0, 0.6);
- border: 1px solid rgba(255, 255, 255, 0.1);
- padding: 15px 40px;
- font-size: 1.1rem;
- font-weight: bold;
- border-radius: 30px;
- text-transform: uppercase;
- letter-spacing: 1px;
- color: #fff;
- transition: all 0.3s ease;
- box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .back-button:hover {
- background-color: rgba(0, 0, 0, 0.8);
- transform: translateY(-3px);
- box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
- border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Thông báo không tìm thấy */
+/* TRẠNG THÁI KHÔNG TÌM THẤY */
 .not-found {
- text-align: center;
- margin-top: 50px;
- font-size: 1.5rem;
- color: #888;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  color: #888;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
- .content-wrapper {
-  flex-direction: column;
-  text-align: center;
- }
-
- .logo-section {
-  margin-right: 0;
-  margin-bottom: 2rem;
- }
-
- .info-section {
-  align-items: center;
-  text-align: center;
- }
-
- .team-detail-name {
-  font-size: 2.5rem;
- }
-
- .info-item {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  white-space: normal;
- }
-
- .info-item strong {
-  margin-right: 0;
-  margin-bottom: 5px;
- }
+  .info-top-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .info-section {
+    align-items: center;
+  }
+  .info-list {
+    align-items: center;
+    text-align: center;
+  }
+  .info-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+  }
 }
