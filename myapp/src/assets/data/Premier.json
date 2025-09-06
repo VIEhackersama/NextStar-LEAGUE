@@ -7,7 +7,8 @@
       "stadium": "Emirates Stadium",
       "founded": 1886,
       "country": "England",
-      "image": "/image/arsenal.png"
+      "image": "/image/arsenal.png",
+      "history": "Arsenal Football Club was founded in 1886 in London. A founding member of the Premier League in 1992, they hold the record for the longest unbeaten run in the top flight, earning them the nickname 'The Invincibles' during the 2003–04 season. The club has won 13 First Division and Premier League titles and a record 14 FA Cups."
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "stadium": "Villa Park",
       "founded": 1874,
       "country": "England",
-      "image": "/image/astonvilla.png"
+      "image": "/image/astonvilla.png",
+      "history": "Aston Villa Football Club was formed in 1874. As one of the oldest and most successful clubs in English history, they were one of the founding members of the Football League in 1888 and the Premier League in 1992. Their major achievements include winning the First Division title seven times and the European Cup (now the Champions League) in 1982."
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "stadium": "Vitality Stadium",
       "founded": 1899,
       "country": "England",
-      "image": "/image/bournemouth.png"
+      "image": "/image/bournemouth.png",
+      "history": "AFC Bournemouth, founded in 1899, is a club with a history of overcoming adversity. After decades in the lower divisions, they made a remarkable ascent under manager Eddie Howe, earning their first promotion to the Premier League in 2015. Known for their attacking style of play, the Cherries have since become an established top-flight team."
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "stadium": "Gtech Community Stadium",
       "founded": 1889,
       "country": "England",
-      "image": "/image/brentford.png"
+      "image": "/image/brentford.png",
+      "history": "Brentford FC, nicknamed 'The Bees', was founded in 1889. The club has a long history, but their most notable recent achievement came in 2021 when they were promoted to the Premier League for the first time in the club's history. They are known for their data-driven approach to recruitment and a passionate fanbase."
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "stadium": "Amex Stadium",
       "founded": 1901,
       "country": "England",
-      "image": "/image/brighton.png"
+      "image": "/image/brighton.png",
+      "history": "Brighton & Hove Albion, founded in 1901, had a turbulent history before its recent rise to prominence. After nearly going out of business in the 1990s, the club has since stabilized and achieved promotion to the Premier League in 2017. They are now known for their attractive, possession-based football and strong youth development program."
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "stadium": "Stamford Bridge",
       "founded": 1905,
       "country": "England",
-      "image": "/image/chelsea.png"
+      "image": "/image/chelsea.png",
+      "history": "Chelsea FC was founded in 1905 and have spent most of their history in the top tier of English football. Their most successful period began in the early 2000s following a takeover by Roman Abramovich, during which they won multiple Premier League titles and two Champions League trophies (2012 and 2021)."
     },
     {
       "id": 7,
@@ -61,7 +67,8 @@
       "stadium": "Selhurst Park",
       "founded": 1905,
       "country": "England",
-      "image": "/image/crystalpalace.png"
+      "image": "/image/crystalpalace.png",
+      "history": "Crystal Palace was founded in 1905 at the site of the famous Crystal Palace exhibition building. The club has had a history of fluctuating between the top two divisions of English football. They secured their spot in the Premier League in 2013 and have remained there ever since, often known for their passionate home crowd and strong attacking flair."
     },
     {
       "id": 8,
@@ -70,7 +77,8 @@
       "stadium": "Goodison Park",
       "founded": 1878,
       "country": "England",
-      "image": "/image/everton.png"
+      "image": "/image/everton.png",
+      "history": "Everton is one of the founding members of the Football League and has a rich history as one of England's most established clubs. They have won the league title nine times, placing them fourth on the all-time list. The club is known for its strong traditions and its long-standing rivalry with fellow Merseyside club Liverpool."
     },
     {
       "id": 9,
@@ -79,7 +87,8 @@
       "stadium": "Craven Cottage",
       "founded": 1879,
       "country": "England",
-      "image": "/image/fullham.png"
+      "image": "/image/fullham.png",
+      "history": "Fulham FC, founded in 1879, is the oldest professional football club in London. They have spent a significant amount of time in the top flight over the years. A memorable period came in 2010 when they reached the UEFA Europa League final, showcasing their ability to compete at the highest level of European football."
     },
     {
       "id": 10,
@@ -88,7 +97,8 @@
       "stadium": "Anfield",
       "founded": 1892,
       "country": "England",
-      "image": "/image/liverpool.png"
+      "image": "/image/liverpool.png",
+      "history": "Liverpool FC is one of the most successful clubs in English football history, with a massive global following. Founded in 1892, the club has won 19 league titles and six European Cups. The team is known for its famous anthem 'You'll Never Walk Alone' and its historic achievements both domestically and internationally."
     },
     {
       "id": 11,
@@ -97,7 +107,8 @@
       "stadium": "Etihad Stadium",
       "founded": 1880,
       "country": "England",
-      "image": "/image/manchestercity.png"
+      "image": "/image/manchestercity.png",
+      "history": "Manchester City, founded in 1880, has enjoyed a period of unprecedented success since its takeover in 2008. They have won multiple Premier League titles, FA Cups, and League Cups, establishing themselves as a dominant force in English and European football. Their first Champions League title was secured in 2023."
     },
     {
       "id": 12,
@@ -106,7 +117,8 @@
       "stadium": "Old Trafford",
       "founded": 1878,
       "country": "England",
-      "image": "/image/manchesterunited.png"
+      "image": "/image/manchesterunited.png",
+      "history": "Manchester United, one of the most famous clubs in the world, was founded in 1878. Under the legendary Sir Alex Ferguson, they dominated English football for over two decades, winning 13 Premier League titles. With a record 20 league titles and three Champions League trophies, they remain a global footballing powerhouse."
     },
     {
       "id": 13,
@@ -115,7 +127,8 @@
       "stadium": "St James' Park",
       "founded": 1892,
       "country": "England",
-      "image": "/image/newcastle.png"
+      "image": "/image/newcastle.png",
+      "history": "Newcastle United, founded in 1892, has a fiercely loyal fanbase and a rich history. They have won four league titles and six FA Cups. Following a significant takeover in 2021, the club is now a major contender in the Premier League, aiming to recapture its former glory and compete for top honors."
     },
     {
       "id": 14,
@@ -124,7 +137,8 @@
       "stadium": "City Ground",
       "founded": 1865,
       "country": "England",
-      "image": "/image/nottinghamforest.png"
+      "image": "/image/nottinghamforest.png",
+      "history": "Nottingham Forest is one of the oldest clubs in England, founded in 1865. The club's most celebrated era was under manager Brian Clough in the late 1970s and early 1980s, when they famously won the European Cup twice in a row (1979 and 1980), cementing their place in football history."
     },
     {
       "id": 15,
@@ -133,7 +147,8 @@
       "stadium": "St Mary's Stadium",
       "founded": 1885,
       "country": "England",
-      "image": "/image/southampton.png"
+      "image": "/image/southampton.png",
+      "history": "Southampton FC was founded in 1885. Nicknamed 'The Saints', the club has a strong reputation for developing young talent. They have won the FA Cup once in 1976 and have consistently been a presence in the top two divisions of English football, known for their passing style of play."
     },
     {
       "id": 16,
@@ -142,7 +157,8 @@
       "stadium": "Tottenham Hotspur Stadium",
       "founded": 1882,
       "country": "England",
-      "image": "/image/tottenham.png"
+      "image": "/image/tottenham.png",
+      "history": "Tottenham Hotspur, founded in 1882, is a prominent North London club. They were the first club in the 20th century to achieve the League and FA Cup Double in the 1960–61 season. They have also won two UEFA Cups and the UEFA Cup Winners' Cup, making them the first British club to win a major European trophy."
     },
     {
       "id": 17,
@@ -151,7 +167,8 @@
       "stadium": "London Stadium",
       "founded": 1895,
       "country": "England",
-      "image": "/image/westham.png"
+      "image": "/image/westham.png",
+      "history": "West Ham United, founded in 1895, are known for their strong 'Academy of Football' and for being the only club to have supplied players to every World Cup-winning England squad. They have won the FA Cup three times and, most recently, secured a major European title by winning the UEFA Europa Conference League in 2023."
     },
     {
       "id": 18,
@@ -160,7 +177,8 @@
       "stadium": "Molineux Stadium",
       "founded": 1877,
       "country": "England",
-      "image": "/image/wolverhampton.png"
+      "image": "/image/wolverhampton.png",
+      "history": "Wolverhampton Wanderers, founded in 1877, is one of the oldest clubs in England. They were a dominant force in the 1950s, winning the First Division title three times. Known as 'Wolves', the club has experienced a modern resurgence, solidifying their position in the Premier League with a distinct playing style."
     },
     {
       "id": 19,
@@ -169,7 +187,8 @@
       "stadium": "Kenilworth Road",
       "founded": 1885,
       "country": "England",
-      "image": "/image/lutontown.png"
+      "image": "/image/lutontown.png",
+      "history": "Luton Town FC, nicknamed 'The Hatters', was founded in 1885. The club has a remarkable recent history, rising from non-league football back to the top flight. They earned promotion to the Premier League in 2023, marking their return to the top tier for the first time in 31 years."
     },
     {
       "id": 20,
@@ -178,7 +197,8 @@
       "stadium": "Bramall Lane",
       "founded": 1889,
       "country": "England",
-      "image": "/image/sheffield.png"
+      "image": "/image/sheffield.png",
+      "history": "Sheffield United, founded in 1889, is one of the oldest clubs in the world. They won the First Division title in 1898 and four FA Cups. After fluctuating between divisions, the 'Blades' have secured promotions to the Premier League in recent years, demonstrating their resilience and ability to compete at a high level."
     }
   ]
 }
