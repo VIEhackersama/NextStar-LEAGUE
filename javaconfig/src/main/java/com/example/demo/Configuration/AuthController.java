@@ -3,6 +3,7 @@ package com.example.demo.Configuration;
 import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,7 +25,7 @@ public class AuthController {
 
     @Autowired
     private AccountRepository accountRepository;
-    
+
     @Autowired
     private UserRepository userRepository;
 
@@ -61,5 +62,26 @@ public class AuthController {
         accountRoleRepository.save(accountRole);
 
         return "User registered successfully with role USER";
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody LoginRequest request) {
+        Account account = accountRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new RuntimeException("Account not found"));
+
+        if (!passwordEncoder.matches(request.getPassword(), account.getPasswordHash())) {
+            return ResponseEntity.status(401).body("Invalid email or password");
+        }
+
+        AccountRole accountRole = accountRoleRepository.findByAccount(account)
+                .orElseThrow(() -> new RuntimeException("Role not found for account"));
+
+        LoginResponse response = new LoginResponse(
+                "Login successful",
+                account.getUser().getUsername(),
+                account.getEmail(),
+                accountRole.getRole().getRoleName());
+
+        return ResponseEntity.ok(response);
     }
 }
