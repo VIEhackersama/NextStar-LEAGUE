@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
-
 function NewsPage() {
   return (
     <Container fluid className="py-5">
@@ -136,5 +135,3 @@ function NewsPage() {
 }
 
 export default NewsPage;
-
-
