@@ -9,6 +9,7 @@ import HistoryPage from "../pages/HistoryPage";
 import ClubsPage from "../pages/ClubsPage";     
 import StarsPage from "../pages/StarsPage"; 
 import NewsPage from '../pages/newPage';
+import NewsDetailPage from '../pages/NewsDetailPage';
 
 
 const Routers = () => {
@@ -23,6 +24,7 @@ return (
     <Route path="/clubs" element={<ClubsPage />} />
     <Route path="/stars" element={<StarsPage />} />
     <Route path="/news" element={<NewsPage/>} />
+    <Route path="/news/:id" element={<NewsDetailPage />} />
     </Routes>
     </AnimatePresence>
 );

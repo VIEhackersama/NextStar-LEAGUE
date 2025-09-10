@@ -1,52 +1,50 @@
-[
-  {
-"id": "pl-2025-01",
-"title": "Premier League sets spending record in Summer 2025 transfer window",
-"summary":
-"The summer of 2025 witnessed a record-breaking transfer window with huge spending across Premier League clubs, including major signings by Liverpool.",
-"published": "2025-09-01",
-"tags": ["transfer", "summer 2025", "record"],
-"source": "ESPN / NBC / Premier League",
-"image": "https://via.placeholder.com/400x200?text=Transfers+2025"
-},
 {
-"id": "pl-2025-02",
-"title": "Fixture changes due to European competitions",
-"summary":
-"The Premier League announced amendments to several fixtures in Matchweeks 5, 6, 7, and 9 to accommodate clubs competing in European tournaments.",
-"published": "2025-09-03",
-"tags": ["fixtures", "schedule", "UEFA"],
-"source": "PremierLeague.com",
-"image": "https://via.placeholder.com/400x200?text=Fixture+Changes"
-},
-{
-"id": "pl-2025-03",
-"title": "Daniel Levy steps down as Tottenham chairman after 25 years",
-"summary":
-"Daniel Levy has stepped down as chairman of Tottenham Hotspur after 25 years, with reports widely covered by major outlets.",
-"published": "2025-09-06",
-"tags": ["club news", "Tottenham", "leadership"],
-"source": "The Times / ESPN",
-"image": "https://via.placeholder.com/400x200?text=Tottenham+News"
-},
-{
-"id": "pl-2025-04",
-"title": "Liverpool sign Alexander Isak on deadline day",
-"summary":
-"On transfer deadline day, Liverpool secured major signings, with Alexander Isak being one of the most notable deals reported.",
-"published": "2025-09-01",
-"tags": ["transfer", "Liverpool", "deadline day"],
-"source": "ESPN / NBC Sports",
-"image": "https://via.placeholder.com/400x200?text=Liverpool+Transfer"
-},
-{
-"id": "pl-2025-05",
-"title": "Early-season analysis: Key talking points after first 3 rounds of 2025/26",
-"summary":
-"A roundup of the main stories from the opening three rounds of the 2025/26 season — champions' form, early surprises, and tactical trends.",
-"published": "2025-09-05",
-"tags": ["analysis", "matchweek review", "tactics"],
-"source": "PremierLeague.com",
-"image": "https://via.placeholder.com/400x200?text=Season+Analysis"
+  "news": [
+    {
+      "id": 1,
+      "title": "Onana gets double salary after leaving Man Utd",
+      "image": "/image/onana.webp",
+      "summary": "<strong>André Onana</strong> has officially completed his move away from Manchester United. The Cameroonian goalkeeper will now earn almost double his salary compared to what he received at Old Trafford. This decision has surprised many fans and analysts, as Onana had only joined United last season. His departure is expected to bring major changes to United’s goalkeeping plans moving forward.",
+      "content": "André Onana has officially left Manchester United and joined a new club with a contract that doubles his previous salary. His departure raises questions about United’s strategy in the transfer market and the club’s long-term vision for their goalkeeping department. With his new challenge, Onana aims to prove himself once again at the top level.",
+      "comments": 47
+    },
+    {
+      "id": 2,
+      "title": "Man Utd consider sending Onana to Turkey",
+      "image": "/image/onana2.webp",
+      "summary": "<strong>Manchester United</strong> are reportedly in talks with Turkish clubs regarding André Onana. The goalkeeper has faced difficulties adapting to the Premier League style of play. United’s management believes a loan move might help him regain confidence. This move, however, has sparked debate among fans about whether Onana still has a future at Old Trafford.",
+      "content": "Reports from England suggest that Manchester United officials are considering sending Onana to Turkey on loan. This is seen as an opportunity for him to get regular playing time and rebuild his form. If successful, the move could benefit both the player and the club in the long run.",
+      "comments": 14
+    },
+    {
+      "id": 3,
+      "title": "Premier League faces record-breaking transfer window",
+      "image": "/image/new3.webp",
+      "summary": "<strong>The Premier League</strong> is once again at the center of the football world with a record-breaking transfer window. Clubs have spent massive amounts of money to strengthen their squads. With big names arriving and some surprising departures, the competition next season promises to be more intense than ever. Experts believe this could set a new benchmark for global football spending.",
+      "content": "The 2024 summer transfer window in the Premier League has been one of the busiest in recent years. Top clubs like Manchester City, Arsenal, and Liverpool have made major signings to ensure they remain competitive both domestically and in Europe. The influx of talent is expected to make the league even more exciting and unpredictable.",
+      "comments": 107
+    }
+  ],
+  "standings": [
+    { "rank": 1, "club": "Manchester City", "played": 38, "wins": 28, "draws": 7, "losses": 3, "points": 91 },
+    { "rank": 2, "club": "Arsenal", "played": 38, "wins": 27, "draws": 6, "losses": 5, "points": 87 },
+    { "rank": 3, "club": "Liverpool", "played": 38, "wins": 24, "draws": 10, "losses": 4, "points": 82 },
+    { "rank": 4, "club": "Aston Villa", "played": 38, "wins": 20, "draws": 8, "losses": 10, "points": 68 },
+    { "rank": 5, "club": "Tottenham Hotspur", "played": 38, "wins": 20, "draws": 6, "losses": 12, "points": 66 },
+    { "rank": 6, "club": "Chelsea", "played": 38, "wins": 18, "draws": 9, "losses": 11, "points": 63 },
+    { "rank": 7, "club": "Newcastle United", "played": 38, "wins": 18, "draws": 6, "losses": 14, "points": 60 },
+    { "rank": 8, "club": "Manchester United", "played": 38, "wins": 18, "draws": 6, "losses": 14, "points": 60 },
+    { "rank": 9, "club": "West Ham United", "played": 38, "wins": 14, "draws": 10, "losses": 14, "points": 52 },
+    { "rank": 10, "club": "Crystal Palace", "played": 38, "wins": 13, "draws": 10, "losses": 15, "points": 49 },
+    { "rank": 11, "club": "Brighton", "played": 38, "wins": 12, "draws": 12, "losses": 14, "points": 48 },
+    { "rank": 12, "club": "Bournemouth", "played": 38, "wins": 13, "draws": 9, "losses": 16, "points": 48 },
+    { "rank": 13, "club": "Fulham", "played": 38, "wins": 13, "draws": 8, "losses": 17, "points": 47 },
+    { "rank": 14, "club": "Wolves", "played": 38, "wins": 13, "draws": 7, "losses": 18, "points": 46 },
+    { "rank": 15, "club": "Everton", "played": 38, "wins": 13, "draws": 9, "losses": 16, "points": 40 },
+    { "rank": 16, "club": "Brentford", "played": 38, "wins": 10, "draws": 9, "losses": 19, "points": 39 },
+    { "rank": 17, "club": "Nottingham Forest", "played": 38, "wins": 9, "draws": 9, "losses": 20, "points": 32 },
+    { "rank": 18, "club": "Luton Town", "played": 38, "wins": 6, "draws": 8, "losses": 24, "points": 26 },
+    { "rank": 19, "club": "Burnley", "played": 38, "wins": 5, "draws": 9, "losses": 24, "points": 24 },
+    { "rank": 20, "club": "Sheffield United", "played": 38, "wins": 3, "draws": 7, "losses": 28, "points": 16 }
+  ]
 }
-]
