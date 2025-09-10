@@ -26,8 +26,6 @@ function Header() {
         
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Trang chủ</Nav.Link>
-            <Nav.Link as={Link} to="/team">Đội hình</Nav.Link>
-            <Nav.Link as={Link} to="/matches">Lịch thi đấu</Nav.Link>
             <Nav.Link as={Link} to="/news">Tin tức</Nav.Link>
             <Nav.Link as={Link} to="/contact">Liên hệ</Nav.Link>
           </Nav>
