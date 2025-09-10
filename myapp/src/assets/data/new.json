@@ -1,0 +1,52 @@
+[
+  {
+"id": "pl-2025-01",
+"title": "Premier League sets spending record in Summer 2025 transfer window",
+"summary":
+"The summer of 2025 witnessed a record-breaking transfer window with huge spending across Premier League clubs, including major signings by Liverpool.",
+"published": "2025-09-01",
+"tags": ["transfer", "summer 2025", "record"],
+"source": "ESPN / NBC / Premier League",
+"image": "https://via.placeholder.com/400x200?text=Transfers+2025"
+},
+{
+"id": "pl-2025-02",
+"title": "Fixture changes due to European competitions",
+"summary":
+"The Premier League announced amendments to several fixtures in Matchweeks 5, 6, 7, and 9 to accommodate clubs competing in European tournaments.",
+"published": "2025-09-03",
+"tags": ["fixtures", "schedule", "UEFA"],
+"source": "PremierLeague.com",
+"image": "https://via.placeholder.com/400x200?text=Fixture+Changes"
+},
+{
+"id": "pl-2025-03",
+"title": "Daniel Levy steps down as Tottenham chairman after 25 years",
+"summary":
+"Daniel Levy has stepped down as chairman of Tottenham Hotspur after 25 years, with reports widely covered by major outlets.",
+"published": "2025-09-06",
+"tags": ["club news", "Tottenham", "leadership"],
+"source": "The Times / ESPN",
+"image": "https://via.placeholder.com/400x200?text=Tottenham+News"
+},
+{
+"id": "pl-2025-04",
+"title": "Liverpool sign Alexander Isak on deadline day",
+"summary":
+"On transfer deadline day, Liverpool secured major signings, with Alexander Isak being one of the most notable deals reported.",
+"published": "2025-09-01",
+"tags": ["transfer", "Liverpool", "deadline day"],
+"source": "ESPN / NBC Sports",
+"image": "https://via.placeholder.com/400x200?text=Liverpool+Transfer"
+},
+{
+"id": "pl-2025-05",
+"title": "Early-season analysis: Key talking points after first 3 rounds of 2025/26",
+"summary":
+"A roundup of the main stories from the opening three rounds of the 2025/26 season — champions' form, early surprises, and tactical trends.",
+"published": "2025-09-05",
+"tags": ["analysis", "matchweek review", "tactics"],
+"source": "PremierLeague.com",
+"image": "https://via.placeholder.com/400x200?text=Season+Analysis"
+}
+]
