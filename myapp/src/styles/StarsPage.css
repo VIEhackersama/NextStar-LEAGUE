@@ -1,172 +1,56 @@
-/* General Page Styling - Giữ nguyên */
-.stars-page {
-  background-color: #0c0d12;
-  color: #e0e6ed;
-  font-family: 'Inter', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Background Image - Giữ nguyên */
-.stars-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.1;
-  filter: grayscale(50%);
-  z-index: 0;
-}
-
-/* Content Overlay - Giữ nguyên */
-.stars-content-overlay {
+.stars-hero {
   position: relative;
-  z-index: 1;
-  padding-top: 4rem; /* Giảm khoảng cách trên */
-  padding-bottom: 4rem; /* Giảm khoảng cách dưới */
-}
-
-/* Heading Styling - Tiêu đề nhỏ gọn hơn */
-.stars-content-overlay h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 2.8rem; /* Giảm kích thước font */
-  color: #e0e6ed;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(88, 166, 255, 0.3);
-  margin-bottom: 3rem; /* Giảm khoảng cách dưới */
-  letter-spacing: 0.04em; /* Giảm khoảng cách chữ một chút */
-}
-
-/* Star Card - Thẻ cầu thủ nhỏ gọn hơn */
-.star-card {
-  background-color: #1a1e27;
-  border: 1px solid rgba(88, 166, 255, 0.2) !important;
-  border-radius: 10px; /* Bo tròn góc ít hơn */
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Giảm đổ bóng */
-  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, border-color 0.4s ease-out;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.star-card:hover {
-  transform: translateY(-10px) scale(1.03); /* Hiệu ứng hover nhỏ hơn */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(88, 166, 255, 0.5); /* Đổ bóng hover cũng nhỏ hơn */
-  border-color: #58a6ff !important;
-}
-
-/* Player Image - Ảnh cầu thủ nhỏ hơn */
-.player-image {
   width: 100%;
-  height: 250px; /* Giảm chiều cao của ảnh */
-  object-fit: cover;
-  border-bottom: 2px solid rgba(88, 166, 255, 0.3);
-  filter: brightness(0.95);
-  transition: filter 0.3s ease-in-out;
-}
-
-.star-card:hover .player-image {
-    filter: brightness(1.05) saturate(1.1);
-}
-
-/* Card Header - Giữ nguyên */
-.star-card .card-header {
-  background-color: transparent !important;
-  border-bottom: none !important;
-  padding: 0;
-}
-
-/* Card Body - Phần nội dung thẻ nhỏ hơn */
-.star-card .card-body {
-  padding: 1.5rem; /* Giảm khoảng cách đệm */
+  min-height: 70vh; 
+  background-image: url('https://a.espncdn.com/photo/2017/0808/0808_youngplayers2_2000x1000.jpg');
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-  flex-grow: 1;
+  align-items: center; 
+  justify-content: center; 
+  overflow: hidden;
 }
 
-/* Card Title - Tên cầu thủ nhỏ hơn */
-.card-title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 1.3rem; /* Giảm kích thước font */
-  color: #58a6ff;
-  margin-bottom: 0.5rem; /* Giảm khoảng cách dưới */
-  letter-spacing: 0.02em;
+
+.stars-overlay {
+  position: absolute;
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
-/* Card Text - Thông tin nhỏ hơn */
-.card-text {
-  font-size: 0.95rem; /* Giảm kích thước font */
-  line-height: 1.5;
-  color: #c9d1d9;
-  margin-bottom: 1rem; /* Giảm khoảng cách dưới */
+
+.stars-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.card-text strong {
-  color: #e0e6ed;
-  font-weight: 500;
+.card-top-img {
+  width: 100%;
+  height: 220px; 
+  object-fit: cover; 
 }
 
-/* Card Highlights - Mô tả nhỏ hơn */
-.card-highlights {
-  font-size: 0.85em; /* Giảm kích thước font */
-  line-height: 1.5;
-  color: #a0a6ae;
-  text-align: justify;
-  margin-top: auto;
-}
 
-/* Responsive Grid - Điều chỉnh cho các màn hình */
-@media (max-width: 1200px) {
-  .stars-content-overlay h2 {
-    font-size: 2.2rem;
+@media (max-width: 768px) {
+  .stars-hero {
+    min-height: 60vh;
+    background-position: center top;
   }
-  .player-image {
-    height: 220px;
-  }
-}
-
-@media (max-width: 991px) {
-  .stars-content-overlay h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  .player-image {
-    height: 200px;
-  }
-  .star-card .card-body {
-    padding: 1.2rem;
-  }
-  .card-title {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .stars-content-overlay {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-  .stars-content-overlay h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-  .player-image {
+  .card-top-img {
     height: 180px;
   }
-  .card-title {
-    font-size: 1.1rem;
+}
+@media (max-width: 480px) {
+  .stars-hero {
+    min-height: 55vh;
+    background-position: center top;
   }
-  .card-text {
-    font-size: 0.9rem;
-  }
-  .card-highlights {
-    font-size: 0.8em;
+  .card-top-img {
+    height: 140px;
   }
 }
