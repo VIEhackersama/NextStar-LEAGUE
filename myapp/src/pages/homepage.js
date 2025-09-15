@@ -101,6 +101,7 @@ function BackToTop() {
   );
 }
 
+
 function CompareOffcanvas({ show, onHide, teams }) {
   const [aId, setAId] = useState("");
   const [bId, setBId] = useState("");
