@@ -13,6 +13,7 @@ import NewsDetailPage from '../pages/NewsDetailPage';
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import ForgotPasswordPage from "../pages/ForgotPasswordPage";
+import ContactPage from "../pages/ContactPage";
 
 
 const Routers = () => {
@@ -31,6 +32,7 @@ return (
     <Route path="/login" element={<LoginPage />} />
     <Route path="/register" element={<RegisterPage />} />
     <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+    <Route path="/contact" element={<ContactPage />} />
     </Routes>
     </AnimatePresence>
 );

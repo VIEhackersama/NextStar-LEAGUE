@@ -1,0 +1,163 @@
+/* ================= THEME TOKENS ================= */
+:root{
+  --bg-start:#0f2027; --bg-mid:#203a43; --bg-end:#2c5364;
+
+  --surface-1:#0f1524;   /* card tối */
+  --surface-2:#161d2f;
+  --border:rgba(88,166,255,.25);
+
+  --text:#E6EDF3;
+  --text-2:#B8C3D6;
+  --muted:#8FA1B8;
+
+  --accent:#58a6ff;
+  --brand:#ffc107;
+
+  --shadow:0 14px 32px rgba(0,0,0,.35);
+  --radius:16px;
+}
+
+/* =============== BASE (nhẹ, tránh đè global) =============== */
+html, body { height: 100%; }
+body{
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  color:var(--text);
+}
+
+/* ===== Utilities ===== */
+.glass-card{
+  border:1px solid var(--border) !important;
+  border-radius:var(--radius) !important;
+  background:linear-gradient(165deg,rgba(22,29,47,.96),rgba(15,21,36,.96)) !important;
+  box-shadow:var(--shadow) !important;
+  backdrop-filter:blur(6px);
+}
+.btn-auth{
+  border-width:2px; border-radius:12px;
+  font-weight:900; letter-spacing:.2px;
+  padding:.72rem 1rem; text-shadow:none !important;
+  color:#ffd659; border-color:#ffc107; background:transparent;
+}
+.btn-auth:hover{
+  background:rgba(255,193,7,.12);
+  box-shadow:0 10px 18px rgba(255,193,7,.25);
+  transform:translateY(-1px);
+}
+.btn-auth:active{ transform:translateY(0) }
+.social{ width:40px; height:40px; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; transition:transform .15s ease, box-shadow .15s ease; }
+.social:hover{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.35) }
+.social.fb{ background:#1877F2 }
+.social.ig{ background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888) }
+.social.tw{ background:#1DA1F2 }
+.social.yt{ background:#FF0000 }
+
+/* ===================== CONTACT PAGE ===================== */
+.contact-page{
+  min-height:100vh;
+  background:linear-gradient(135deg,var(--bg-start),var(--bg-mid),var(--bg-end)) fixed;
+  isolation:isolate;
+}
+
+/* HERO */
+.contact-page .contact-hero{ position:relative; padding:72px 0 84px; overflow:hidden; z-index:0; }
+.contact-page .contact-hero .hero-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.72) saturate(1.05); z-index:0; }
+.contact-page .contact-hero .hero-overlay{
+  position:absolute; inset:0; z-index:1;
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(13,110,253,.25), transparent 60%),
+    radial-gradient(900px 500px at 80% 100%, rgba(255,193,7,.18), transparent 60%),
+    linear-gradient(180deg, rgba(10,14,22,.55), rgba(10,14,22,.85));
+}
+.contact-page .hero-title{
+  position:relative; z-index:2; font-weight:900; font-size:2.4rem; letter-spacing:.2px; margin-bottom:.35rem;
+  text-shadow:none !important;
+}
+.contact-page .hero-sub{ position:relative; z-index:2; color:var(--text-2); font-size:1.05rem }
+.contact-page .soft-pill{
+  position:relative; z-index:2; color:var(--text-2);
+  border:1px solid var(--border); background:rgba(13,18,32,.6);
+  border-radius:999px; padding:.4rem .7rem; font-weight:600;
+}
+
+/* CARD trong contact */
+.contact-page .contact-card{
+  border:1px solid var(--border) !important;
+  border-radius:var(--radius) !important;
+  background:linear-gradient(165deg,rgba(22,29,47,.96),rgba(15,21,36,.96)) !important;
+  box-shadow:var(--shadow) !important; backdrop-filter:blur(6px);
+}
+.contact-page h1, .contact-page h2, .contact-page h3, .contact-page h4 { color:var(--text) !important; text-shadow:none !important; }
+.contact-page .section-title{ display:flex; align-items:center; gap:.55rem }
+.contact-page .section-title .dot{ width:10px; height:10px; border-radius:999px; background:var(--brand); box-shadow:0 0 0 4px rgba(255,193,7,.18) }
+
+/* FORM */
+.contact-page .contact-card .form-label{ font-weight:700; color:var(--muted) }
+.contact-page .contact-card .form-control,
+.contact-page .contact-card .form-select{
+  border-radius:12px; background:#0c1220; border:1px solid #22304a; color:var(--text);
+  padding:.65rem .95rem; text-shadow:none !important;
+}
+.contact-page .contact-card .form-control::placeholder{ color:#9fb0c9 }
+.contact-page .contact-card .form-control:focus,
+.contact-page .contact-card .form-select:focus{ border-color:var(--brand); box-shadow:0 0 0 .2rem rgba(255,193,7,.25); }
+.contact-page .contact-card .form-check-label{
+  color: var(--text-2) !important;
+  font-weight: 600;
+}
+
+/* CONTACT INFO: 2 cột – icon | content; content xếp dọc (label + value) */
+.contact-page .info-list{ display:flex; flex-direction:column; gap:18px; margin-top:.25rem; }
+.contact-page .info-item{
+  display:grid !important; grid-template-columns:56px 1fr !important; column-gap:16px;
+  align-items:center;
+}
+.contact-page .info-icon{
+  width:48px; height:48px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid var(--border);
+  background:rgba(13,18,32,.85); color:#fff; box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+.contact-page .info-item > div:last-child{
+  display:flex !important; flex-direction:column !important; gap:4px;
+  margin:0 !important; text-align:left !important;
+  justify-self:start !important; align-self:center !important;
+}
+.contact-page .info-label{ color:var(--muted); font-weight:800; letter-spacing:.2px; margin:0; }
+.contact-page .info-item a, .contact-page .info-item span{
+  color:var(--text); font-weight:900; font-size:1.06rem; text-decoration:none; text-shadow:none !important;
+}
+.contact-page .info-item a:hover{ color:var(--accent) }
+
+/* Socials */
+.contact-page .socials{ display:flex; gap:12px; margin-top:.35rem }
+
+/* MAP */
+.contact-page .map-wrap{ width:100%; height:340px; overflow:hidden; border-radius:var(--radius) }
+.contact-page .map-wrap iframe{ width:100%; height:100%; border:0; display:block }
+
+/* FAQ */
+.contact-page .faq .accordion-item{
+  border:1px solid var(--border) !important;
+  background:rgba(13,18,32,.55) !important; color:var(--text);
+  border-radius:14px !important; overflow:hidden; margin-bottom:10px;
+}
+.contact-page .faq .accordion-button{
+  background:transparent !important; color:var(--text) !important; font-weight:900;
+  box-shadow:none !important; text-shadow:none !important;
+}
+.contact-page .faq .accordion-body{ color:var(--text-2) }
+
+/* Responsive */
+@media (max-width: 991px){
+  .contact-page .hero-title{ font-size:2rem }
+}
+
+/* ===== HARDENING PATCH (đặt CUỐI FILE để thắng mọi rule khác) ===== */
+.contact-page .btn-auth{
+  color:#ffcf40 !important;
+  border-color:#ffc107 !important;
+  text-shadow:none !important;
+  filter:none !important;
+}

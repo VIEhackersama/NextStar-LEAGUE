@@ -1,150 +1,125 @@
-/* Page background (same photo as homepage) with animated overlay */
-.auth-page {
-  min-height: 100vh;
-  padding: 48px 0;
-  background: url("https://m.media-amazon.com/images/M/MV5BZGE3MWQyYzYtYzI3My00OWViLWEzMDQtYjY5MjFjNDJkNDYxXkEyXkFqcGc@._V1_.jpg")
-    no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
+/* ===================== AUTH (Login / Register / Forgot) ===================== */
+/* Dùng chung biến trong theme.css. Nếu chưa có theme.css, file này vẫn chạy tốt. */
+
+/* Trang nền (giống homepage) + overlay nhẹ */
+.auth-page{
+  min-height:100vh;
+  padding:48px 0;
+  background:linear-gradient(135deg,var(--bg-start,#0f2027),var(--bg-mid,#203a43),var(--bg-end,#2c5364)) fixed;
+  position:relative;
+  color:var(--text,#E6EDF3);
+}
+.auth-page::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(88,166,255,.18), transparent 60%),
+    radial-gradient(1000px 500px at 80% 100%, rgba(255,193,7,.18), transparent 60%),
+    rgba(0,0,0,.45);
+  pointer-events:none;
 }
 
-.auth-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-      1200px 600px at 20% 0%,
-      rgba(13, 110, 253, 0.25),
-      transparent 60%
-    ),
-    radial-gradient(
-      1000px 500px at 80% 100%,
-      rgba(255, 193, 7, 0.25),
-      transparent 60%
-    ),
-    rgba(0, 0, 0, 0.55);
-  animation: overlayPulse 6s ease-in-out infinite alternate;
-  pointer-events: none;
+/* Card dark glass */
+.auth-card{
+  position:relative; z-index:1;
+  border:1px solid var(--border,rgba(88,166,255,.25));
+  border-radius:16px;
+  background:linear-gradient(165deg,rgba(22,29,47,.92),rgba(15,21,36,.92));
+  box-shadow:var(--shadow,0 14px 32px rgba(0,0,0,.35));
+  backdrop-filter:blur(8px);
+  color:var(--text,#E6EDF3);
 }
 
-@keyframes overlayPulse {
-  from { opacity: 0.85; }
-  to   { opacity: 1; }
+/* Title & subtitle */
+.auth-card h2{ color:var(--text,#E6EDF3); font-weight:800; letter-spacing:.2px }
+.auth-card .text-muted{ color:var(--text-2,#A8B3C7) !important }
+
+/* Entrance */
+.fade-in{ animation:fadeInUp .55s ease both }
+@keyframes fadeInUp{
+  from{ opacity:0; transform:translate3d(0,18px,0) }
+  to{ opacity:1; transform:translate3d(0,0,0) }
 }
 
-/* Auth card (glassmorphism) */
-.auth-card {
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  background: linear-gradient(
-    165deg,
-    rgba(255, 255, 255, 0.95),
-    rgba(255, 255, 255, 0.88)
-  );
-  border-radius: 1.1rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+/* Labels & inputs (dark) */
+.auth-card .form-label{ font-weight:600; color:var(--text,#E6EDF3) }
+.auth-card .form-control{
+  border-radius:12px;
+  padding:.65rem .95rem;
+  background:#0c1220;
+  color:var(--text,#E6EDF3);
+  border:1px solid #22304a;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.auth-card .form-control::placeholder{ color:#7f8aa3 }
+.auth-card .form-control:focus{
+  border-color:var(--brand,#ffc107);
+  box-shadow:0 0 0 .2rem rgba(255,193,7,.25);
+  background:#0c1220;
+  color:var(--text,#E6EDF3);
 }
 
-/* Subtle entrance */
-.fade-in {
-  animation: fadeInUp 550ms ease both;
+/* InputGroup adornments/buttons dark-friendly */
+.input-group-text{
+  background:#0c1220;
+  color:var(--text-2,#A8B3C7);
+  border:1px solid #22304a;
 }
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translate3d(0, 18px, 0); }
-  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+.input-group .btn{
+  border-radius:12px;
+  border-color:#22304a;
+  color:var(--text-2,#A8B3C7);
+  background:#0c1220;
 }
-
-/* Inputs */
-.auth-card .form-label {
-  font-weight: 600;
-}
-.auth-card .form-control {
-  border-radius: 0.65rem;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid #e5e7eb;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.auth-card .form-control:focus {
-  border-color: #ffcd39; /* warning */
-  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+.input-group .btn:hover{
+  color:var(--text,#E6EDF3);
+  border-color:var(--brand,#ffc107);
 }
 
-/* InputGroup button */
-.input-group .btn {
-  border-radius: 0.65rem;
+/* Primary actions (khớp outline-warning) */
+.btn-auth{
+  border-width:2px;
+  border-radius:12px;
+  font-weight:700;
+  letter-spacing:.2px;
+  padding:.6rem 1rem;
+  transition:transform .12s ease, box-shadow .12s ease;
 }
-
-/* Primary action buttons */
-.btn-auth {
-  border-width: 2px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  padding: 0.6rem 1rem;
-  border-radius: 0.75rem;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+.btn-auth:hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 18px rgba(255,193,7,.25);
 }
-.btn-auth:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 18px rgba(255, 193, 7, 0.25);
-}
-.btn-auth:active {
-  transform: translateY(0);
-}
-
-/* Social buttons */
-.btn-social {
-  border-radius: 0.7rem;
-  font-weight: 600;
-  padding: 0.55rem 1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
+.btn-auth:active{ transform:none }
 
 /* Divider */
-.divider {
-  text-align: center;
-  position: relative;
-  color: #6b7280;
-  font-size: 0.9rem;
+.divider{
+  text-align:center; position:relative; color:var(--text-2,#A8B3C7); font-size:.9rem;
 }
-.divider::before,
-.divider::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 42%;
-  height: 1px;
-  background: #e5e7eb;
+.divider::before,.divider::after{
+  content:""; position:absolute; top:50%; width:42%; height:1px;
+  background:var(--border,rgba(88,166,255,.25));
 }
-.divider::before { left: 0; }
-.divider::after  { right: 0; }
-.divider span {
-  display: inline-block;
-  padding: 0 0.6rem;
-  background: transparent;
-}
+.divider::before{ left:0 } .divider::after{ right:0 }
+.divider span{ display:inline-block; padding:0 .6rem }
 
 /* Password strength meter */
-.pwd-meter {
-  height: 8px;
-  border-radius: 6px;
-  overflow: hidden;
-}
-.pwd-meter .progress-bar {
-  transition: width 0.3s ease;
-}
+.pwd-meter{ height:8px; border-radius:6px; overflow:hidden; background:#0c1220; border:1px solid #22304a }
+.pwd-meter .progress-bar{ transition:width .3s ease }
 .pwd-meter.score-0 .progress-bar,
-.pwd-meter.score-1 .progress-bar { background-color: #dc3545; } /* red */
-.pwd-meter.score-2 .progress-bar { background-color: #fd7e14; } /* orange */
-.pwd-meter.score-3 .progress-bar { background-color: #ffc107; } /* yellow */
-.pwd-meter.score-4 .progress-bar { background-color: #20c997; } /* teal */
-.pwd-meter.score-5 .progress-bar { background-color: #198754; } /* green */
-/* Verification code input */
-.code-input {
-  text-align: center;
-  letter-spacing: 0.35em;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+.pwd-meter.score-1 .progress-bar{ background:#dc3545 }   /* red */
+.pwd-meter.score-2 .progress-bar{ background:#fd7e14 }   /* orange */
+.pwd-meter.score-3 .progress-bar{ background:var(--brand,#ffc107) } /* yellow */
+.pwd-meter.score-4 .progress-bar{ background:#20c997 }   /* teal */
+.pwd-meter.score-5 .progress-bar{ background:#198754 }   /* green */
+
+/* 6-digit code input (Forgot password) */
+.code-input{
+  text-align:center; letter-spacing:.35em;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
 }
 
+/* Alerts contrast inside dark card */
+.auth-card .alert{
+  border-radius:12px;
+  padding:.55rem .9rem;
+}
