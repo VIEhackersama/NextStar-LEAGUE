@@ -24,9 +24,9 @@ function Header() {
 
         <Navbar.Collapse id="main-navbar">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">Trang chủ</Nav.Link>
-            <Nav.Link as={Link} to="/news">Tin tức</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Liên hệ</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/news">News</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
           </Nav>
 
           {/* Buttons bên phải - cùng style như Login */}
