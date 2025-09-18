@@ -10,7 +10,7 @@ function NewsPage() {
     <div className="news-container">
       <Container fluid>
         <Row>
-          {/* Tin tức bên trái */}
+          
           <Col md={8}>
             <h2 className="fw-bold mb-4 text-white">Latest Premier League News</h2>
             <Row className="g-4">
