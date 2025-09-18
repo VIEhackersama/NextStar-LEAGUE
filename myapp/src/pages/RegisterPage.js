@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import {
   Container,
   Row,
@@ -7,11 +7,10 @@ import {
   Form,
   Button,
   InputGroup,
-  ProgressBar,
 } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
-import { Eye, EyeSlash, ShieldLock } from "react-bootstrap-icons";
-import { register } from "../services/auth";
+import { Eye, EyeSlash } from "react-bootstrap-icons";
+import { register } from "../services/auth"; // API call
 import "../styles/auth.css";
 
 function RegisterPage() {
@@ -19,35 +18,19 @@ function RegisterPage() {
   const [validated, setValidated] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showPwd, setShowPwd] = useState(false);
-  const [showPwd2, setShowPwd2] = useState(false);
   const [error, setError] = useState("");
   const [ok, setOk] = useState("");
 
   const [form, setForm] = useState({
-    fullName: "",
+    username: "",
     email: "",
     password: "",
-    password2: "",
-    agree: false,
   });
 
   const handleChange = (e) => {
-    const { name, type, value, checked } = e.target;
-    setForm((s) => ({ ...s, [name]: type === "checkbox" ? checked : value }));
+    const { name, value } = e.target;
+    setForm((s) => ({ ...s, [name]: value }));
   };
-
-  // password strength
-  const pwdScore = useMemo(() => {
-    let score = 0;
-    if (form.password.length >= 8) score++;
-    if (/[A-Z]/.test(form.password)) score++;
-    if (/[a-z]/.test(form.password)) score++;
-    if (/\d/.test(form.password)) score++;
-    if (/[^A-Za-z0-9]/.test(form.password)) score++;
-    return score; // 0..5
-  }, [form.password]);
-
-  const pwdLabel = ["Very weak", "Weak", "Fair", "Good", "Strong", "Very strong"][pwdScore];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,24 +38,21 @@ function RegisterPage() {
     setOk("");
 
     const f = e.currentTarget;
-    const passwordsMatch = form.password === form.password2;
-
-    if (!f.checkValidity() || !passwordsMatch) {
+    if (!f.checkValidity()) {
       e.stopPropagation();
       setValidated(true);
-      if (!passwordsMatch) setError("Passwords do not match.");
       return;
     }
 
     try {
       setLoading(true);
       await register({
-        fullName: form.fullName.trim(),
+        username: form.username.trim(),
         email: form.email.trim(),
         password: form.password,
       });
       setOk("Account created successfully! Redirecting to sign in…");
-      setTimeout(() => navigate("/login"), 900);
+      setTimeout(() => navigate("/login"), 1000);
     } catch (err) {
       setError(err.message || "Registration failed. Please try again.");
     } finally {
@@ -96,18 +76,18 @@ function RegisterPage() {
                 {ok && <div className="alert alert-success py-2">{ok}</div>}
 
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                  <Form.Group className="mb-3" controlId="fullName">
-                    <Form.Label>Full name</Form.Label>
+                  <Form.Group className="mb-3" controlId="username">
+                    <Form.Label>Username</Form.Label>
                     <Form.Control
                       type="text"
-                      name="fullName"
-                      placeholder="John Doe"
-                      value={form.fullName}
+                      name="username"
+                      placeholder="Enter your username"
+                      value={form.username}
                       onChange={handleChange}
                       required
                     />
                     <Form.Control.Feedback type="invalid">
-                      Please enter your full name.
+                      Please enter your username.
                     </Form.Control.Feedback>
                   </Form.Group>
 
@@ -126,14 +106,14 @@ function RegisterPage() {
                     </Form.Control.Feedback>
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="password">
+                  <Form.Group className="mb-4" controlId="password">
                     <Form.Label>Password</Form.Label>
                     <InputGroup>
                       <Form.Control
                         type={showPwd ? "text" : "password"}
                         name="password"
-                        placeholder="At least 8 characters; mix upper, lower, number, symbol"
-                        minLength={8}
+                        placeholder="Enter your password"
+                        minLength={6}
                         value={form.password}
                         onChange={handleChange}
                         required
@@ -147,67 +127,9 @@ function RegisterPage() {
                         {showPwd ? <EyeSlash /> : <Eye />}
                       </Button>
                       <Form.Control.Feedback type="invalid">
-                        Password must be at least 8 characters.
+                        Password must be at least 6 characters.
                       </Form.Control.Feedback>
                     </InputGroup>
-
-                    <div className="mt-2 d-flex align-items-center gap-2">
-                      <ShieldLock />
-                      <div className="flex-grow-1">
-                        <ProgressBar
-                          now={(pwdScore / 5) * 100}
-                          className={`pwd-meter score-${pwdScore}`}
-                          aria-label="Password strength"
-                        />
-                        <small className="text-muted">Strength: {pwdLabel}</small>
-                      </div>
-                    </div>
-                  </Form.Group>
-
-                  <Form.Group className="mb-3" controlId="password2">
-                    <Form.Label>Confirm password</Form.Label>
-                    <InputGroup>
-                      <Form.Control
-                        type={showPwd2 ? "text" : "password"}
-                        name="password2"
-                        placeholder="Re-enter your password"
-                        minLength={8}
-                        value={form.password2}
-                        onChange={handleChange}
-                        isInvalid={validated && form.password !== form.password2}
-                        required
-                      />
-                      <Button
-                        variant="outline-secondary"
-                        onClick={() => setShowPwd2((s) => !s)}
-                        aria-label={showPwd2 ? "Hide password" : "Show password"}
-                        tabIndex={-1}
-                      >
-                        {showPwd2 ? <EyeSlash /> : <Eye />}
-                      </Button>
-                      <Form.Control.Feedback type="invalid">
-                        Passwords do not match.
-                      </Form.Control.Feedback>
-                    </InputGroup>
-                  </Form.Group>
-
-                  <Form.Group className="mb-4" controlId="agree">
-                    <Form.Check
-                      type="checkbox"
-                      name="agree"
-                      checked={form.agree}
-                      onChange={handleChange}
-                      label={
-                        <>
-                          I agree to the <a href="#!">Terms</a> &{" "}
-                          <a href="#!">Privacy Policy</a>.
-                        </>
-                      }
-                      required
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      You must agree before creating an account.
-                    </Form.Control.Feedback>
                   </Form.Group>
 
                   <div className="d-grid">
