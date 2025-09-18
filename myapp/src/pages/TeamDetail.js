@@ -2,11 +2,14 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
 import teamsData from "../assets/data/Premier.json";
+import playersData from "../assets/data/players.json";
+import PlayerCard from "../components/PlayerCard";
 import "../styles/TeamDetail.css";
 
 const TeamDetail = () => {
   const { teamId } = useParams();
   const navigate = useNavigate();
+
   const team = teamsData.premier_league_teams.find(
     (t) => t.id === parseInt(teamId)
   );
@@ -17,14 +20,17 @@ const TeamDetail = () => {
     );
   }
 
+  const teamPlayers = playersData.players[String(team.id)] || [];
+
   return (
     <div className="team-detail-page">
       <div className="background-image-container"></div>
+
+      {/* ====== PHẦN THÔNG TIN ĐỘI (card) ====== */}
       <Container className="team-detail-container">
         <div className="content-wrapper">
-          {/* Club name at the top, centered */}
           <h1 className="team-detail-name">{team.name}</h1>
-          {/* Logo and 4 details on a single horizontal line */}
+
           <div className="info-top-section">
             <div className="logo-section">
               <img
@@ -33,35 +39,55 @@ const TeamDetail = () => {
                 className="team-logo-large"
               />
             </div>
+
             <div className="info-section">
               <div className="info-list">
                 <div className="info-item">
-                  <strong>Short Name:</strong>
-                  <span>{team.shortName}</span>
+                  <strong>Short Name:</strong> <span>{team.shortName}</span>
                 </div>
                 <div className="info-item">
-                  <strong>Stadium:</strong>
-                  <span>{team.stadium}</span>
+                  <strong>Stadium:</strong> <span>{team.stadium}</span>
                 </div>
                 <div className="info-item">
-                  <strong>Founded:</strong>
-                  <span>{team.founded}</span>
+                  <strong>Founded:</strong> <span>{team.founded}</span>
                 </div>
                 <div className="info-item">
-                  <strong>Country:</strong>
-                  <span>{team.country}</span>
+                  <strong>Country:</strong> <span>{team.country}</span>
                 </div>
               </div>
             </div>
           </div>
-          {/* History section at the bottom, centered */}
+
           {team.history && (
             <div className="history-section">
-              <h2>History</h2>
+              <h2>HISTORY</h2>
               <p>{team.history}</p>
             </div>
           )}
         </div>
+      </Container>
+
+      {/* ====== PHẦN CẦU THỦ (section riêng, full-width) ====== */}
+      <section className="players-section-outer">
+        <div className="players-width">
+          <h2 className="players-title">ĐỘI HÌNH & CHỈ SỐ</h2>
+
+          {teamPlayers.length === 0 ? (
+            <div className="players-empty">
+              Đang cập nhật dữ liệu cầu thủ cho {team.name}.
+            </div>
+          ) : (
+            <div className="players-grid" role="list">
+              {teamPlayers.map((p) => (
+                <PlayerCard key={p.id} player={p} />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Nút quay lại */}
+      <Container className="team-detail-container">
         <div className="button-container">
           <Button onClick={() => navigate(-1)} className="back-button">
             Go back
