@@ -23,6 +23,8 @@ import com.example.demo.Repository.UserRepository;
 public class AuthController {
 
     @Autowired
+    private JwtUtil jwtUtil;    
+    @Autowired
     private AccountRepository accountRepository;
     
     @Autowired
@@ -39,16 +41,14 @@ public class AuthController {
 
     @PostMapping("/register")
     public String register(@RequestBody RegisterRequest request) {
-        // 1. Tạo user
         User user = new User();
         user.setUsername(request.getUsername());
         user = userRepository.save(user);
 
-        // 2. Tạo account
         Account account = new Account();
         account.setUser(user);
         account.setEmail(request.getEmail());
-        account.setPasswordHash(passwordEncoder.encode(request.getPassword())); // hash tại đây
+        account.setPasswordHash(passwordEncoder.encode(request.getPassword())); 
         account.setCreatedAt(LocalDateTime.now());
         account.setIsActive(true);
         account.setIsAdmin(false);
@@ -62,4 +62,33 @@ public class AuthController {
 
         return "User registered successfully with role USER";
     }
+    
+    @PostMapping("/login")
+    public LoginResponse login(@RequestBody LoginRequest request) {
+        // Tìm account theo email
+        Account account = accountRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new RuntimeException("Account not found"));
+
+        // Kiểm tra password
+        if (!passwordEncoder.matches(request.getPassword(), account.getPasswordHash())) {
+            throw new RuntimeException("Invalid password");
+        }
+
+        if (!account.getIsActive()) {
+            throw new RuntimeException("Account is inactive");
+        }
+
+        // Cập nhật last login
+        account.setLastLogin(LocalDateTime.now());
+        accountRepository.save(account);
+
+        // Tạo JWT token
+        String token = jwtUtil.generateToken(account.getEmail());
+
+        return new LoginResponse(
+                token,
+                account.getEmail(),
+                account.getUser().getUsername());
+    }
+
 }

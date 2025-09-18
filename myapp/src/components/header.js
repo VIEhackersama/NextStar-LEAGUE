@@ -1,11 +1,24 @@
-import React from "react";
-import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Navbar, Nav, Container, Button, Dropdown } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-// (Tuỳ chọn) nếu bạn muốn dùng file css riêng cho nút auth:
-// import "./Header.css";
+import { getAuth, logout } from "../services/auth"; // <- từ auth.js
 
 function Header() {
+  const navigate = useNavigate();
+  const [auth, setAuth] = useState(getAuth());
+
+  // Cập nhật khi reload
+  useEffect(() => {
+    setAuth(getAuth());
+  }, []);
+
+  const handleLogout = () => {
+    logout();
+    setAuth(null);
+    navigate("/login");
+  };
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
       <Container>
@@ -27,27 +40,46 @@ function Header() {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/news">News</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
-
           </Nav>
 
-          {/* Buttons bên phải - cùng style như Login */}
+          {/* Bên phải */}
           <div className="d-flex gap-2">
-            <Button
-              as={Link}
-              to="/register"
-              variant="outline-warning"
-              className="btn-auth"
-            >
-              Register
-            </Button>
-            <Button
-              as={Link}
-              to="/login"
-              variant="outline-warning"
-              className="btn-auth"
-            >
-              Login
-            </Button>
+            {!auth ? (
+              <>
+                <Button
+                  as={Link}
+                  to="/register"
+                  variant="outline-warning"
+                  className="btn-auth"
+                >
+                  Register
+                </Button>
+                <Button
+                  as={Link}
+                  to="/login"
+                  variant="outline-warning"
+                  className="btn-auth"
+                >
+                  Login
+                </Button>
+              </>
+            ) : (
+              <Dropdown align="end">
+                <Dropdown.Toggle
+                  variant="outline-warning"
+                  id="dropdown-user"
+                  className="btn-auth"
+                >
+                  Xin chào, {auth.user.username}
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  <Dropdown.Item onClick={handleLogout}>
+                    Đăng xuất
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            )}
           </div>
         </Navbar.Collapse>
       </Container>
