@@ -1,7 +1,7 @@
 /* Nền xanh dương cho trang NewsPage */
 .news-container {
   min-height: 100vh;
-  background: linear-gradient(to right, #1e3c72, #2a5298); /* xanh dương đậm */
+  background: linear-gradient(to right, #0d1630); /* xanh dương đậm */
   padding: 40px 0;
 }
 
@@ -33,5 +33,10 @@
 .standings-table {
   border-radius: 8px;
   overflow: hidden;
+}
+.news-detail-container {
+  background-color: #aca5cf;
+  min-height: 100vh; 
+  padding: 2rem;
 }
 

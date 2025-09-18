@@ -4,25 +4,81 @@
       "id": 1,
       "title": "Onana gets double salary after leaving Man Utd",
       "image": "/image/onana.webp",
-      "summary": "<strong>André Onana</strong> has officially completed his move away from Manchester United. The Cameroonian goalkeeper will now earn almost double his salary compared to what he received at Old Trafford. This decision has surprised many fans and analysts, as Onana had only joined United last season. His departure is expected to bring major changes to United’s goalkeeping plans moving forward.",
-      "content": "André Onana has officially left Manchester United and joined a new club with a contract that doubles his previous salary. His departure raises questions about United’s strategy in the transfer market and the club’s long-term vision for their goalkeeping department. With his new challenge, Onana aims to prove himself once again at the top level.",
+      "summary": "André Onana has officially completed his move away from Manchester United. The Cameroonian goalkeeper will now earn almost double his salary compared to what he received at Old Trafford.",
+      "content": "André Onana has officially left Manchester United and joined a new club with a contract that doubles his previous salary. His departure raises questions about United’s strategy in the transfer market.",
       "comments": 47
     },
     {
       "id": 2,
       "title": "Man Utd consider sending Onana to Turkey",
       "image": "/image/onana2.webp",
-      "summary": "<strong>Manchester United</strong> are reportedly in talks with Turkish clubs regarding André Onana. The goalkeeper has faced difficulties adapting to the Premier League style of play. United’s management believes a loan move might help him regain confidence. This move, however, has sparked debate among fans about whether Onana still has a future at Old Trafford.",
-      "content": "Reports from England suggest that Manchester United officials are considering sending Onana to Turkey on loan. This is seen as an opportunity for him to get regular playing time and rebuild his form. If successful, the move could benefit both the player and the club in the long run.",
+      "summary": "Manchester United are reportedly in talks with Turkish clubs regarding André Onana.",
+      "content": "Reports suggest Manchester United officials are considering sending Onana to Turkey on loan. This is seen as an opportunity for him to get regular playing time and rebuild his form.",
       "comments": 14
     },
     {
       "id": 3,
       "title": "Premier League faces record-breaking transfer window",
       "image": "/image/new3.webp",
-      "summary": "<strong>The Premier League</strong> is once again at the center of the football world with a record-breaking transfer window. Clubs have spent massive amounts of money to strengthen their squads. With big names arriving and some surprising departures, the competition next season promises to be more intense than ever. Experts believe this could set a new benchmark for global football spending.",
-      "content": "The 2024 summer transfer window in the Premier League has been one of the busiest in recent years. Top clubs like Manchester City, Arsenal, and Liverpool have made major signings to ensure they remain competitive both domestically and in Europe. The influx of talent is expected to make the league even more exciting and unpredictable.",
+      "summary": "The Premier League is once again at the center of the football world with a record-breaking transfer window.",
+      "content": "The 2024 summer transfer window in the Premier League has been one of the busiest in recent years. Top clubs have made major signings to ensure they remain competitive.",
       "comments": 107
+    },
+    {
+      "id": 4,
+      "title": "Arsenal sign rising star midfielder",
+      "image": "/image/ar1.jpg",
+      "summary": "Arsenal have completed the signing of a young midfielder who is expected to be the future of the club.",
+      "content": "Arsenal officially announced the signing of 19-year-old sensation Lucas Silva for a fee of £45m. Fans are excited to see him in the Premier League.",
+      "comments": 33
+    },
+    {
+      "id": 5,
+      "title": "Chelsea sack manager after poor results",
+      "image": "/image/chelsea1.webp",
+      "summary": "Chelsea’s board has decided to part ways with their head coach after a disappointing run of results.",
+      "content": "Following a string of losses, Chelsea’s management has terminated the contract of their head coach. The search for a replacement is already underway.",
+      "comments": 89
+    },
+    {
+      "id": 6,
+      "title": "Liverpool extend Salah’s contract",
+      "image": "/image/salah1.webp",
+      "summary": "Liverpool have successfully extended Mohamed Salah’s contract until 2027.",
+      "content": "The Egyptian King has agreed to stay at Anfield until 2027, ending speculation about his future. Fans celebrated the news across social media.",
+      "comments": 145
+    },
+    {
+      "id": 7,
+      "title": "Manchester City unveil new stadium plans",
+      "image": "/image/manchestercity.png",
+      "summary": "Manchester City have revealed their ambitious plans to expand the Etihad Stadium.",
+      "content": "The new expansion will increase capacity to 70,000 seats and include state-of-the-art facilities for fans.",
+      "comments": 62
+    },
+    {
+      "id": 8,
+      "title": "Cristiano Ronaldo breaks another record",
+      "image": "/image/Ronaldo.jpg",
+      "summary": "Cristiano Ronaldo has set another record in his illustrious career.",
+      "content": "Ronaldo scored his 850th career goal in a league match, further solidifying his status as one of the greatest of all time.",
+      "comments": 200
+    },
+    {
+      "id": 9,
+      "title": "Lionel Messi wins 9th Ballon d’Or",
+      "image": "/image/messi.webp",
+      "summary": "Lionel Messi has claimed his 9th Ballon d’Or after an incredible season in MLS and international football.",
+      "content": "Messi continues to defy age, winning another Ballon d’Or and inspiring a new generation of footballers.",
+      "comments": 320
+    },
+    {
+      "id": 10,
+      "title": "Tottenham eye shock move for Real Madrid star",
+      "image": "/image/tot2.avif",
+      "summary": "Tottenham Hotspur are reportedly interested in signing a Real Madrid star to strengthen their squad.",
+      "content": "Spurs have made contact with Real Madrid over a potential transfer deal. The move is expected to cost around £70m.",
+      "comments": 58
     }
   ],
   "standings": [
