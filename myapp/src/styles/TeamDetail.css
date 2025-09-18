@@ -1,232 +1,284 @@
-/* NỀN VÀ KHUNG CHUNG */
-.team-detail-page {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #0d0d1a;
-  overflow: hidden;
+/* =========================
+   THEME & GLOBAL TOKENS
+   ========================= */
+:root{
+  --bg: #0b0c16;
+  --text: #ecf2ff;
+  --muted: #b9c6d2;
+  --primary: #7cc0ff;
+  --primary-weak: rgba(124,192,255,.35);
+  --accent: #ffd166;
+
+  --surface-1: rgba(255,255,255,0.08);
+  --surface-2: rgba(255,255,255,0.04);
+  --glass: rgba(16,24,40,.55);
+
+  --radius-xl: 22px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+
+  --shadow-1: 0 10px 30px rgba(0,0,0,.45);
+  --shadow-2: 0 16px 40px rgba(0,0,0,.55);
+  --ring: 0 0 0 3px var(--primary-weak);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  accent-color: var(--primary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-  animation: fadeIn 0.8s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@media (prefers-reduced-motion: reduce){
+  * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
 }
 
-.background-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
+/* =========================
+   PAGE WRAPPER & BACKDROP
+   ========================= */
+.team-detail-page{
+  position: relative;
+  width: 100%; min-height: 100vh;
+  display: flex; flex-direction: column;
+  background-color: var(--bg);
+  animation: fadeIn .8s ease-in-out;
+  overflow-x: hidden;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.background-image-container{
+  position: absolute; inset: 0;
   background-image: url('https://m.media-amazon.com/images/M/MV5BZGE3MWQyYzYtYzI3My00OWViLWEzMDQtYjY5MjFjNDJkNDYxXkEyXkFqcGc@._V1_.jpg');
-  filter: blur(8px) brightness(0.3) saturate(0.8);
+  background-size: cover; background-position: center;
+  filter: blur(8px) brightness(.35) saturate(.9);
   z-index: 1;
 }
-
-.team-detail-container {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 900px;
-  min-height: 100vh;
-  padding: 40px;
-  box-sizing: border-box;
-  animation: slideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.background-image-container::after{
+  content:""; position:absolute; inset:0;
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(124,192,255,.18), transparent 60%),
+              linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.6) 60%, rgba(0,0,0,.7));
 }
 
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+/* =========================
+   CONTENT CARD (TEAM INFO)
+   ========================= */
+.team-detail-container{
+  position: relative; z-index: 2;
+  width: 100%; max-width: 1200px;
+  padding: 40px 20px; margin: 0 auto;
 }
 
-/* KHUNG CHÍNH CHỨA NỘI DUNG */
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 30px;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
-  flex-grow: 1;
-  margin-bottom: 20px;
+.content-wrapper{
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-1);
+  /* Viền gradient + kính mờ */
+  background:
+    linear-gradient(180deg, var(--surface-1), var(--surface-2)) padding-box,
+    linear-gradient(120deg, rgba(255,255,255,.18), rgba(124,192,255,.25), rgba(255,209,102,.18)) border-box;
+  border: 1px solid transparent;
+  backdrop-filter: blur(12px);
+}
+@supports not (backdrop-filter: blur(12px)){
+  .content-wrapper{ background: rgba(0,0,0,.45); }
 }
 
-/* TIÊU ĐỀ TÊN CÂU LẠC BỘ */
-.team-detail-name {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #fff;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
+.team-detail-name{
+  text-align: center; text-transform: uppercase; letter-spacing: 2px;
+  font-weight: 800;
+  font-size: clamp(2.1rem, 3.5vw, 3.4rem);
+  margin: 0 0 18px 0;
+  text-shadow: 0 6px 24px rgba(0,0,0,.6);
+  animation: rise .6s ease;
+}
+@keyframes rise { from { transform: translateY(8px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.info-top-section{
+  display: flex; align-items: center; justify-content: center;
+  gap: clamp(18px, 4vw, 42px);
+  margin-bottom: 26px;
 }
 
-/* KHUNG CHỨA LOGO VÀ THÔNG TIN TRÊN CÙNG */
-.info-top-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 30px;
+.logo-section{ flex-shrink: 0; }
+.team-logo-large{
+  width: 150px; height: 150px; border-radius: 50%;
+  object-fit: contain; background: #fff; padding: 10px;
+  box-shadow: 0 0 0 6px rgba(255,255,255,.12), 0 8px 26px rgba(0,0,0,.45);
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.team-logo-large:hover{ transform: scale(1.06) rotate(-1deg); box-shadow: 0 0 0 6px rgba(255,255,255,.18), 0 16px 40px rgba(0,0,0,.55); }
+
+.info-section{ flex: 1; }
+.info-list{
+  display: grid; gap: 12px;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+}
+.info-item{
+  display: grid; grid-template-columns: auto 1fr; align-items: center;
+  gap: 10px; white-space: nowrap;
+  padding: 10px 12px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius-md);
+}
+.info-item strong{ color: #9dd0ff; }
+.info-item span{
+  justify-self: end; overflow: hidden; text-overflow: ellipsis;
+  color: var(--text);
 }
 
-/* PHẦN LOGO */
-.logo-section {
-  flex-shrink: 0;
-  margin-right: 40px;
+.history-section{
+  margin-top: 20px; padding: 18px 20px;
+  background: rgba(255,255,255,.06); border-radius: var(--radius-md);
+  text-align: center; border: 1px solid rgba(255,255,255,.1);
+}
+.history-section h2{ font-size: clamp(1.25rem, 2.2vw, 1.6rem); font-weight: 800; margin: 0 0 10px; letter-spacing: .5px; }
+.history-section p{ color: #d7deea; line-height: 1.65; }
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px){
+  .info-top-section{ flex-direction: column; }
+  .info-item{ grid-template-columns: 1fr; text-align: center; white-space: normal; }
+  .info-item span{ justify-self: center; }
 }
 
-.team-logo-large {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  object-fit: contain;
-  background-color: white;
-  padding: 10px;
-  transition: transform 0.3s ease;
+/* =========================
+   PLAYERS SECTION (FULL-WIDTH)
+   ========================= */
+.players-section-outer{
+  position: relative; z-index: 2;
+  width: 100vw; margin: 26px 0 42px;
+  padding: 28px 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03) 35%, rgba(255,255,255,.05));
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 10px 28px rgba(0,0,0,.35);
+}
+.players-width{
+  width: min(1600px, 96vw); margin: 0 auto; padding: 0 16px;
 }
 
-.team-logo-large:hover {
-  transform: scale(1.05);
+.players-title{
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 900; letter-spacing: .6px; text-transform: uppercase;
+  margin: 0 0 18px 0;
+  display: flex; align-items: center; gap: 10px;
+}
+.players-title::after{
+  content:""; flex: 1 1 auto; height: 2px;
+  background: linear-gradient(90deg, rgba(124,192,255,.6), rgba(255,255,255,0));
+  border-radius: 99px;
 }
 
-/* PHẦN THÔNG TIN CHI TIẾT CÂU LẠC BỘ */
-.info-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
+.players-grid{
+  --min: 260px;
+  display: grid; gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr));
 }
 
-.info-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  font-size: 1.2rem;
-  width: 100%;
+.players-empty{
+  width: 100%; padding: 24px; text-align: center;
+  color: var(--muted);
+  background: rgba(255,255,255,.05);
+  border-radius: 14px; border: 1px dashed rgba(255,255,255,.14);
 }
 
-.info-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  white-space: nowrap;
+/* =========================
+   PLAYER CARD
+   ========================= */
+.player-card{
+  position: relative; display: flex; flex-direction: column;
+  min-height: 240px; border-radius: var(--radius-lg); padding: 14px;
+  box-shadow: var(--shadow-1);
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+  /* nền + viền gradient */
+  background:
+    linear-gradient(180deg, var(--surface-1), var(--surface-2)) padding-box,
+    linear-gradient(120deg, rgba(255,255,255,.14), rgba(124,192,255,.22), rgba(255,209,102,.14)) border-box;
+  border: 1px solid transparent;
+}
+.player-card:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-2);
+  filter: saturate(1.05);
 }
 
-.info-item strong {
-  color: #92bce4;
-  font-weight: 600;
-  margin-right: 5px;
+.player-card__header{ display: flex; align-items: center; gap: 12px; }
+.player-avatar{
+  width: 70px; aspect-ratio: 1/1;
+  object-fit: cover; object-position: center top;
+  border-radius: 14px; background: #fff;
+  box-shadow: 0 0 0 3px rgba(255,255,255,.12), 0 6px 18px rgba(0,0,0,.35);
+}
+.player-id{ display: flex; flex-direction: column; gap: 2px; }
+.player-number{ font-size: .95rem; font-weight: 900; color: var(--accent); letter-spacing: .4px; }
+.player-position{ font-size: .85rem; font-weight: 700; color: #9dd0ff; text-transform: uppercase; }
+
+.player-card__body{ margin-top: 10px; }
+.player-name{ font-size: 1.06rem; font-weight: 800; margin: 2px 0 6px; letter-spacing: .2px; }
+.player-meta{ display: flex; gap: 8px; align-items: center; color: var(--muted); font-size: .9rem; margin-bottom: 10px; }
+
+.player-stats-grid{
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 10px;
+}
+.player-attrs{
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+}
+@media (max-width: 520px){
+  .player-stats-grid{ grid-template-columns: repeat(2, 1fr); }
+  .player-attrs{ grid-template-columns: repeat(3, 1fr); }
 }
 
-.info-item span {
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: right;
-  flex-grow: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* PHẦN LỊCH SỬ */
-.history-section {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+.player-stat-row{
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 10px;
+  background: rgba(0,0,0,.25);
   border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.12);
+  font-size: .9rem; color: #e9eef5;
 }
+.player-stat-row strong{ font-weight: 900; color: #fff; }
 
-.history-section h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 15px;
-  text-transform: uppercase;
+/* =========================
+   BACK BUTTON
+   ========================= */
+.button-container{ display: flex; justify-content: center; padding: 10px 0 22px; }
+.back-button{
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 36px; border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  border: 1px solid rgba(255,255,255,.14);
+  color: #fff; font-size: 1.05rem; font-weight: 800; letter-spacing: .6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.28);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
-
-.history-section p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #d1d1d1;
-}
-
-/* NÚT QUAY LẠI */
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: auto;
-  padding-bottom: 20px;
-}
-
-.back-button {
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 15px 40px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #fff;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-.back-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.back-button:hover{
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));
+  box-shadow: 0 12px 28px rgba(0,0,0,.42);
+}
+.back-button:active{ transform: translateY(-1px) scale(.995); }
+.back-button:focus-visible{ outline: none; box-shadow: var(--ring), 0 6px 18px rgba(0,0,0,.28); }
+
+/* =========================
+   EMPTY & NOT FOUND
+   ========================= */
+.not-found{
+  text-align: center; margin-top: 50px;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem); color: #a0a8b8;
 }
 
-/* TRẠNG THÁI KHÔNG TÌM THẤY */
-.not-found {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 1.5rem;
-  color: #888;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .info-top-section {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .info-section {
-    align-items: center;
-  }
-  .info-list {
-    align-items: center;
-    text-align: center;
-  }
-  .info-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    white-space: normal;
-  }
+/* =========================
+   NICE-TO-HAVE: SCROLLBAR
+   ========================= */
+::-webkit-scrollbar{ height: 12px; width: 12px; }
+::-webkit-scrollbar-track{ background: rgba(255,255,255,.04); }
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(180deg, rgba(124,192,255,.55), rgba(124,192,255,.35));
+  border-radius: 10px; border: 2px solid rgba(0,0,0,.25);
 }

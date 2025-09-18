@@ -1,0 +1,3914 @@
+{
+  "players": {
+    "1": [
+      {
+        "id": 1001,
+        "name": "Bukayo Saka",
+        "number": 7,
+        "position": "RW",
+        "age": 24,
+        "nationality": "England",
+        "image": "/image/bukayo-saka.png",
+        "stats": {
+          "apps": 37,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.3,
+          "pace": 53,
+          "shooting": 19,
+          "passing": 50,
+          "dribbling": 56,
+          "defending": 82,
+          "physical": 62
+        }
+      },
+      {
+        "id": 1002,
+        "name": "Martin Ødegaard",
+        "number": 8,
+        "position": "AM",
+        "age": 26,
+        "nationality": "Norway",
+        "image": "/image/martin-odegaard.png",
+        "stats": {
+          "apps": 31,
+          "goals": 0,
+          "assists": 8,
+          "rating": 7.0,
+          "pace": 68,
+          "shooting": 81,
+          "passing": 61,
+          "dribbling": 83,
+          "defending": 79,
+          "physical": 61
+        }
+      },
+      {
+        "id": 1003,
+        "name": "Declan Rice",
+        "number": 41,
+        "position": "DM/CM",
+        "age": 26,
+        "nationality": "England",
+        "image": "/image/declan-rice.png",
+        "stats": {
+          "apps": 24,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.7,
+          "pace": 63,
+          "shooting": 59,
+          "passing": 71,
+          "dribbling": 80,
+          "defending": 45,
+          "physical": 63
+        }
+      },
+      {
+        "id": 1004,
+        "name": "William Saliba",
+        "number": 2,
+        "position": "CB",
+        "age": 24,
+        "nationality": "France",
+        "image": "/image/william-saliba.png",
+        "stats": {
+          "apps": 39,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.5,
+          "pace": 92,
+          "shooting": 85,
+          "passing": 82,
+          "dribbling": 78,
+          "defending": 64,
+          "physical": 65
+        }
+      },
+      {
+        "id": 1005,
+        "name": "Gabriel Magalhães",
+        "number": 6,
+        "position": "CB",
+        "age": 27,
+        "nationality": "Brazil",
+        "image": "/image/gabrielmagalhaes.png",
+        "stats": {
+          "apps": 33,
+          "goals": 0,
+          "assists": 13,
+          "rating": 8.2,
+          "pace": 87,
+          "shooting": 64,
+          "passing": 50,
+          "dribbling": 76,
+          "defending": 82,
+          "physical": 68
+        }
+      },
+      {
+        "id": 1006,
+        "name": "Ben White",
+        "number": 4,
+        "position": "RB/CB",
+        "age": 27,
+        "nationality": "England",
+        "image": "/image/ben-white.png",
+        "stats": {
+          "apps": 26,
+          "goals": 15,
+          "assists": 14,
+          "rating": 7.9,
+          "pace": 82,
+          "shooting": 90,
+          "passing": 61,
+          "dribbling": 73,
+          "defending": 48,
+          "physical": 70
+        }
+      },
+      {
+        "id": 1007,
+        "name": "David Raya",
+        "number": 1,
+        "position": "GK",
+        "age": 30,
+        "nationality": "Spain",
+        "image": "/image/davidraya.png",
+        "stats": {
+          "apps": 20,
+          "goals": 2,
+          "assists": 1,
+          "rating": 7.6,
+          "pace": 77,
+          "shooting": 69,
+          "passing": 71,
+          "dribbling": 71,
+          "defending": 66,
+          "physical": 72
+        }
+      },
+      {
+        "id": 1008,
+        "name": "Leandro Trossard",
+        "number": 19,
+        "position": "LW/FW",
+        "age": 30,
+        "nationality": "Belgium",
+        "image": "/image/leandro-trossard.png",
+        "stats": {
+          "apps": 35,
+          "goals": 10,
+          "assists": 2,
+          "rating": 7.2,
+          "pace": 72,
+          "shooting": 47,
+          "passing": 82,
+          "dribbling": 69,
+          "defending": 85,
+          "physical": 74
+        }
+      },
+      {
+        "id": 1009,
+        "name": "Kai Havertz",
+        "number": 31,
+        "position": "AM/FW",
+        "age": 26,
+        "nationality": "Germany",
+        "image": "/image/kaihavertz..png",
+        "stats": {
+          "apps": 28,
+          "goals": 19,
+          "assists": 4,
+          "rating": 6.9,
+          "pace": 67,
+          "shooting": 73,
+          "passing": 50,
+          "dribbling": 67,
+          "defending": 51,
+          "physical": 77
+        }
+      },
+      {
+        "id": 1010,
+        "name": "Viktor Gyökeres",
+        "number": 14,
+        "position": "ST",
+        "age": 27,
+        "nationality": "Sweden",
+        "image": "/image/viktor-gyokeres.png",
+        "stats": {
+          "apps": 22,
+          "goals": 6,
+          "assists": 5,
+          "rating": 6.6,
+          "pace": 62,
+          "shooting": 52,
+          "passing": 61,
+          "dribbling": 64,
+          "defending": 69,
+          "physical": 79
+        }
+      }
+    ],
+    "2": [
+      {
+    "id": 2001,
+    "name": "Emiliano Martínez",
+    "number": 1,
+    "position": "GK",
+    "age": 33,
+    "nationality": "Argentina",
+    "image": "/image/Emiliano Martínez.png",
+    "stats": {
+      "apps": 38,
+      "goals": 0,
+      "assists": 0,
+      "rating": 8.4,
+      "pace": 66,
+      "shooting": 18,
+      "passing": 74,
+      "dribbling": 42,
+      "defending": 14,
+      "physical": 82
+    }
+  },
+  {
+    "id": 2002,
+    "name": "Matty Cash",
+    "number": 2,
+    "position": "RB",
+    "age": 28,
+    "nationality": "Poland",
+    "image": "/image/MattyCash.png",
+    "stats": {
+      "apps": 34,
+      "goals": 2,
+      "assists": 7,
+      "rating": 7.7,
+      "pace": 86,
+      "shooting": 61,
+      "passing": 73,
+      "dribbling": 74,
+      "defending": 79,
+      "physical": 78
+    }
+  },
+  {
+    "id": 2003,
+    "name": "Ezri Konsa",
+    "number": 4,
+    "position": "CB",
+    "age": 27,
+    "nationality": "England",
+    "image": "/image/ezrikonsangoyo.png",
+    "stats": {
+      "apps": 36,
+      "goals": 1,
+      "assists": 1,
+      "rating": 7.9,
+      "pace": 78,
+      "shooting": 46,
+      "passing": 76,
+      "dribbling": 66,
+      "defending": 86,
+      "physical": 84
+    }
+  },
+  {
+    "id": 2004,
+    "name": "Pau Torres",
+    "number": 14,
+    "position": "CB",
+    "age": 28,
+    "nationality": "Spain",
+    "image": "/image/pautorres.png",
+    "stats": {
+      "apps": 32,
+      "goals": 2,
+      "assists": 0,
+      "rating": 7.6,
+      "pace": 74,
+      "shooting": 48,
+      "passing": 82,
+      "dribbling": 68,
+      "defending": 84,
+      "physical": 78
+    }
+  },
+  {
+    "id": 2005,
+    "name": "Lucas Digne",
+    "number": 12,
+    "position": "LB",
+    "age": 32,
+    "nationality": "France",
+    "image": "/image/lucasdigne1.png",
+    "stats": {
+      "apps": 33,
+      "goals": 1,
+      "assists": 6,
+      "rating": 7.4,
+      "pace": 78,
+      "shooting": 57,
+      "passing": 82,
+      "dribbling": 73,
+      "defending": 80,
+      "physical": 74
+    }
+  },
+  {
+    "id": 2006,
+    "name": "Boubacar Kamara",
+    "number": 44,
+    "position": "DM",
+    "age": 25,
+    "nationality": "France",
+    "image": "/image/boubacarkamara.png",
+    "stats": {
+      "apps": 28,
+      "goals": 1,
+      "assists": 3,
+      "rating": 7.3,
+      "pace": 71,
+      "shooting": 52,
+      "passing": 77,
+      "dribbling": 72,
+      "defending": 81,
+      "physical": 80
+    }
+  },
+  {
+    "id": 2007,
+    "name": "John McGinn",
+    "number": 7,
+    "position": "CM",
+    "age": 30,
+    "nationality": "Scotland",
+    "image": "/image/johnmcginn.png",
+    "stats": {
+      "apps": 35,
+      "goals": 5,
+      "assists": 8,
+      "rating": 7.5,
+      "pace": 70,
+      "shooting": 72,
+      "passing": 78,
+      "dribbling": 76,
+      "defending": 72,
+      "physical": 84
+    }
+  },
+  {
+    "id": 2008,
+    "name": "Emiliano Buendía",
+    "number": 10,
+    "position": "AM",
+    "age": 28,
+    "nationality": "Argentina",
+    "image": "/image/emilianobuendia.png",
+    "stats": {
+      "apps": 29,
+      "goals": 7,
+      "assists": 9,
+      "rating": 7.8,
+      "pace": 77,
+      "shooting": 73,
+      "passing": 82,
+      "dribbling": 84,
+      "defending": 58,
+      "physical": 70
+    }
+  },
+  {
+    "id": 2009,
+    "name": "Leon Bailey",
+    "number": 31,
+    "position": "RW",
+    "age": 28,
+    "nationality": "Jamaica",
+    "image": "/image/Leon Bailey.png",
+    "stats": {
+      "apps": 37,
+      "goals": 12,
+      "assists": 10,
+      "rating": 8.2,
+      "pace": 92,
+      "shooting": 80,
+      "passing": 76,
+      "dribbling": 88,
+      "defending": 48,
+      "physical": 76
+    }
+  },
+  {
+    "id": 2010,
+    "name": "Ollie Watkins",
+    "number": 11,
+    "position": "ST",
+    "age": 29,
+    "nationality": "England",
+    "image": "/image/olliewatkins123.png",
+    "stats": {
+      "apps": 38,
+      "goals": 23,
+      "assists": 9,
+      "rating": 8.3,
+      "pace": 84,
+      "shooting": 86,
+      "passing": 72,
+      "dribbling": 79,
+      "defending": 50,
+      "physical": 83
+    }
+  }
+    ],
+    "3": [
+      {
+    "id": 3001,
+    "name": "Neto",
+    "number": 1,
+    "position": "GK",
+    "age": 36,
+    "nationality": "Brazil",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Norberto%20Murara%20Neto.jpg",
+    "stats": { "apps": 35, "goals": 0, "assists": 0, "rating": 7.7, "pace": 64, "shooting": 18, "passing": 73, "dribbling": 45, "defending": 15, "physical": 80 }
+  },
+  {
+    "id": 3002,
+    "name": "Adam Smith",
+    "number": 15,
+    "position": "RB",
+    "age": 34,
+    "nationality": "England",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Adam%20Smith%202024.png",
+    "stats": { "apps": 28, "goals": 0, "assists": 4, "rating": 7.0, "pace": 78, "shooting": 52, "passing": 72, "dribbling": 71, "defending": 76, "physical": 79 }
+  },
+  {
+    "id": 3003,
+    "name": "Illia Zabarnyi",
+    "number": 27,
+    "position": "CB",
+    "age": 23,
+    "nationality": "Ukraine",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Illya%20Zabarnyi%202023.jpg",
+    "stats": { "apps": 38, "goals": 1, "assists": 1, "rating": 7.6, "pace": 77, "shooting": 47, "passing": 75, "dribbling": 66, "defending": 85, "physical": 83 }
+  },
+  {
+    "id": 3004,
+    "name": "Marcos Senesi",
+    "number": 25,
+    "position": "CB",
+    "age": 28,
+    "nationality": "Argentina",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/FC%20RB%20Salzburg%20gegen%20Feyenoord%20Rotterdam%20%28Testspiel%202022-07-09%29%2017.jpg",
+    "stats": { "apps": 33, "goals": 2, "assists": 1, "rating": 7.5, "pace": 73, "shooting": 49, "passing": 78, "dribbling": 68, "defending": 84, "physical": 82 }
+  },
+  {
+    "id": 3005,
+    "name": "Milos Kerkez",
+    "number": 3,
+    "position": "LB",
+    "age": 21,
+    "nationality": "Hungary",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Milo%C5%A1%20Kerkez%2029122024.jpg",
+    "stats": { "apps": 30, "goals": 1, "assists": 3, "rating": 7.2, "pace": 86, "shooting": 56, "passing": 74, "dribbling": 76, "defending": 78, "physical": 77 }
+  },
+  {
+    "id": 3006,
+    "name": "Lewis Cook",
+    "number": 4,
+    "position": "CM",
+    "age": 28,
+    "nationality": "England",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lewis%20Cook%2029122024%20%281%29.jpg",
+    "stats": { "apps": 34, "goals": 1, "assists": 5, "rating": 7.3, "pace": 72, "shooting": 58, "passing": 80, "dribbling": 77, "defending": 73, "physical": 78 }
+  },
+  {
+    "id": 3007,
+    "name": "Ryan Christie",
+    "number": 10,
+    "position": "AM",
+    "age": 30,
+    "nationality": "Scotland",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ryan%20Christie%20%28cropped%29.jpg",
+    "stats": { "apps": 37, "goals": 6, "assists": 8, "rating": 7.6, "pace": 78, "shooting": 70, "passing": 81, "dribbling": 82, "defending": 58, "physical": 73 }
+  },
+  {
+    "id": 3008,
+    "name": "Justin Kluivert",
+    "number": 19,
+    "position": "LW",
+    "age": 26,
+    "nationality": "Netherlands",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Justin%20Kluivert%202023.jpg",
+    "stats": { "apps": 32, "goals": 8, "assists": 5, "rating": 7.4, "pace": 90, "shooting": 76, "passing": 74, "dribbling": 86, "defending": 45, "physical": 72 }
+  },
+  {
+    "id": 3009,
+    "name": "Antoine Semenyo",
+    "number": 24,
+    "position": "RW",
+    "age": 25,
+    "nationality": "Ghana",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Antoine%20Semenyo%202023.jpg",
+    "stats": { "apps": 36, "goals": 10, "assists": 7, "rating": 7.7, "pace": 91, "shooting": 78, "passing": 73, "dribbling": 82, "defending": 50, "physical": 84 }
+  },
+  {
+    "id": 3010,
+    "name": "Dominic Solanke",
+    "number": 9,
+    "position": "ST",
+    "age": 28,
+    "nationality": "England",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dominic%20Solanke%20YouTube%202024.png",
+    "stats": { "apps": 38, "goals": 19, "assists": 6, "rating": 8.1, "pace": 84, "shooting": 86, "passing": 72, "dribbling": 80, "defending": 48, "physical": 83 }
+  }
+    ],
+    "4": [
+      {
+    "id": 4001,
+    "name": "Mark Flekken",
+    "number": 1,
+    "position": "GK",
+    "age": 31,
+    "nationality": "Netherlands",
+    "image": "https://assets.bundesliga.com/contender/2025/5/flekken.jpg?fit=1140,1140",
+    "stats": { "apps": 36, "goals": 0, "assists": 0, "rating": 7.6, "pace": 63, "shooting": 18, "passing": 74, "dribbling": 44, "defending": 15, "physical": 81 }
+  },
+  {
+    "id": 4002,
+    "name": "Aaron Hickey",
+    "number": 2,
+    "position": "RB",
+    "age": 22,
+    "nationality": "Scotland",
+    "image": "https://res.cloudinary.com/brentford-fc/image/upload/f_auto,q_auto:best,f_auto,q_100,c_fill,ar_16:9/Production/20220813-172630-0006_swygma.jpg",
+    "stats": { "apps": 22, "goals": 1, "assists": 3, "rating": 7.1, "pace": 83, "shooting": 58, "passing": 74, "dribbling": 76, "defending": 76, "physical": 75 }
+  },
+  {
+    "id": 4003,
+    "name": "Ethan Pinnock",
+    "number": 5,
+    "position": "CB",
+    "age": 31,
+    "nationality": "Jamaica",
+    "image": "https://res.cloudinary.com/brentford-fc/image/upload/f_auto,q_auto:best,f_auto,q_100,c_fill,ar_16:9/Production/Ethan_Pinnock_16x9_tup89h.jpg",
+    "stats": { "apps": 34, "goals": 2, "assists": 1, "rating": 7.7, "pace": 76, "shooting": 49, "passing": 76, "dribbling": 64, "defending": 86, "physical": 86 }
+  },
+  {
+    "id": 4004,
+    "name": "Nathan Collins",
+    "number": 22,
+    "position": "CB",
+    "age": 24,
+    "nationality": "Ireland",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Nathan_Collins_02082025_%282%29.jpg",
+    "stats": { "apps": 32, "goals": 1, "assists": 0, "rating": 7.4, "pace": 74, "shooting": 46, "passing": 74, "dribbling": 66, "defending": 84, "physical": 84 }
+  },
+  {
+    "id": 4005,
+    "name": "Rico Henry",
+    "number": 3,
+    "position": "LB",
+    "age": 27,
+    "nationality": "England",
+    "image": "https://res.cloudinary.com/brentford-fc/image/upload/f_auto,q_auto:best,f_auto,q_100,c_fill,ar_16:9/Production/20220209-202200-62_dugm5y.jpg",
+    "stats": { "apps": 24, "goals": 0, "assists": 3, "rating": 7.2, "pace": 90, "shooting": 52, "passing": 76, "dribbling": 78, "defending": 78, "physical": 76 }
+  },
+  {
+    "id": 4006,
+    "name": "Christian Nørgaard",
+    "number": 6,
+    "position": "DM",
+    "age": 31,
+    "nationality": "Denmark",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/Christian_N%C3%B8rgaard_2_-HSV.jpg",
+    "stats": { "apps": 33, "goals": 2, "assists": 3, "rating": 7.4, "pace": 71, "shooting": 58, "passing": 81, "dribbling": 74, "defending": 83, "physical": 83 }
+  },
+  {
+    "id": 4007,
+    "name": "Mathias Jensen",
+    "number": 8,
+    "position": "CM",
+    "age": 28,
+    "nationality": "Denmark",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Mathias_Jensen_XXIII_Memorial_Quinocho_%28RC_Celta_vs_Mainz_05%29_%28cropped%29.jpg",
+    "stats": { "apps": 36, "goals": 3, "assists": 8, "rating": 7.5, "pace": 73, "shooting": 67, "passing": 83, "dribbling": 79, "defending": 68, "physical": 76 }
+  },
+  {
+    "id": 4008,
+    "name": "Bryan Mbeumo",
+    "number": 19,
+    "position": "RW",
+    "age": 25,
+    "nationality": "Cameroon",
+    "image": "https://res.cloudinary.com/brentford-fc/image/upload/f_auto,q_auto:best,f_auto,q_100,c_fill,ar_16:9/Mbeumo_analysis_hero_qidlbu.jpg",
+    "stats": { "apps": 32, "goals": 12, "assists": 9, "rating": 7.9, "pace": 88, "shooting": 82, "passing": 78, "dribbling": 84, "defending": 48, "physical": 80 }
+  },
+  {
+    "id": 4009,
+    "name": "Yoane Wissa",
+    "number": 11,
+    "position": "LW",
+    "age": 29,
+    "nationality": "DR Congo",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/CAN_2023RD_Congo_2-1_Guin%C3%A9e_9939_%28cropped%29.jpg",
+    "stats": { "apps": 35, "goals": 14, "assists": 5, "rating": 7.8, "pace": 86, "shooting": 81, "passing": 74, "dribbling": 82, "defending": 47, "physical": 82 }
+  },
+  {
+    "id": 4010,
+    "name": "Ivan Toney",
+    "number": 17,
+    "position": "ST",
+    "age": 29,
+    "nationality": "England",
+    "image": "https://i.guim.co.uk/img/media/f7358023b3292a3054ff4aff1d93ba115f0d093b/0_0_3500_2101/master/3500.jpg?width=1900&dpr=2&s=none&crop=none",
+    "stats": { "apps": 30, "goals": 16, "assists": 5, "rating": 8.0, "pace": 82, "shooting": 87, "passing": 72, "dribbling": 78, "defending": 52, "physical": 86 }
+  }
+    ],
+    "5": [
+      {
+    "id": 5001,
+    "name": "Bart Verbruggen",
+    "number": 1,
+    "position": "GK",
+    "age": 23,
+    "nationality": "Netherlands",
+    "image": "https://www.sussexexpress.co.uk/webimg/b25lY21zOmZjYjRhOGY3LTNiYjgtNDYwOS04YTVkLWQ2ZDFkZDgwYjI2YzplNzdjNGIwMS1lZGE0LTRjMzgtODFlMS05MjYxOTUwYjBlMGU=.jpg?crop=3:2,smart&trim=&width=640&quality=65",
+    "stats": { "apps": 34, "goals": 0, "assists": 0, "rating": 7.5, "pace": 62, "shooting": 18, "passing": 73, "dribbling": 44, "defending": 15, "physical": 79 }
+  },
+      {
+    "id": 5002,
+    "name": "Tariq Lamptey",
+    "number": 2,
+    "position": "RB",
+    "age": 25,
+    "nationality": "Ghana",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Tariq_Lamptey_2022.jpg/250px-Tariq_Lamptey_2022.jpg",
+    "stats": { "apps": 27, "goals": 1, "assists": 5, "rating": 7.2, "pace": 93, "shooting": 55, "passing": 74, "dribbling": 84, "defending": 72, "physical": 70 }
+  },
+      {
+    "id": 5003,
+    "name": "Lewis Dunk",
+    "number": 5,
+    "position": "CB",
+    "age": 33,
+    "nationality": "England",
+    "image": "https://static.independent.co.uk/2023/11/30/21/4be9757614dbc011045be0aee07d3ce5Y29udGVudHNlYXJjaGFwaSwxNzAxNDY1NjQ4-2.74334333.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp",
+    "stats": { "apps": 36, "goals": 3, "assists": 1, "rating": 7.8, "pace": 66, "shooting": 58, "passing": 79, "dribbling": 68, "defending": 87, "physical": 85 }
+  },
+      {
+    "id": 5004,
+    "name": "Jan Paul van Hecke",
+    "number": 29,
+    "position": "CB",
+    "age": 25,
+    "nationality": "Netherlands",
+    "image": "https://image.bongda24h.vn/medias/640x395twebp/original/2024/10/29/tieu-su-jan-paul-van-hecke-2910140719.jpg",
+    "stats": { "apps": 33, "goals": 1, "assists": 1, "rating": 7.5, "pace": 73, "shooting": 47, "passing": 76, "dribbling": 66, "defending": 84, "physical": 82 }
+  },
+      {
+    "id": 5005,
+    "name": "Pervis Estupiñán",
+    "number": 30,
+    "position": "LB",
+    "age": 27,
+    "nationality": "Ecuador",
+    "image": "https://static01.nyt.com/athletic/uploads/wp/2024/10/08115448/GettyImages-2173777443-scaled-e1728405355518-1024x681.jpg?width=1000&quality=70&auto=webp",
+    "stats": { "apps": 28, "goals": 2, "assists": 6, "rating": 7.4, "pace": 88, "shooting": 60, "passing": 78, "dribbling": 77, "defending": 78, "physical": 76 }
+  },
+      {
+    "id": 5006,
+    "name": "Billy Gilmour",
+    "number": 11,
+    "position": "CM",
+    "age": 24,
+    "nationality": "Scotland",
+    "image": "https://i2-prod.footballscotland.co.uk/incoming/article28295213.ece/ALTERNATES/s810/0_Billy-Gilmour.jpg",
+    "stats": { "apps": 35, "goals": 1, "assists": 5, "rating": 7.3, "pace": 72, "shooting": 58, "passing": 82, "dribbling": 79, "defending": 70, "physical": 72 }
+  },
+      {
+    "id": 5007,
+    "name": "Pascal Groß",
+    "number": 13,
+    "position": "CM",
+    "age": 34,
+    "nationality": "Germany",
+    "image": "https://www.brightonandhovenews.org/wp-content/uploads/2024/08/Brighton__Hove_Albion_v_Chelsea_29OCT_PH.270-scaled-1-1140x815.jpg",
+    "stats": { "apps": 33, "goals": 5, "assists": 10, "rating": 7.9, "pace": 67, "shooting": 74, "passing": 86, "dribbling": 80, "defending": 66, "physical": 74 }
+  },
+      {
+    "id": 5008,
+    "name": "Kaoru Mitoma",
+    "number": 22,
+    "position": "LW",
+    "age": 28,
+    "nationality": "Japan",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Kaoru_Mitoma_%282022%29.jpg/250px-Kaoru_Mitoma_%282022%29.jpg",
+    "stats": { "apps": 30, "goals": 8, "assists": 7, "rating": 7.6, "pace": 92, "shooting": 78, "passing": 77, "dribbling": 90, "defending": 48, "physical": 72 }
+  },
+      {
+    "id": 5009,
+    "name": "Simon Adingra",
+    "number": 24,
+    "position": "RW",
+    "age": 23,
+    "nationality": "Côte d’Ivoire",
+    "image": "https://static01.nyt.com/athletic/uploads/wp/2023/08/23084600/GettyImages-1593676179-scaled-e1692794784935-1024x682.jpg?width=1000&quality=70&auto=webp",
+    "stats": { "apps": 34, "goals": 10, "assists": 6, "rating": 7.7, "pace": 91, "shooting": 77, "passing": 74, "dribbling": 86, "defending": 48, "physical": 78 }
+  },
+      {
+    "id": 5010,
+    "name": "João Pedro",
+    "number": 9,
+    "position": "ST",
+    "age": 23,
+    "nationality": "Brazil",
+    "image": "https://static.independent.co.uk/2023/11/30/19/3ba5f2f516575fadfe8024ed017f2725Y29udGVudHNlYXJjaGFwaSwxNzAxNDU5NTU2-2.74660478.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp",
+    "stats": { "apps": 37, "goals": 18, "assists": 5, "rating": 8.0, "pace": 86, "shooting": 85, "passing": 73, "dribbling": 84, "defending": 46, "physical": 80 }
+  }
+    ],
+    "6": [
+      {
+        "id": 6001,
+        "name": "Chelsea Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 22,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.8,
+          "pace": 45,
+          "shooting": 24,
+          "passing": 78,
+          "dribbling": 36,
+          "defending": 87,
+          "physical": 90
+        }
+      },
+      {
+        "id": 6002,
+        "name": "Chelsea Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 25,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 0,
+          "assists": 1,
+          "rating": 6.5,
+          "pace": 60,
+          "shooting": 45,
+          "passing": 50,
+          "dribbling": 48,
+          "defending": 40,
+          "physical": 50
+        }
+      },
+      {
+        "id": 6003,
+        "name": "Chelsea Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.3,
+          "pace": 89,
+          "shooting": 71,
+          "passing": 61,
+          "dribbling": 92,
+          "defending": 58,
+          "physical": 52
+        }
+      },
+      {
+        "id": 6004,
+        "name": "Chelsea Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.0,
+          "pace": 84,
+          "shooting": 50,
+          "passing": 71,
+          "dribbling": 90,
+          "defending": 77,
+          "physical": 54
+        }
+      },
+      {
+        "id": 6005,
+        "name": "Chelsea Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 0,
+          "assists": 5,
+          "rating": 7.7,
+          "pace": 79,
+          "shooting": 76,
+          "passing": 82,
+          "dribbling": 87,
+          "defending": 43,
+          "physical": 57
+        }
+      },
+      {
+        "id": 6006,
+        "name": "Chelsea Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 15,
+          "assists": 7,
+          "rating": 7.3,
+          "pace": 73,
+          "shooting": 54,
+          "passing": 50,
+          "dribbling": 85,
+          "defending": 61,
+          "physical": 59
+        }
+      },
+      {
+        "id": 6007,
+        "name": "Chelsea Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 2,
+          "assists": 8,
+          "rating": 7.0,
+          "pace": 68,
+          "shooting": 81,
+          "passing": 61,
+          "dribbling": 83,
+          "defending": 79,
+          "physical": 61
+        }
+      },
+      {
+        "id": 6008,
+        "name": "Chelsea Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 10,
+          "assists": 10,
+          "rating": 6.7,
+          "pace": 63,
+          "shooting": 59,
+          "passing": 71,
+          "dribbling": 80,
+          "defending": 45,
+          "physical": 63
+        }
+      },
+      {
+        "id": 6009,
+        "name": "Chelsea Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 19,
+          "assists": 11,
+          "rating": 8.5,
+          "pace": 92,
+          "shooting": 85,
+          "passing": 82,
+          "dribbling": 78,
+          "defending": 64,
+          "physical": 65
+        }
+      },
+      {
+        "id": 6010,
+        "name": "Chelsea Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 6,
+          "assists": 13,
+          "rating": 8.2,
+          "pace": 87,
+          "shooting": 64,
+          "passing": 50,
+          "dribbling": 76,
+          "defending": 82,
+          "physical": 68
+        }
+      }
+    ],
+    "7": [
+      {
+        "id": 7001,
+        "name": "Crystal Palace Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 25,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.0,
+          "pace": 62,
+          "shooting": 17,
+          "passing": 68,
+          "dribbling": 59,
+          "defending": 88,
+          "physical": 59
+        }
+      },
+      {
+        "id": 7002,
+        "name": "Crystal Palace Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 0,
+          "assists": 5,
+          "rating": 7.7,
+          "pace": 79,
+          "shooting": 76,
+          "passing": 82,
+          "dribbling": 87,
+          "defending": 43,
+          "physical": 57
+        }
+      },
+      {
+        "id": 7003,
+        "name": "Crystal Palace Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.3,
+          "pace": 73,
+          "shooting": 54,
+          "passing": 50,
+          "dribbling": 85,
+          "defending": 61,
+          "physical": 59
+        }
+      },
+      {
+        "id": 7004,
+        "name": "Crystal Palace Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.0,
+          "pace": 68,
+          "shooting": 81,
+          "passing": 61,
+          "dribbling": 83,
+          "defending": 79,
+          "physical": 61
+        }
+      },
+      {
+        "id": 7005,
+        "name": "Crystal Palace Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 21,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 0,
+          "assists": 10,
+          "rating": 6.7,
+          "pace": 63,
+          "shooting": 59,
+          "passing": 71,
+          "dribbling": 80,
+          "defending": 45,
+          "physical": 63
+        }
+      },
+      {
+        "id": 7006,
+        "name": "Crystal Palace Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 19,
+          "assists": 11,
+          "rating": 8.5,
+          "pace": 92,
+          "shooting": 85,
+          "passing": 82,
+          "dribbling": 78,
+          "defending": 64,
+          "physical": 65
+        }
+      },
+      {
+        "id": 7007,
+        "name": "Crystal Palace Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 6,
+          "assists": 13,
+          "rating": 8.2,
+          "pace": 87,
+          "shooting": 64,
+          "passing": 50,
+          "dribbling": 76,
+          "defending": 82,
+          "physical": 68
+        }
+      },
+      {
+        "id": 7008,
+        "name": "Crystal Palace Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 15,
+          "assists": 14,
+          "rating": 7.9,
+          "pace": 82,
+          "shooting": 90,
+          "passing": 61,
+          "dribbling": 73,
+          "defending": 48,
+          "physical": 70
+        }
+      },
+      {
+        "id": 7009,
+        "name": "Crystal Palace Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 2,
+          "assists": 1,
+          "rating": 7.6,
+          "pace": 77,
+          "shooting": 69,
+          "passing": 71,
+          "dribbling": 71,
+          "defending": 66,
+          "physical": 72
+        }
+      },
+      {
+        "id": 7010,
+        "name": "Crystal Palace Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 22,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 10,
+          "assists": 2,
+          "rating": 7.2,
+          "pace": 72,
+          "shooting": 47,
+          "passing": 82,
+          "dribbling": 69,
+          "defending": 85,
+          "physical": 74
+        }
+      }
+    ],
+    "8": [
+      {
+        "id": 8001,
+        "name": "Everton Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.0,
+          "pace": 48,
+          "shooting": 31,
+          "passing": 59,
+          "dribbling": 55,
+          "defending": 88,
+          "physical": 64
+        }
+      },
+      {
+        "id": 8002,
+        "name": "Everton Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 0,
+          "assists": 10,
+          "rating": 6.7,
+          "pace": 63,
+          "shooting": 59,
+          "passing": 71,
+          "dribbling": 80,
+          "defending": 45,
+          "physical": 63
+        }
+      },
+      {
+        "id": 8003,
+        "name": "Everton Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.5,
+          "pace": 92,
+          "shooting": 85,
+          "passing": 82,
+          "dribbling": 78,
+          "defending": 64,
+          "physical": 65
+        }
+      },
+      {
+        "id": 8004,
+        "name": "Everton Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 21,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.2,
+          "pace": 87,
+          "shooting": 64,
+          "passing": 50,
+          "dribbling": 76,
+          "defending": 82,
+          "physical": 68
+        }
+      },
+      {
+        "id": 8005,
+        "name": "Everton Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 0,
+          "assists": 14,
+          "rating": 7.9,
+          "pace": 82,
+          "shooting": 90,
+          "passing": 61,
+          "dribbling": 73,
+          "defending": 48,
+          "physical": 70
+        }
+      },
+      {
+        "id": 8006,
+        "name": "Everton Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 2,
+          "assists": 1,
+          "rating": 7.6,
+          "pace": 77,
+          "shooting": 69,
+          "passing": 71,
+          "dribbling": 71,
+          "defending": 66,
+          "physical": 72
+        }
+      },
+      {
+        "id": 8007,
+        "name": "Everton Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 10,
+          "assists": 2,
+          "rating": 7.2,
+          "pace": 72,
+          "shooting": 47,
+          "passing": 82,
+          "dribbling": 69,
+          "defending": 85,
+          "physical": 74
+        }
+      },
+      {
+        "id": 8008,
+        "name": "Everton Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 19,
+          "assists": 4,
+          "rating": 6.9,
+          "pace": 67,
+          "shooting": 73,
+          "passing": 50,
+          "dribbling": 67,
+          "defending": 51,
+          "physical": 77
+        }
+      },
+      {
+        "id": 8009,
+        "name": "Everton Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 6,
+          "assists": 5,
+          "rating": 6.6,
+          "pace": 62,
+          "shooting": 52,
+          "passing": 61,
+          "dribbling": 64,
+          "defending": 69,
+          "physical": 79
+        }
+      },
+      {
+        "id": 8010,
+        "name": "Everton Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 15,
+          "assists": 7,
+          "rating": 8.4,
+          "pace": 90,
+          "shooting": 78,
+          "passing": 71,
+          "dribbling": 62,
+          "defending": 87,
+          "physical": 81
+        }
+      }
+    ],
+    "9": [
+      {
+        "id": 9001,
+        "name": "Fulham Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.2,
+          "pace": 65,
+          "shooting": 23,
+          "passing": 50,
+          "dribbling": 51,
+          "defending": 89,
+          "physical": 70
+        }
+      },
+      {
+        "id": 9002,
+        "name": "Fulham Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 32,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 0,
+          "assists": 14,
+          "rating": 7.9,
+          "pace": 82,
+          "shooting": 90,
+          "passing": 61,
+          "dribbling": 73,
+          "defending": 48,
+          "physical": 70
+        }
+      },
+      {
+        "id": 9003,
+        "name": "Fulham Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 21,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.6,
+          "pace": 77,
+          "shooting": 69,
+          "passing": 71,
+          "dribbling": 71,
+          "defending": 66,
+          "physical": 72
+        }
+      },
+      {
+        "id": 9004,
+        "name": "Fulham Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.2,
+          "pace": 72,
+          "shooting": 47,
+          "passing": 82,
+          "dribbling": 69,
+          "defending": 85,
+          "physical": 74
+        }
+      },
+      {
+        "id": 9005,
+        "name": "Fulham Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 0,
+          "assists": 4,
+          "rating": 6.9,
+          "pace": 67,
+          "shooting": 73,
+          "passing": 50,
+          "dribbling": 67,
+          "defending": 51,
+          "physical": 77
+        }
+      },
+      {
+        "id": 9006,
+        "name": "Fulham Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 6,
+          "assists": 5,
+          "rating": 6.6,
+          "pace": 62,
+          "shooting": 52,
+          "passing": 61,
+          "dribbling": 64,
+          "defending": 69,
+          "physical": 79
+        }
+      },
+      {
+        "id": 9007,
+        "name": "Fulham Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 15,
+          "assists": 7,
+          "rating": 8.4,
+          "pace": 90,
+          "shooting": 78,
+          "passing": 71,
+          "dribbling": 62,
+          "defending": 87,
+          "physical": 81
+        }
+      },
+      {
+        "id": 9008,
+        "name": "Fulham Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 2,
+          "assists": 8,
+          "rating": 8.1,
+          "pace": 85,
+          "shooting": 57,
+          "passing": 82,
+          "dribbling": 60,
+          "defending": 53,
+          "physical": 83
+        }
+      },
+      {
+        "id": 9009,
+        "name": "Fulham Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 10,
+          "assists": 10,
+          "rating": 7.8,
+          "pace": 80,
+          "shooting": 83,
+          "passing": 50,
+          "dribbling": 57,
+          "defending": 72,
+          "physical": 85
+        }
+      },
+      {
+        "id": 9010,
+        "name": "Fulham Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 26,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 19,
+          "assists": 11,
+          "rating": 7.4,
+          "pace": 75,
+          "shooting": 62,
+          "passing": 61,
+          "dribbling": 55,
+          "defending": 90,
+          "physical": 88
+        }
+      }
+    ],
+    "10": [
+      {
+        "id": 10001,
+        "name": "Liverpool Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 32,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.2,
+          "pace": 51,
+          "shooting": 16,
+          "passing": 78,
+          "dribbling": 47,
+          "defending": 90,
+          "physical": 75
+        }
+      },
+      {
+        "id": 10002,
+        "name": "Liverpool Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 21,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 0,
+          "assists": 4,
+          "rating": 6.9,
+          "pace": 67,
+          "shooting": 73,
+          "passing": 50,
+          "dribbling": 67,
+          "defending": 51,
+          "physical": 77
+        }
+      },
+      {
+        "id": 10003,
+        "name": "Liverpool Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.6,
+          "pace": 62,
+          "shooting": 52,
+          "passing": 61,
+          "dribbling": 64,
+          "defending": 69,
+          "physical": 79
+        }
+      },
+      {
+        "id": 10004,
+        "name": "Liverpool Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.4,
+          "pace": 90,
+          "shooting": 78,
+          "passing": 71,
+          "dribbling": 62,
+          "defending": 87,
+          "physical": 81
+        }
+      },
+      {
+        "id": 10005,
+        "name": "Liverpool Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 0,
+          "assists": 8,
+          "rating": 8.1,
+          "pace": 85,
+          "shooting": 57,
+          "passing": 82,
+          "dribbling": 60,
+          "defending": 53,
+          "physical": 83
+        }
+      },
+      {
+        "id": 10006,
+        "name": "Liverpool Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 10,
+          "assists": 10,
+          "rating": 7.8,
+          "pace": 80,
+          "shooting": 83,
+          "passing": 50,
+          "dribbling": 57,
+          "defending": 72,
+          "physical": 85
+        }
+      },
+      {
+        "id": 10007,
+        "name": "Liverpool Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 19,
+          "assists": 11,
+          "rating": 7.4,
+          "pace": 75,
+          "shooting": 62,
+          "passing": 61,
+          "dribbling": 55,
+          "defending": 90,
+          "physical": 88
+        }
+      },
+      {
+        "id": 10008,
+        "name": "Liverpool Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 6,
+          "assists": 13,
+          "rating": 7.1,
+          "pace": 70,
+          "shooting": 88,
+          "passing": 71,
+          "dribbling": 53,
+          "defending": 56,
+          "physical": 90
+        }
+      },
+      {
+        "id": 10009,
+        "name": "Liverpool Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 26,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 15,
+          "assists": 14,
+          "rating": 6.8,
+          "pace": 65,
+          "shooting": 66,
+          "passing": 82,
+          "dribbling": 50,
+          "defending": 74,
+          "physical": 92
+        }
+      },
+      {
+        "id": 10010,
+        "name": "Liverpool Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 29,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 2,
+          "assists": 1,
+          "rating": 6.5,
+          "pace": 60,
+          "shooting": 45,
+          "passing": 50,
+          "dribbling": 48,
+          "defending": 40,
+          "physical": 50
+        }
+      }
+    ],
+    "11": [
+      {
+        "id": 11001,
+        "name": "Manchester City Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 21,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.4,
+          "pace": 68,
+          "shooting": 30,
+          "passing": 68,
+          "dribbling": 43,
+          "defending": 91,
+          "physical": 81
+        }
+      },
+      {
+        "id": 11002,
+        "name": "Manchester City Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 0,
+          "assists": 8,
+          "rating": 8.1,
+          "pace": 85,
+          "shooting": 57,
+          "passing": 82,
+          "dribbling": 60,
+          "defending": 53,
+          "physical": 83
+        }
+      },
+      {
+        "id": 11003,
+        "name": "Manchester City Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.8,
+          "pace": 80,
+          "shooting": 83,
+          "passing": 50,
+          "dribbling": 57,
+          "defending": 72,
+          "physical": 85
+        }
+      },
+      {
+        "id": 11004,
+        "name": "Manchester City Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.4,
+          "pace": 75,
+          "shooting": 62,
+          "passing": 61,
+          "dribbling": 55,
+          "defending": 90,
+          "physical": 88
+        }
+      },
+      {
+        "id": 11005,
+        "name": "Manchester City Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 0,
+          "assists": 13,
+          "rating": 7.1,
+          "pace": 70,
+          "shooting": 88,
+          "passing": 71,
+          "dribbling": 53,
+          "defending": 56,
+          "physical": 90
+        }
+      },
+      {
+        "id": 11006,
+        "name": "Manchester City Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 15,
+          "assists": 14,
+          "rating": 6.8,
+          "pace": 65,
+          "shooting": 66,
+          "passing": 82,
+          "dribbling": 50,
+          "defending": 74,
+          "physical": 92
+        }
+      },
+      {
+        "id": 11007,
+        "name": "Manchester City Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 2,
+          "assists": 1,
+          "rating": 6.5,
+          "pace": 60,
+          "shooting": 45,
+          "passing": 50,
+          "dribbling": 48,
+          "defending": 40,
+          "physical": 50
+        }
+      },
+      {
+        "id": 11008,
+        "name": "Manchester City Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 26,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 10,
+          "assists": 2,
+          "rating": 8.3,
+          "pace": 89,
+          "shooting": 71,
+          "passing": 61,
+          "dribbling": 92,
+          "defending": 58,
+          "physical": 52
+        }
+      },
+      {
+        "id": 11009,
+        "name": "Manchester City Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 29,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 19,
+          "assists": 4,
+          "rating": 8.0,
+          "pace": 84,
+          "shooting": 50,
+          "passing": 71,
+          "dribbling": 90,
+          "defending": 77,
+          "physical": 54
+        }
+      },
+      {
+        "id": 11010,
+        "name": "Manchester City Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 6,
+          "assists": 5,
+          "rating": 7.7,
+          "pace": 79,
+          "shooting": 76,
+          "passing": 82,
+          "dribbling": 87,
+          "defending": 43,
+          "physical": 57
+        }
+      }
+    ],
+    "12": [
+      {
+        "id": 12001,
+        "name": "Manchester United Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.4,
+          "pace": 54,
+          "shooting": 22,
+          "passing": 59,
+          "dribbling": 39,
+          "defending": 92,
+          "physical": 86
+        }
+      },
+      {
+        "id": 12002,
+        "name": "Manchester United Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 25,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 0,
+          "assists": 13,
+          "rating": 7.1,
+          "pace": 70,
+          "shooting": 88,
+          "passing": 71,
+          "dribbling": 53,
+          "defending": 56,
+          "physical": 90
+        }
+      },
+      {
+        "id": 12003,
+        "name": "Manchester United Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.8,
+          "pace": 65,
+          "shooting": 66,
+          "passing": 82,
+          "dribbling": 50,
+          "defending": 74,
+          "physical": 92
+        }
+      },
+      {
+        "id": 12004,
+        "name": "Manchester United Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.5,
+          "pace": 60,
+          "shooting": 45,
+          "passing": 50,
+          "dribbling": 48,
+          "defending": 40,
+          "physical": 50
+        }
+      },
+      {
+        "id": 12005,
+        "name": "Manchester United Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 0,
+          "assists": 2,
+          "rating": 8.3,
+          "pace": 89,
+          "shooting": 71,
+          "passing": 61,
+          "dribbling": 92,
+          "defending": 58,
+          "physical": 52
+        }
+      },
+      {
+        "id": 12006,
+        "name": "Manchester United Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 19,
+          "assists": 4,
+          "rating": 8.0,
+          "pace": 84,
+          "shooting": 50,
+          "passing": 71,
+          "dribbling": 90,
+          "defending": 77,
+          "physical": 54
+        }
+      },
+      {
+        "id": 12007,
+        "name": "Manchester United Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 26,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 6,
+          "assists": 5,
+          "rating": 7.7,
+          "pace": 79,
+          "shooting": 76,
+          "passing": 82,
+          "dribbling": 87,
+          "defending": 43,
+          "physical": 57
+        }
+      },
+      {
+        "id": 12008,
+        "name": "Manchester United Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 15,
+          "assists": 7,
+          "rating": 7.3,
+          "pace": 73,
+          "shooting": 54,
+          "passing": 50,
+          "dribbling": 85,
+          "defending": 61,
+          "physical": 59
+        }
+      },
+      {
+        "id": 12009,
+        "name": "Manchester United Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 2,
+          "assists": 8,
+          "rating": 7.0,
+          "pace": 68,
+          "shooting": 81,
+          "passing": 61,
+          "dribbling": 83,
+          "defending": 79,
+          "physical": 61
+        }
+      },
+      {
+        "id": 12010,
+        "name": "Manchester United Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 10,
+          "assists": 10,
+          "rating": 6.7,
+          "pace": 63,
+          "shooting": 59,
+          "passing": 71,
+          "dribbling": 80,
+          "defending": 45,
+          "physical": 63
+        }
+      }
+    ],
+    "13": [
+      {
+        "id": 13001,
+        "name": "Newcastle United Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 25,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.5,
+          "pace": 40,
+          "shooting": 15,
+          "passing": 50,
+          "dribbling": 35,
+          "defending": 75,
+          "physical": 55
+        }
+      },
+      {
+        "id": 13002,
+        "name": "Newcastle United Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 0,
+          "assists": 2,
+          "rating": 8.3,
+          "pace": 89,
+          "shooting": 71,
+          "passing": 61,
+          "dribbling": 92,
+          "defending": 58,
+          "physical": 52
+        }
+      },
+      {
+        "id": 13003,
+        "name": "Newcastle United Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.0,
+          "pace": 84,
+          "shooting": 50,
+          "passing": 71,
+          "dribbling": 90,
+          "defending": 77,
+          "physical": 54
+        }
+      },
+      {
+        "id": 13004,
+        "name": "Newcastle United Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.7,
+          "pace": 79,
+          "shooting": 76,
+          "passing": 82,
+          "dribbling": 87,
+          "defending": 43,
+          "physical": 57
+        }
+      },
+      {
+        "id": 13005,
+        "name": "Newcastle United Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 0,
+          "assists": 7,
+          "rating": 7.3,
+          "pace": 73,
+          "shooting": 54,
+          "passing": 50,
+          "dribbling": 85,
+          "defending": 61,
+          "physical": 59
+        }
+      },
+      {
+        "id": 13006,
+        "name": "Newcastle United Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 2,
+          "assists": 8,
+          "rating": 7.0,
+          "pace": 68,
+          "shooting": 81,
+          "passing": 61,
+          "dribbling": 83,
+          "defending": 79,
+          "physical": 61
+        }
+      },
+      {
+        "id": 13007,
+        "name": "Newcastle United Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 10,
+          "assists": 10,
+          "rating": 6.7,
+          "pace": 63,
+          "shooting": 59,
+          "passing": 71,
+          "dribbling": 80,
+          "defending": 45,
+          "physical": 63
+        }
+      },
+      {
+        "id": 13008,
+        "name": "Newcastle United Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 19,
+          "assists": 11,
+          "rating": 8.5,
+          "pace": 92,
+          "shooting": 85,
+          "passing": 82,
+          "dribbling": 78,
+          "defending": 64,
+          "physical": 65
+        }
+      },
+      {
+        "id": 13009,
+        "name": "Newcastle United Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 6,
+          "assists": 13,
+          "rating": 8.2,
+          "pace": 87,
+          "shooting": 64,
+          "passing": 50,
+          "dribbling": 76,
+          "defending": 82,
+          "physical": 68
+        }
+      },
+      {
+        "id": 13010,
+        "name": "Newcastle United Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 22,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 15,
+          "assists": 14,
+          "rating": 7.9,
+          "pace": 82,
+          "shooting": 90,
+          "passing": 61,
+          "dribbling": 73,
+          "defending": 48,
+          "physical": 70
+        }
+      }
+    ],
+    "14": [
+      {
+        "id": 14001,
+        "name": "Nottingham Forest Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.7,
+          "pace": 57,
+          "shooting": 29,
+          "passing": 78,
+          "dribbling": 57,
+          "defending": 76,
+          "physical": 61
+        }
+      },
+      {
+        "id": 14002,
+        "name": "Nottingham Forest Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 0,
+          "assists": 7,
+          "rating": 7.3,
+          "pace": 73,
+          "shooting": 54,
+          "passing": 50,
+          "dribbling": 85,
+          "defending": 61,
+          "physical": 59
+        }
+      },
+      {
+        "id": 14003,
+        "name": "Nottingham Forest Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.0,
+          "pace": 68,
+          "shooting": 81,
+          "passing": 61,
+          "dribbling": 83,
+          "defending": 79,
+          "physical": 61
+        }
+      },
+      {
+        "id": 14004,
+        "name": "Nottingham Forest Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 21,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.7,
+          "pace": 63,
+          "shooting": 59,
+          "passing": 71,
+          "dribbling": 80,
+          "defending": 45,
+          "physical": 63
+        }
+      },
+      {
+        "id": 14005,
+        "name": "Nottingham Forest Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 0,
+          "assists": 11,
+          "rating": 8.5,
+          "pace": 92,
+          "shooting": 85,
+          "passing": 82,
+          "dribbling": 78,
+          "defending": 64,
+          "physical": 65
+        }
+      },
+      {
+        "id": 14006,
+        "name": "Nottingham Forest Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 6,
+          "assists": 13,
+          "rating": 8.2,
+          "pace": 87,
+          "shooting": 64,
+          "passing": 50,
+          "dribbling": 76,
+          "defending": 82,
+          "physical": 68
+        }
+      },
+      {
+        "id": 14007,
+        "name": "Nottingham Forest Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 15,
+          "assists": 14,
+          "rating": 7.9,
+          "pace": 82,
+          "shooting": 90,
+          "passing": 61,
+          "dribbling": 73,
+          "defending": 48,
+          "physical": 70
+        }
+      },
+      {
+        "id": 14008,
+        "name": "Nottingham Forest Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 2,
+          "assists": 1,
+          "rating": 7.6,
+          "pace": 77,
+          "shooting": 69,
+          "passing": 71,
+          "dribbling": 71,
+          "defending": 66,
+          "physical": 72
+        }
+      },
+      {
+        "id": 14009,
+        "name": "Nottingham Forest Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 22,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 10,
+          "assists": 2,
+          "rating": 7.2,
+          "pace": 72,
+          "shooting": 47,
+          "passing": 82,
+          "dribbling": 69,
+          "defending": 85,
+          "physical": 74
+        }
+      },
+      {
+        "id": 14010,
+        "name": "Nottingham Forest Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 19,
+          "assists": 4,
+          "rating": 6.9,
+          "pace": 67,
+          "shooting": 73,
+          "passing": 50,
+          "dribbling": 67,
+          "defending": 51,
+          "physical": 77
+        }
+      }
+    ],
+    "15": [
+      {
+        "id": 15001,
+        "name": "Southampton Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.7,
+          "pace": 43,
+          "shooting": 21,
+          "passing": 68,
+          "dribbling": 53,
+          "defending": 77,
+          "physical": 66
+        }
+      },
+      {
+        "id": 15002,
+        "name": "Southampton Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 0,
+          "assists": 11,
+          "rating": 8.5,
+          "pace": 92,
+          "shooting": 85,
+          "passing": 82,
+          "dribbling": 78,
+          "defending": 64,
+          "physical": 65
+        }
+      },
+      {
+        "id": 15003,
+        "name": "Southampton Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 21,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.2,
+          "pace": 87,
+          "shooting": 64,
+          "passing": 50,
+          "dribbling": 76,
+          "defending": 82,
+          "physical": 68
+        }
+      },
+      {
+        "id": 15004,
+        "name": "Southampton Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.9,
+          "pace": 82,
+          "shooting": 90,
+          "passing": 61,
+          "dribbling": 73,
+          "defending": 48,
+          "physical": 70
+        }
+      },
+      {
+        "id": 15005,
+        "name": "Southampton Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 0,
+          "assists": 1,
+          "rating": 7.6,
+          "pace": 77,
+          "shooting": 69,
+          "passing": 71,
+          "dribbling": 71,
+          "defending": 66,
+          "physical": 72
+        }
+      },
+      {
+        "id": 15006,
+        "name": "Southampton Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 10,
+          "assists": 2,
+          "rating": 7.2,
+          "pace": 72,
+          "shooting": 47,
+          "passing": 82,
+          "dribbling": 69,
+          "defending": 85,
+          "physical": 74
+        }
+      },
+      {
+        "id": 15007,
+        "name": "Southampton Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 19,
+          "assists": 4,
+          "rating": 6.9,
+          "pace": 67,
+          "shooting": 73,
+          "passing": 50,
+          "dribbling": 67,
+          "defending": 51,
+          "physical": 77
+        }
+      },
+      {
+        "id": 15008,
+        "name": "Southampton Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 6,
+          "assists": 5,
+          "rating": 6.6,
+          "pace": 62,
+          "shooting": 52,
+          "passing": 61,
+          "dribbling": 64,
+          "defending": 69,
+          "physical": 79
+        }
+      },
+      {
+        "id": 15009,
+        "name": "Southampton Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 15,
+          "assists": 7,
+          "rating": 8.4,
+          "pace": 90,
+          "shooting": 78,
+          "passing": 71,
+          "dribbling": 62,
+          "defending": 87,
+          "physical": 81
+        }
+      },
+      {
+        "id": 15010,
+        "name": "Southampton Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 26,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 2,
+          "assists": 8,
+          "rating": 8.1,
+          "pace": 85,
+          "shooting": 57,
+          "passing": 82,
+          "dribbling": 60,
+          "defending": 53,
+          "physical": 83
+        }
+      }
+    ],
+    "16": [
+      {
+        "id": 16001,
+        "name": "Tottenham Hotspur Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 32,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.9,
+          "pace": 61,
+          "shooting": 35,
+          "passing": 59,
+          "dribbling": 49,
+          "defending": 78,
+          "physical": 72
+        }
+      },
+      {
+        "id": 16002,
+        "name": "Tottenham Hotspur Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 21,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 0,
+          "assists": 1,
+          "rating": 7.6,
+          "pace": 77,
+          "shooting": 69,
+          "passing": 71,
+          "dribbling": 71,
+          "defending": 66,
+          "physical": 72
+        }
+      },
+      {
+        "id": 16003,
+        "name": "Tottenham Hotspur Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.2,
+          "pace": 72,
+          "shooting": 47,
+          "passing": 82,
+          "dribbling": 69,
+          "defending": 85,
+          "physical": 74
+        }
+      },
+      {
+        "id": 16004,
+        "name": "Tottenham Hotspur Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.9,
+          "pace": 67,
+          "shooting": 73,
+          "passing": 50,
+          "dribbling": 67,
+          "defending": 51,
+          "physical": 77
+        }
+      },
+      {
+        "id": 16005,
+        "name": "Tottenham Hotspur Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 0,
+          "assists": 5,
+          "rating": 6.6,
+          "pace": 62,
+          "shooting": 52,
+          "passing": 61,
+          "dribbling": 64,
+          "defending": 69,
+          "physical": 79
+        }
+      },
+      {
+        "id": 16006,
+        "name": "Tottenham Hotspur Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 15,
+          "assists": 7,
+          "rating": 8.4,
+          "pace": 90,
+          "shooting": 78,
+          "passing": 71,
+          "dribbling": 62,
+          "defending": 87,
+          "physical": 81
+        }
+      },
+      {
+        "id": 16007,
+        "name": "Tottenham Hotspur Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 2,
+          "assists": 8,
+          "rating": 8.1,
+          "pace": 85,
+          "shooting": 57,
+          "passing": 82,
+          "dribbling": 60,
+          "defending": 53,
+          "physical": 83
+        }
+      },
+      {
+        "id": 16008,
+        "name": "Tottenham Hotspur Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 10,
+          "assists": 10,
+          "rating": 7.8,
+          "pace": 80,
+          "shooting": 83,
+          "passing": 50,
+          "dribbling": 57,
+          "defending": 72,
+          "physical": 85
+        }
+      },
+      {
+        "id": 16009,
+        "name": "Tottenham Hotspur Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 26,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 19,
+          "assists": 11,
+          "rating": 7.4,
+          "pace": 75,
+          "shooting": 62,
+          "passing": 61,
+          "dribbling": 55,
+          "defending": 90,
+          "physical": 88
+        }
+      },
+      {
+        "id": 16010,
+        "name": "Tottenham Hotspur Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 29,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 6,
+          "assists": 13,
+          "rating": 7.1,
+          "pace": 70,
+          "shooting": 88,
+          "passing": 71,
+          "dribbling": 53,
+          "defending": 56,
+          "physical": 90
+        }
+      }
+    ],
+    "17": [
+      {
+        "id": 17001,
+        "name": "West Ham United Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 21,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.9,
+          "pace": 46,
+          "shooting": 28,
+          "passing": 50,
+          "dribbling": 46,
+          "defending": 79,
+          "physical": 77
+        }
+      },
+      {
+        "id": 17002,
+        "name": "West Ham United Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 0,
+          "assists": 5,
+          "rating": 6.6,
+          "pace": 62,
+          "shooting": 52,
+          "passing": 61,
+          "dribbling": 64,
+          "defending": 69,
+          "physical": 79
+        }
+      },
+      {
+        "id": 17003,
+        "name": "West Ham United Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.4,
+          "pace": 90,
+          "shooting": 78,
+          "passing": 71,
+          "dribbling": 62,
+          "defending": 87,
+          "physical": 81
+        }
+      },
+      {
+        "id": 17004,
+        "name": "West Ham United Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.1,
+          "pace": 85,
+          "shooting": 57,
+          "passing": 82,
+          "dribbling": 60,
+          "defending": 53,
+          "physical": 83
+        }
+      },
+      {
+        "id": 17005,
+        "name": "West Ham United Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 0,
+          "assists": 10,
+          "rating": 7.8,
+          "pace": 80,
+          "shooting": 83,
+          "passing": 50,
+          "dribbling": 57,
+          "defending": 72,
+          "physical": 85
+        }
+      },
+      {
+        "id": 17006,
+        "name": "West Ham United Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 19,
+          "assists": 11,
+          "rating": 7.4,
+          "pace": 75,
+          "shooting": 62,
+          "passing": 61,
+          "dribbling": 55,
+          "defending": 90,
+          "physical": 88
+        }
+      },
+      {
+        "id": 17007,
+        "name": "West Ham United Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 6,
+          "assists": 13,
+          "rating": 7.1,
+          "pace": 70,
+          "shooting": 88,
+          "passing": 71,
+          "dribbling": 53,
+          "defending": 56,
+          "physical": 90
+        }
+      },
+      {
+        "id": 17008,
+        "name": "West Ham United Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 26,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 15,
+          "assists": 14,
+          "rating": 6.8,
+          "pace": 65,
+          "shooting": 66,
+          "passing": 82,
+          "dribbling": 50,
+          "defending": 74,
+          "physical": 92
+        }
+      },
+      {
+        "id": 17009,
+        "name": "West Ham United Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 29,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 2,
+          "assists": 1,
+          "rating": 6.5,
+          "pace": 60,
+          "shooting": 45,
+          "passing": 50,
+          "dribbling": 48,
+          "defending": 40,
+          "physical": 50
+        }
+      },
+      {
+        "id": 17010,
+        "name": "West Ham United Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 32,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 10,
+          "assists": 2,
+          "rating": 8.3,
+          "pace": 89,
+          "shooting": 71,
+          "passing": 61,
+          "dribbling": 92,
+          "defending": 58,
+          "physical": 52
+        }
+      }
+    ],
+    "18": [
+      {
+        "id": 18001,
+        "name": "Wolverhampton Wanderers Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.1,
+          "pace": 64,
+          "shooting": 20,
+          "passing": 78,
+          "dribbling": 42,
+          "defending": 79,
+          "physical": 83
+        }
+      },
+      {
+        "id": 18002,
+        "name": "Wolverhampton Wanderers Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 0,
+          "assists": 10,
+          "rating": 7.8,
+          "pace": 80,
+          "shooting": 83,
+          "passing": 50,
+          "dribbling": 57,
+          "defending": 72,
+          "physical": 85
+        }
+      },
+      {
+        "id": 18003,
+        "name": "Wolverhampton Wanderers Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.4,
+          "pace": 75,
+          "shooting": 62,
+          "passing": 61,
+          "dribbling": 55,
+          "defending": 90,
+          "physical": 88
+        }
+      },
+      {
+        "id": 18004,
+        "name": "Wolverhampton Wanderers Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.1,
+          "pace": 70,
+          "shooting": 88,
+          "passing": 71,
+          "dribbling": 53,
+          "defending": 56,
+          "physical": 90
+        }
+      },
+      {
+        "id": 18005,
+        "name": "Wolverhampton Wanderers Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 0,
+          "assists": 14,
+          "rating": 6.8,
+          "pace": 65,
+          "shooting": 66,
+          "passing": 82,
+          "dribbling": 50,
+          "defending": 74,
+          "physical": 92
+        }
+      },
+      {
+        "id": 18006,
+        "name": "Wolverhampton Wanderers Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 2,
+          "assists": 1,
+          "rating": 6.5,
+          "pace": 60,
+          "shooting": 45,
+          "passing": 50,
+          "dribbling": 48,
+          "defending": 40,
+          "physical": 50
+        }
+      },
+      {
+        "id": 18007,
+        "name": "Wolverhampton Wanderers Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 26,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 10,
+          "assists": 2,
+          "rating": 8.3,
+          "pace": 89,
+          "shooting": 71,
+          "passing": 61,
+          "dribbling": 92,
+          "defending": 58,
+          "physical": 52
+        }
+      },
+      {
+        "id": 18008,
+        "name": "Wolverhampton Wanderers Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 29,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 19,
+          "assists": 4,
+          "rating": 8.0,
+          "pace": 84,
+          "shooting": 50,
+          "passing": 71,
+          "dribbling": 90,
+          "defending": 77,
+          "physical": 54
+        }
+      },
+      {
+        "id": 18009,
+        "name": "Wolverhampton Wanderers Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 6,
+          "assists": 5,
+          "rating": 7.7,
+          "pace": 79,
+          "shooting": 76,
+          "passing": 82,
+          "dribbling": 87,
+          "defending": 43,
+          "physical": 57
+        }
+      },
+      {
+        "id": 18010,
+        "name": "Wolverhampton Wanderers Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 15,
+          "assists": 7,
+          "rating": 7.3,
+          "pace": 73,
+          "shooting": 54,
+          "passing": 50,
+          "dribbling": 85,
+          "defending": 61,
+          "physical": 59
+        }
+      }
+    ],
+    "19": [
+      {
+        "id": 19001,
+        "name": "Luton Town Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 25,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.1,
+          "pace": 49,
+          "shooting": 34,
+          "passing": 68,
+          "dribbling": 38,
+          "defending": 80,
+          "physical": 88
+        }
+      },
+      {
+        "id": 19002,
+        "name": "Luton Town Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 0,
+          "assists": 14,
+          "rating": 6.8,
+          "pace": 65,
+          "shooting": 66,
+          "passing": 82,
+          "dribbling": 50,
+          "defending": 74,
+          "physical": 92
+        }
+      },
+      {
+        "id": 19003,
+        "name": "Luton Town Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.5,
+          "pace": 60,
+          "shooting": 45,
+          "passing": 50,
+          "dribbling": 48,
+          "defending": 40,
+          "physical": 50
+        }
+      },
+      {
+        "id": 19004,
+        "name": "Luton Town Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.3,
+          "pace": 89,
+          "shooting": 71,
+          "passing": 61,
+          "dribbling": 92,
+          "defending": 58,
+          "physical": 52
+        }
+      },
+      {
+        "id": 19005,
+        "name": "Luton Town Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 0,
+          "assists": 4,
+          "rating": 8.0,
+          "pace": 84,
+          "shooting": 50,
+          "passing": 71,
+          "dribbling": 90,
+          "defending": 77,
+          "physical": 54
+        }
+      },
+      {
+        "id": 19006,
+        "name": "Luton Town Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 26,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 6,
+          "assists": 5,
+          "rating": 7.7,
+          "pace": 79,
+          "shooting": 76,
+          "passing": 82,
+          "dribbling": 87,
+          "defending": 43,
+          "physical": 57
+        }
+      },
+      {
+        "id": 19007,
+        "name": "Luton Town Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 15,
+          "assists": 7,
+          "rating": 7.3,
+          "pace": 73,
+          "shooting": 54,
+          "passing": 50,
+          "dribbling": 85,
+          "defending": 61,
+          "physical": 59
+        }
+      },
+      {
+        "id": 19008,
+        "name": "Luton Town Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 2,
+          "assists": 8,
+          "rating": 7.0,
+          "pace": 68,
+          "shooting": 81,
+          "passing": 61,
+          "dribbling": 83,
+          "defending": 79,
+          "physical": 61
+        }
+      },
+      {
+        "id": 19009,
+        "name": "Luton Town Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 10,
+          "assists": 10,
+          "rating": 6.7,
+          "pace": 63,
+          "shooting": 59,
+          "passing": 71,
+          "dribbling": 80,
+          "defending": 45,
+          "physical": 63
+        }
+      },
+      {
+        "id": 19010,
+        "name": "Luton Town Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 22,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 19,
+          "assists": 11,
+          "rating": 8.5,
+          "pace": 92,
+          "shooting": 85,
+          "passing": 82,
+          "dribbling": 78,
+          "defending": 64,
+          "physical": 65
+        }
+      }
+    ],
+    "20": [
+      {
+        "id": 20001,
+        "name": "Sheffield United Player 1",
+        "number": 1,
+        "position": "GK",
+        "age": 28,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 35,
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.3,
+          "pace": 67,
+          "shooting": 27,
+          "passing": 59,
+          "dribbling": 60,
+          "defending": 81,
+          "physical": 57
+        }
+      },
+      {
+        "id": 20002,
+        "name": "Sheffield United Player 2",
+        "number": 2,
+        "position": "RB",
+        "age": 31,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 28,
+          "goals": 0,
+          "assists": 4,
+          "rating": 8.0,
+          "pace": 84,
+          "shooting": 50,
+          "passing": 71,
+          "dribbling": 90,
+          "defending": 77,
+          "physical": 54
+        }
+      },
+      {
+        "id": 20003,
+        "name": "Sheffield United Player 3",
+        "number": 4,
+        "position": "CB",
+        "age": 20,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 22,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.7,
+          "pace": 79,
+          "shooting": 76,
+          "passing": 82,
+          "dribbling": 87,
+          "defending": 43,
+          "physical": 57
+        }
+      },
+      {
+        "id": 20004,
+        "name": "Sheffield United Player 4",
+        "number": 5,
+        "position": "CB",
+        "age": 23,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 37,
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.3,
+          "pace": 73,
+          "shooting": 54,
+          "passing": 50,
+          "dribbling": 85,
+          "defending": 61,
+          "physical": 59
+        }
+      },
+      {
+        "id": 20005,
+        "name": "Sheffield United Player 5",
+        "number": 3,
+        "position": "LB",
+        "age": 24,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 31,
+          "goals": 0,
+          "assists": 8,
+          "rating": 7.0,
+          "pace": 68,
+          "shooting": 81,
+          "passing": 61,
+          "dribbling": 83,
+          "defending": 79,
+          "physical": 61
+        }
+      },
+      {
+        "id": 20006,
+        "name": "Sheffield United Player 6",
+        "number": 6,
+        "position": "CM",
+        "age": 27,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 24,
+          "goals": 10,
+          "assists": 10,
+          "rating": 6.7,
+          "pace": 63,
+          "shooting": 59,
+          "passing": 71,
+          "dribbling": 80,
+          "defending": 45,
+          "physical": 63
+        }
+      },
+      {
+        "id": 20007,
+        "name": "Sheffield United Player 7",
+        "number": 8,
+        "position": "CM",
+        "age": 30,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 39,
+          "goals": 19,
+          "assists": 11,
+          "rating": 8.5,
+          "pace": 92,
+          "shooting": 85,
+          "passing": 82,
+          "dribbling": 78,
+          "defending": 64,
+          "physical": 65
+        }
+      },
+      {
+        "id": 20008,
+        "name": "Sheffield United Player 8",
+        "number": 10,
+        "position": "AM",
+        "age": 19,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 33,
+          "goals": 6,
+          "assists": 13,
+          "rating": 8.2,
+          "pace": 87,
+          "shooting": 64,
+          "passing": 50,
+          "dribbling": 76,
+          "defending": 82,
+          "physical": 68
+        }
+      },
+      {
+        "id": 20009,
+        "name": "Sheffield United Player 9",
+        "number": 7,
+        "position": "RW",
+        "age": 22,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 26,
+          "goals": 15,
+          "assists": 14,
+          "rating": 7.9,
+          "pace": 82,
+          "shooting": 90,
+          "passing": 61,
+          "dribbling": 73,
+          "defending": 48,
+          "physical": 70
+        }
+      },
+      {
+        "id": 20010,
+        "name": "Sheffield United Player 10",
+        "number": 9,
+        "position": "ST",
+        "age": 25,
+        "nationality": "International",
+        "image": "/players/placeholder.png",
+        "stats": {
+          "apps": 20,
+          "goals": 2,
+          "assists": 1,
+          "rating": 7.6,
+          "pace": 77,
+          "shooting": 69,
+          "passing": 71,
+          "dribbling": 71,
+          "defending": 66,
+          "physical": 72
+        }
+      }
+    ]
+  }
+}
