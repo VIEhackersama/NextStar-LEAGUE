@@ -27,6 +27,7 @@ function Header() {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/news">News</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+
           </Nav>
 
           {/* Buttons bên phải - cùng style như Login */}

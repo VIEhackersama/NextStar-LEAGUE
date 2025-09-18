@@ -5,9 +5,9 @@ import { AnimatePresence } from "framer-motion";
 import Homepage from "../pages/homepage";
 import TeamDetail from "../pages/TeamDetail";
 import Header from "../components/header";
-import HistoryPage from "../pages/HistoryPage";   
-import ClubsPage from "../pages/ClubsPage";     
-import StarsPage from "../pages/StarsPage"; 
+import HistoryPage from "../pages/HistoryPage";
+import ClubsPage from "../pages/ClubsPage";
+import StarsPage from "../pages/StarsPage";
 import NewsPage from '../pages/newPage';
 import NewsDetailPage from '../pages/NewsDetailPage';
 import LoginPage from "../pages/LoginPage";
@@ -36,6 +36,7 @@ return (
     </Routes>
     </AnimatePresence>
 );
+
 };
 
 export default Routers;

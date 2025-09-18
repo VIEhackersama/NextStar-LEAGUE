@@ -17,6 +17,7 @@ import {
   FiClock,
   FiSend,
   FiCheckCircle,
+
 } from "react-icons/fi";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import "../styles/contact.css";
@@ -342,3 +343,4 @@ function ContactPage() {
 }
 
 export default ContactPage;
+
