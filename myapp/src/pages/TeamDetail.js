@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
 import teamsData from "../assets/data/Premier.json";
 import playersData from "../assets/data/players.json";
-import PlayerCard from "../components/PlayerCard";
+// import PlayerCard from "../components/PlayerCard";
 import "../styles/TeamDetail.css";
 
 const TeamDetail = () => {
@@ -78,9 +78,9 @@ const TeamDetail = () => {
             </div>
           ) : (
             <div className="players-grid" role="list">
-              {teamPlayers.map((p) => (
+              {/* {teamPlayers.map((p) => (
                 <PlayerCard key={p.id} player={p} />
-              ))}
+              ))} */}
             </div>
           )}
         </div>

@@ -124,6 +124,7 @@ function CompareOffcanvas({ show, onHide, teams }) {
   const age = (y) => (Number.isFinite(y) ? new Date().getFullYear() - y : "-");
 
   return (
+    
     <Offcanvas show={show} onHide={onHide} placement="end" className="compare-offcanvas">
       <Offcanvas.Header closeButton closeVariant="white">
         <Offcanvas.Title>Compare clubs</Offcanvas.Title>
