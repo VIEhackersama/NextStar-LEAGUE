@@ -24,5 +24,5 @@ public class PlayerStat {
     private StatType statType;
 
     @Column(name = "stat_value", nullable = false)
-    private Byte value;
+    private Byte statvalue;
 }

@@ -7,5 +7,5 @@ import com.example.demo.Entity.Position;
 import java.util.Optional;
 
 public interface PositionRepository extends JpaRepository<Position, Integer> {
-    Optional<Position> findByCode(String code);
+    Optional<Position> findBypositioncode(String positioncode);
 }

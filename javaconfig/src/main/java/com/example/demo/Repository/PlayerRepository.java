@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface PlayerRepository extends JpaRepository<Player, Integer> {
     List<Player> findByFullNameContainingIgnoreCase(String keyword);
-
+    // List<Player> findbyplayerid(int playerid);
     List<Player> findByRatingBetween(Byte min, Byte max);
 }
