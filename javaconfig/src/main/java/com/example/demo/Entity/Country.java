@@ -13,11 +13,11 @@ public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "country_id")
-    private Integer id;
+    private Integer countryid;
 
     @Column(name = "country_name", nullable = false, unique = true, length = 100)
-    private String name;
+    private String countryname;
 
     @Column(name = "country_flag")
-    private String flag;  
+    private String countryflag;  
 }

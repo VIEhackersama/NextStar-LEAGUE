@@ -7,5 +7,5 @@ import com.example.demo.Entity.StatType;
 import java.util.Optional;
 
 public interface StatTypeRepository extends JpaRepository<StatType, Integer> {
-    Optional<StatType> findByCode(String code);
+    Optional<StatType> findBystatcode(String statcode);
 }

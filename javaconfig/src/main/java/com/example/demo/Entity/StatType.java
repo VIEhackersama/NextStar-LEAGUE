@@ -13,11 +13,11 @@ public class StatType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "stat_type_id")
-    private Integer id;
+    private Integer statid;
 
     @Column(name = "stat_code", nullable = false, unique = true, length = 30)
-    private String code;
+    private String statcode;
 
     @Column(name = "stat_name", nullable = false, length = 60)
-    private String name;
+    private String statname;
 }

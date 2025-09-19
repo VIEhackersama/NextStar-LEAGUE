@@ -10,5 +10,5 @@ import java.util.List;
 public interface OwnershipRepository extends JpaRepository<Ownership, OwnershipId> {
     List<Ownership> findByUser_Id(Integer userId);
 
-    List<Ownership> findByPlayer_Id(Integer playerId);
+    List<Ownership> findByPlayer_playerid(Integer playerId);
 }

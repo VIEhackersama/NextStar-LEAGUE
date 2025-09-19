@@ -14,6 +14,8 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import ForgotPasswordPage from "../pages/ForgotPasswordPage";
 import ContactPage from "../pages/ContactPage";
+import PlayerList from '../components/PlayerList';
+import PlayersPage from '../pages/PlayerPage';
 
 
 const Routers = () => {
@@ -33,6 +35,7 @@ return (
     <Route path="/register" element={<RegisterPage />} />
     <Route path="/forgot-password" element={<ForgotPasswordPage />} />
     <Route path="/contact" element={<ContactPage />} />
+    <Route path='/players' element={<PlayersPage></PlayersPage>}></Route>
     </Routes>
     </AnimatePresence>
 );
