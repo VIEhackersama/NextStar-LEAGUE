@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Spinner } from "react-bootstrap";
 import teamsData from "../assets/data/Premier.json";
-import playersData from "../assets/data/players.json";
 import PlayerCard from "../components/PlayerCard";
 import "../styles/TeamDetail.css";
 
@@ -10,23 +9,50 @@ const TeamDetail = () => {
   const { teamId } = useParams();
   const navigate = useNavigate();
 
+  // lấy thông tin đội từ JSON
   const team = teamsData.premier_league_teams.find(
     (t) => t.id === parseInt(teamId)
   );
 
+  // state cho dữ liệu cầu thủ từ API
+  const [players, setPlayers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // fetch API lấy cầu thủ theo teamId
+  useEffect(() => {
+    const fetchPlayers = async () => {
+      try {
+        const res = await fetch(
+          `http://localhost:8080/api/teams/${teamId}/players`
+        );
+        if (!res.ok) {
+          throw new Error("Lỗi khi tải dữ liệu cầu thủ");
+        }
+        const data = await res.json();
+        setPlayers(data); // API trả về List<PlayerResponse>
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPlayers();
+  }, [teamId]);
+
   if (!team) {
     return (
-      <Container className="not-found">Club information not found.</Container>
+      <Container className="not-found">
+        Club information not found.
+      </Container>
     );
   }
-
-  const teamPlayers = playersData.players[String(team.id)] || [];
 
   return (
     <div className="team-detail-page">
       <div className="background-image-container"></div>
 
-      {/* ====== PHẦN THÔNG TIN ĐỘI (card) ====== */}
+      {/* ====== THÔNG TIN ĐỘI ====== */}
       <Container className="team-detail-container">
         <div className="content-wrapper">
           <h1 className="team-detail-name">{team.name}</h1>
@@ -67,30 +93,34 @@ const TeamDetail = () => {
         </div>
       </Container>
 
-      {/* ====== PHẦN CẦU THỦ (section riêng, full-width) ====== */}
+      {/* ====== DANH SÁCH CẦU THỦ ====== */}
       <section className="players-section-outer">
         <div className="players-width">
           <h2 className="players-title">ĐỘI HÌNH & CHỈ SỐ</h2>
 
-          {teamPlayers.length === 0 ? (
+          {loading ? (
+            <div className="players-empty">
+              <Spinner animation="border" /> Đang tải dữ liệu cầu thủ...
+            </div>
+          ) : players.length === 0 ? (
             <div className="players-empty">
               Đang cập nhật dữ liệu cầu thủ cho {team.name}.
             </div>
           ) : (
             <div className="players-grid" role="list">
-              {teamPlayers.map((p) => (
-                <PlayerCard key={p.id} player={p} />
+              {players.map((p) => (
+                <PlayerCard key={p.playerId} player={p} />
               ))}
             </div>
           )}
         </div>
       </section>
 
-      {/* Nút quay lại */}
+      {/* ====== NÚT QUAY LẠI ====== */}
       <Container className="team-detail-container">
         <div className="button-container">
           <Button onClick={() => navigate(-1)} className="back-button">
-            Go back
+            ⬅ Go back
           </Button>
         </div>
       </Container>
