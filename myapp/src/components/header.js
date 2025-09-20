@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Container, Button, Dropdown } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { getAuth, logout } from "../services/auth"; // <- từ auth.js
+import { getAuth, logout } from "../services/auth";
+import "../styles/header.css"; // <- thêm file CSS mới
 
 function Header() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState(getAuth());
 
-  // Cập nhật khi reload
   useEffect(() => {
     setAuth(getAuth());
   }, []);
@@ -20,23 +20,23 @@ function Header() {
   };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+    <Navbar className="custom-navbar" expand="lg" sticky="top">
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={Link} to="/" className="dm-serif-text-regular text-white fs-3">
           <img
-            src="./image/logo.png"
+            src="http://localhost:3000/image/logo.png"
             alt="Logo CLB"
             width="50"
-            height="30"
-            className="d-inline-block align-top me-2"
+            height="35"
+            className="d-inline-block align-top me-2 mx-1"
           />
           NextStar League
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="main-navbar" />
 
-        <Navbar.Collapse id="main-navbar">
-          <Nav className="me-auto">
+        <Navbar.Collapse id="main-navbar m-4">
+          <Nav className="me-auto nav-links">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/news">News</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
@@ -49,7 +49,8 @@ function Header() {
                 <Button
                   as={Link}
                   to="/register"
-                  variant="outline-warning"
+                  variant="outline-success"
+                  size="sm"
                   className="btn-auth"
                 >
                   Register
@@ -57,7 +58,8 @@ function Header() {
                 <Button
                   as={Link}
                   to="/login"
-                  variant="outline-warning"
+                  variant="success"
+                  size="sm"
                   className="btn-auth"
                 >
                   Login
@@ -66,7 +68,8 @@ function Header() {
             ) : (
               <Dropdown align="end">
                 <Dropdown.Toggle
-                  variant="outline-warning"
+                  variant="success"
+                  size="sm"
                   id="dropdown-user"
                   className="btn-auth"
                 >
