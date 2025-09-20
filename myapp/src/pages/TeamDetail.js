@@ -2,8 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
 import teamsData from "../assets/data/Premier.json";
-import playersData from "../assets/data/players.json";
-// import PlayerCard from "../components/PlayerCard";
+import PlayerList from "../components/PlayerList";
 import "../styles/TeamDetail.css";
 
 const TeamDetail = () => {
@@ -20,13 +19,11 @@ const TeamDetail = () => {
     );
   }
 
-  const teamPlayers = playersData.players[String(team.id)] || [];
-
   return (
     <div className="team-detail-page">
       <div className="background-image-container"></div>
 
-      {/* ====== PHẦN THÔNG TIN ĐỘI (card) ====== */}
+      {/* ====== PHẦN THÔNG TIN ĐỘI ====== */}
       <Container className="team-detail-container">
         <div className="content-wrapper">
           <h1 className="team-detail-name">{team.name}</h1>
@@ -67,22 +64,11 @@ const TeamDetail = () => {
         </div>
       </Container>
 
-      {/* ====== PHẦN CẦU THỦ (section riêng, full-width) ====== */}
+      {/* ====== PHẦN CẦU THỦ ====== */}
       <section className="players-section-outer">
         <div className="players-width">
           <h2 className="players-title">ĐỘI HÌNH & CHỈ SỐ</h2>
-
-          {teamPlayers.length === 0 ? (
-            <div className="players-empty">
-              Đang cập nhật dữ liệu cầu thủ cho {team.name}.
-            </div>
-          ) : (
-            <div className="players-grid" role="list">
-              {/* {teamPlayers.map((p) => (
-                <PlayerCard key={p.id} player={p} />
-              ))} */}
-            </div>
-          )}
+          <PlayerList clubId={teamId} />
         </div>
       </section>
 
