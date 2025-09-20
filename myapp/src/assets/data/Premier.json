@@ -1,7 +1,7 @@
 {
   "premier_league_teams": [
     {
-      "id": 1,
+      "id": 6,
       "name": "Arsenal",
       "shortName": "ARS",
       "stadium": "Emirates Stadium",
@@ -31,7 +31,7 @@
       "history": "AFC Bournemouth, founded in 1899, is a club with a history of overcoming adversity. After decades in the lower divisions, they made a remarkable ascent under manager Eddie Howe, earning their first promotion to the Premier League in 2015. Known for their attacking style of play, the Cherries have since become an established top-flight team."
     },
     {
-      "id": 4,
+      "id": 12,
       "name": "Brentford",
       "shortName": "BRE",
       "stadium": "Gtech Community Stadium",
@@ -51,7 +51,7 @@
       "history": "Brighton & Hove Albion, founded in 1901, had a turbulent history before its recent rise to prominence. After nearly going out of business in the 1990s, the club has since stabilized and achieved promotion to the Premier League in 2017. They are now known for their attractive, possession-based football and strong youth development program."
     },
     {
-      "id": 6,
+      "id": 1,
       "name": "Chelsea",
       "shortName": "CHE",
       "stadium": "Stamford Bridge",
@@ -111,7 +111,7 @@
       "history": "Manchester City, founded in 1880, has enjoyed a period of unprecedented success since its takeover in 2008. They have won multiple Premier League titles, FA Cups, and League Cups, establishing themselves as a dominant force in English and European football. Their first Champions League title was secured in 2023."
     },
     {
-      "id": 12,
+      "id": 4,
       "name": "Manchester United",
       "shortName": "MUN",
       "stadium": "Old Trafford",
