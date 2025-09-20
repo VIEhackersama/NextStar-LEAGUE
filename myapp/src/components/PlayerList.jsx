@@ -3,8 +3,7 @@ import axios from "axios";
 import PlayerCard from "./PlayerCard";
 import { getAuth } from "../services/auth";
 
-const API_URL = "http://localhost:8080/api/players";
-const PlayerList = () => {
+const PlayerList = ({ clubId }) => {
     const [players, setPlayers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -15,7 +14,12 @@ const PlayerList = () => {
                 const auth = getAuth();
                 const token = auth?.token;
 
-                const res = await axios.get(API_URL, {
+                // nếu có clubId thì fetch theo club, không thì fetch tất cả
+                const url = clubId
+                    ? `http://localhost:8080/api/clubs/${clubId}/players`
+                    : `http://localhost:8080/api/players`;
+
+                const res = await axios.get(url, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
 
@@ -29,7 +33,7 @@ const PlayerList = () => {
         };
 
         fetchPlayers();
-    }, []);
+    }, [clubId]);
 
     if (loading) return <p>Đang tải dữ liệu...</p>;
     if (error) return <p>{error}</p>;
@@ -37,7 +41,7 @@ const PlayerList = () => {
     return (
         <div className="player-grid">
             {players.length > 0 ? (
-                players.map((p) => <PlayerCard key={p.playerId} player={p} />)
+                players.map((p) => <PlayerCard key={p.playerid} player={p} />)
             ) : (
                 <p>Không có cầu thủ nào.</p>
             )}
