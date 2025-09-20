@@ -23,7 +23,7 @@ import {
   FaChevronLeft,
   FaChevronRight,
 } from "react-icons/fa";
-
+import Abouthero from "../components/homehero";
 /* ---------- favorites helpers ---------- */
 const FAVE_KEY = "ns_faves";
 const loadFaves = () => {
@@ -356,15 +356,11 @@ function Homepage() {
       {/* 0) News ticker */}
       <NewsTicker items={demoNews} />
 
+      {/* 👇 Hero mới thêm vào */}
+      <Abouthero />
+
       {/* 1) Hero / Carousel */}
-      <Carousel fade interval={2600}>
-        <Carousel.Item>
-          <img className="d-block w-100" src="/image/new3.webp" alt="Premier League" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src="/image/background.avif" alt="Clubs" />
-        </Carousel.Item>
-      </Carousel>
+      
 
       {/* 2) Spotlight */}
       {spotlight && (
@@ -490,6 +486,16 @@ function Homepage() {
         </Row>
       </Container>
 
+
+      <h1>MEDIA</h1>
+      <Carousel fade interval={2600}>
+        <Carousel.Item>
+          <img className="d-block w-100" src="/image/new3.webp" alt="Premier League" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img className="d-block w-100" src="/image/background.avif" alt="Clubs" />
+        </Carousel.Item>
+      </Carousel>
       {/* 6) Members */}
       <Container fluid className="py-5">
         <h2 className="text-center mb-5 fw-bold">👥 Our Team Members</h2>

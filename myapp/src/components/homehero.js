@@ -7,7 +7,7 @@ export default function Abouthero() {
                 <div
                     className="position-absolute top-0 start-0 w-100 h-100"
                     style={{
-                        backgroundImage: `url(https://cdn.prod.website-files.com/661d888187e5cc660a8c375d/664c19d0d3f2cd84ab484028_calligraphy-min.webp)`,
+                        backgroundImage: `url(https://media.discordapp.net/attachments/1399744388967563288/1413501305900630027/Full-table.png?ex=68cf46ec&is=68cdf56c&hm=2c643bea540137dab486cc431b69c27c05c8b79cad4b535cf6f1dac47ff6b529&=&format=webp&quality=lossless&width=1604&height=902)`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -15,20 +15,21 @@ export default function Abouthero() {
                         zIndex: 1,
                     }}
                 ></div>
-                <motion.div
+                <div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="position-relative text-center" style={{ zIndex: 2 }}>
-                    <img style={{ filter: "invert(100%)" }} className="p-3 img-fluid" src='/image/logo1.png'></img>
-                    <p className="container text-white">
-                        <div className="h3">LEARN CALLIGRAPHY WITHIN YOUR OWN SCREEN</div><br></br>
-                        Witness the ancient art of calligraphy defy modern chaos<br></br> We're not just writing; we're resurrecting history, one elegant stroke at a time.
+                    <img style={{ filter: "" }} className="p-3 img-fluid" src='http://localhost:3000/image/logo.png'></img>
+                    <p className="container text-white fs-3">
+                        <div className="dm-serif-text-regular text-white fs-1">NEXTSTAR LEAGUE</div>
+                        Not just about a ball and 22 players. It's about continuing the lagacy of a lengendary.<br></br>
+                        NextStar League, becoming the next star!
                     </p>
-                    <a href='/about' className="btn btn-info my-4 px-5 btn-lg" style={{ borderRadius: '30px' }}>
-                        <span style={{ color: "brown" }}>Learn more!</span>
+                    <a href='/contact' className="btn btn-danger my-4 px-5 btn-lg" style={{ borderRadius: '30px' }}>
+                        <span style={{ color: "" }}>Learn more!</span>
                     </a>
-                </motion.div>
+                </div>
             </div>
         </div>
     );
