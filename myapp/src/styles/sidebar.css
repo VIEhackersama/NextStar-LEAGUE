@@ -1,0 +1,47 @@
+/* Toàn bộ card trong sidebar */
+.sidebar-card {
+  background-color: #1c1c1c !important;
+  color: #eaeaea !important;
+  border: none !important;
+  border-radius: 15px !important;
+}
+
+/* Tiêu đề trong card */
+.sidebar-card h5 {
+  font-family: "Russo One", "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  color: #00bfff; /* xanh thể thao */
+  margin-bottom: 15px;
+}
+
+/* Liên kết trong related news */
+.sidebar-card a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar-card a:hover {
+  color: #00bfff;
+}
+
+/* Author & Details text */
+.sidebar-card p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Badge tags */
+.sidebar-card .badge {
+  background-color: #333 !important;
+  color: #eee !important;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-card .badge:hover {
+  background-color: #00bfff !important;
+  color: #fff !important;
+}
