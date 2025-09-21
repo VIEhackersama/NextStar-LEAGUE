@@ -1,50 +1,61 @@
-/* Import font thể thao */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-.custom-navbar {
-  background-color: #01002b; /* tím đậm EPL */
-  padding: 1.75rem 1.5rem; 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+:root{
+  /* chiều cao header sẽ được JS set động */
+  --header-h: 72px;
+}
+
+/* Navbar cố định trên cùng */
+.custom-navbar{
+  background: #01002b;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  padding: .9rem 1rem;            /* đừng padding quá lớn để khỏi che nội dung */
+  z-index: 1000;
+}
+
+/* Brand */
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: "DM Serif Text", serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: .3px;
+  color: #fff !important;
+}
+
+/* Links */
+.nav-links .nav-link{
+  color: #ffffff !important;
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.5rem;
-}
-
-.brand-text {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #ffffff !important;
-  letter-spacing: 1px;
-}
-
-.nav-links .nav-link {
-  color: #ffffff !important;
-  font-weight: 500;
-  margin-right: 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links .nav-link:hover {
-  color: #00ff99 !important; /* xanh neon thể thao */
-}
-
-.btn-auth {
-  border-radius: 20px;
-  font-size: 0.85rem;
-  padding: 4px 12px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  margin-right: .75rem;
+  transition: color .25s ease, opacity .25s ease;
+}
+.nav-links .nav-link:hover{ color: #58a6ff !important }
+.nav-links .nav-link.active{ color: #ffc107 !important }
+
+/* Auth buttons (Register/Login/User) */
+.btn-auth{
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 700;
+  letter-spacing: .15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.25);
+  border-width: 2px;
+}
+.btn-auth:hover{ transform: translateY(-1px) }
+
+/* Fix collapse spacing trên mobile */
+@media (max-width: 991.98px){
+  #main-navbar{
+    padding-top: .5rem;
+    padding-bottom: .25rem;
+  }
 }
 
-.btn-auth:hover {
-  transform: scale(1.05);
-}
-.dm-serif-text-regular {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.dm-serif-text-regular-italic {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: italic;
-}
+/* Nếu bạn bọc nội dung trong #app-main, khoảng đệm sẽ đặt tại đó.
+   Nếu không, script trong Header sẽ set padding-top cho body. */

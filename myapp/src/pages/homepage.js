@@ -490,7 +490,7 @@ function Homepage() {
       <h1>MEDIA</h1>
       <Carousel fade interval={2600}>
         <Carousel.Item>
-          <img className="d-block w-100" src="/image/new3.webp" alt="Premier League" />
+          <img className="d-block w-100" src="/image/image91923.jpg" alt="Premier League" />
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src="/image/background.avif" alt="Clubs" />

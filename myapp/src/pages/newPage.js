@@ -1,75 +1,190 @@
-import React from "react";
-import { Container, Row, Col, Card, Table } from "react-bootstrap";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import data from "../assets/data/new.json";
-import "../styles/new.css"; // chứa CSS custom nếu cần
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaSearch } from "react-icons/fa";
 
-function NewsPage() {
+import NewsCard from "../components/NewsCard";
+import QuickView from "../components/QuickView";
+import StandingsCard from "../components/StandingsCard";
+
+import data from "../assets/data/new.json";
+import "../styles/new.css";
+import "../styles/quickview.css"; 
+
+const BOOKMARK_KEY = "news_bookmarks_v1";
+const readBookmarks = () => { try { return JSON.parse(localStorage.getItem(BOOKMARK_KEY) || "[]"); } catch { return []; } };
+const writeBookmarks = (ids) => localStorage.setItem(BOOKMARK_KEY, JSON.stringify(ids));
+const inferCategory = (n) => {
+  const s = `${n.title} ${n.content}`.toLowerCase();
+  if (/transfer|sign|joins|contract|loan|fee|window/.test(s)) return "Transfers";
+  if (/manager|sack|boss|coach/.test(s)) return "Managers";
+  if (/stadium|capacity|facility|infrastructure/.test(s)) return "Club";
+  if (/record|ballon|award|milestone/.test(s)) return "Records";
+  return "General";
+};
+
+export default function NewsPage() {
+  const news = data.news || [];
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("All");
+  const [sortBy, setSortBy] = useState("latest");
+  const [bookmarks, setBookmarks] = useState(readBookmarks());
+  const [onlyBookmarks, setOnlyBookmarks] = useState(false);
+  const [limit, setLimit] = useState(8);
+  const [quickView, setQuickView] = useState({ open: false, item: null });
+
+  useEffect(() => { setBookmarks(readBookmarks()); }, []);
+
+  const categories = useMemo(() => {
+    const set = new Set(news.map(inferCategory));
+    return ["All", ...Array.from(set).sort()];
+  }, [news]);
+
+  const processed = useMemo(() => {
+    let arr = news.map(n => ({ ...n, _cat: inferCategory(n) }));
+    if (query) {
+      const q = query.toLowerCase();
+      arr = arr.filter(n => `${n.title} ${n.summary} ${n.content}`.toLowerCase().includes(q));
+    }
+    if (category !== "All") arr = arr.filter(n => n._cat === category);
+    if (onlyBookmarks) arr = arr.filter(n => bookmarks.includes(n.id));
+
+    switch (sortBy) {
+      case "comments": arr.sort((a, b) => (b.comments || 0) - (a.comments || 0)); break;
+      case "title": arr.sort((a, b) => a.title.localeCompare(b.title)); break;
+      default: arr.sort((a, b) => (b.id || 0) - (a.id || 0));
+    }
+    return arr;
+  }, [news, query, category, sortBy, onlyBookmarks, bookmarks]);
+
+  const visible = processed.slice(0, limit);
+  const canLoadMore = limit < processed.length;
+
+  const toggleBookmark = (id) => {
+    setBookmarks(prev => {
+      const next = prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id];
+      writeBookmarks(next);
+      return next;
+    });
+  };
+
+  const sentinelRef = useRef(null);
+  useEffect(() => {
+    const el = sentinelRef.current; if (!el) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => e.isIntersecting && setLimit(l => Math.min(l + 6, processed.length)));
+    }, { rootMargin: "200px" });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [processed.length]);
+
   return (
     <div className="news-container">
-      <Container fluid>
-        <Row>
-          
-          <Col md={8}>
-            <h2 className="fw-bold mb-4 text-white">Latest Premier League News</h2>
-            <Row className="g-4">
-              {data.news.map((news) => (
-                <Col md={6} key={news.id}>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 200 }}
-                  >
-                    <Card className="h-100 shadow-sm border-0 news-card">
-                      <Link
-                        to={`/news/${news.id}`}
-                        className="text-decoration-none text-light"
-                      >
-                        <Card.Img variant="top" src={news.image} />
-                        <Card.Body>
-                          <Card.Title className="fw-bold">{news.title}</Card.Title>
-                          <Card.Text>
-                            <strong>{news.summary}</strong>
-                          </Card.Text>
-                        </Card.Body>
-                      </Link>
-                    </Card>
-                  </motion.div>
-                </Col>
-              ))}
-            </Row>
+      <Container className="topbar">
+        <Row className="g-2 align-items-center">
+          <Col lg={5}>
+            <div className="search-wrap">
+              <FaSearch />
+              <input
+                className="search-input"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search news, clubs, transfers…"
+                aria-label="Search news"
+              />
+            </div>
           </Col>
-
-          {/* Bảng xếp hạng bên phải */}
-          <Col md={4}>
-            <h3 className="fw-bold mb-3 text-center text-white">
-              Premier League Standings
-            </h3>
-            <Card className="shadow-sm border-0 news-card">
-              <Table striped bordered hover responsive size="sm" className="standings-table mb-0">
-                <thead className="table-dark">
-                  <tr>
-                    <th>#</th>
-                    <th>Club</th>
-                    <th>Pts</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.standings.map((team) => (
-                    <tr key={team.rank}>
-                      <td>{team.rank}</td>
-                      <td>{team.club}</td>
-                      <td>{team.points}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </Card>
+          <Col xs={6} lg={3}>
+            <Form.Select
+              value={category}
+              onChange={(e) => { setCategory(e.target.value); setLimit(8); }}
+              className="select-control"
+            >
+              {categories.map(c => <option value={c} key={c}>{c}</option>)}
+            </Form.Select>
+          </Col>
+          <Col xs={6} lg={2}>
+            <Form.Select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="select-control"
+            >
+              <option value="latest">Sort: Latest</option>
+              <option value="comments">Sort: Most comments</option>
+              <option value="title">Sort: Title (A→Z)</option>
+            </Form.Select>
+          </Col>
+          <Col lg={2} className="d-flex justify-content-lg-end">
+            <Form.Check
+              type="switch"
+              id="bm-switch"
+              label="Bookmarks only"
+              checked={onlyBookmarks}
+              onChange={(e) => setOnlyBookmarks(e.target.checked)}
+              className="bookmark-switch"
+            />
           </Col>
         </Row>
       </Container>
+
+      <Container fluid>
+        <Row className="g-4">
+          <Col lg={8}>
+            <h2 className="section-title">Latest Premier League News</h2>
+            <Row className="g-4">
+              {visible.map((n) => (
+                <Col md={6} key={n.id}>
+                  <NewsCard
+                    item={n}
+                    isBookmarked={bookmarks.includes(n.id)}
+                    toggleBookmark={toggleBookmark}
+                    onQuickView={(item) => setQuickView({ open: true, item })}
+                    linkState={{ from: "/news" }}
+                  />
+                </Col>
+              ))}
+            </Row>
+
+            <div ref={sentinelRef} className="load-sentinel" />
+            <div className="load-more-wrap">
+              {canLoadMore && (
+                <Button variant="outline-light" onClick={() => setLimit(l => l + 6)} className="btn-auth">
+                  Load more
+                </Button>
+              )}
+              {!processed.length && (
+                <div className="empty-state">No articles found. Try clearing filters.</div>
+              )}
+            </div>
+          </Col>
+
+          <Col lg={4}>
+            {/* 👇 Bọc cả standings + ticker trong wrapper sticky */}
+            <div className="sidebar-sticky">
+              <StandingsCard standings={data.standings || []} />
+
+              <div className="mini-ticker">
+                <div className="mini-ticker-label">Trending</div>
+                <div className="mini-ticker-track">
+                  <div className="mini-ticker-inner">
+                    {news.slice(0, 8).map(n => <span key={n.id}>{n.title}</span>)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+
+      <AnimatePresence>
+        {quickView.open && (
+          <QuickView
+            show={quickView.open}
+            item={quickView.item}
+            onHide={() => setQuickView({ open: false, item: null })}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
-
-export default NewsPage;

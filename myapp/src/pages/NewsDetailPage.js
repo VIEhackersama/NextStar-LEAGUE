@@ -1,176 +1,167 @@
-import React from "react";
-import { useParams, Link } from "react-router-dom";
-import { Button, Card } from "react-bootstrap";
+import React, { useMemo, useEffect } from "react";
+import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
+import { Container, Row, Col, Card, Badge, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
+import { FaChevronLeft, FaCommentAlt, FaShareAlt, FaAngleLeft, FaAngleRight } from "react-icons/fa";
+
 import data from "../assets/data/new.json";
-import '../styles/sidebar.css'
-function NewsDetailPage() {
+import "../styles/sidebar.css";
+
+const readingTime = (text) => Math.max(1, Math.round((text?.split(/\s+/).length || 120) / 200));
+const inferCategory = (n) => {
+  const s = `${n.title} ${n.content}`.toLowerCase();
+  if (/transfer|sign|joins|contract|loan|fee|window/.test(s)) return "Transfers";
+  if (/manager|sack|boss|coach/.test(s)) return "Managers";
+  if (/stadium|capacity|facility|infrastructure/.test(s)) return "Club";
+  if (/record|ballon|award|milestone/.test(s)) return "Records";
+  return "General";
+};
+
+function shareArticle(article) {
+  const url = window.location.href;
+  if (navigator.share) {
+    navigator.share({ title: article.title, text: article.summary, url }).catch(() => {});
+  } else {
+    navigator.clipboard?.writeText(url);
+    alert("Link copied to clipboard");
+  }
+}
+
+export default function NewsDetailPage() {
   const { id } = useParams();
-  const { news: newsData } = data;
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const news = newsData.find((n) => n.id === parseInt(id));
+  const list = data.news || [];
+  const index = useMemo(() => list.findIndex((n) => String(n.id) === String(id)), [list, id]);
+  const article = index >= 0 ? list[index] : null;
 
-  if (!news) {
+  useEffect(() => { document.title = article ? `${article.title} — News` : "News"; }, [article]);
+
+  if (!article) {
     return (
-      <div style={{ textAlign: "center", padding: "80px" }}>
+      <div style={{ textAlign: "center", padding: 80 }}>
         <h3 style={{ color: "#dc3545" }}>❌ This article does not exist!</h3>
-        <Link to="/" className="btn btn-primary mt-3">
-          Back to Home
-        </Link>
+        <Link to="/news" className="btn btn-primary mt-3">Back to News</Link>
       </div>
     );
   }
 
+  const minutes = readingTime(article.content);
+  const cat = inferCategory(article);
+  const prev = index > 0 ? list[index - 1] : null;
+  const next = index < list.length - 1 ? list[index + 1] : null;
+
+  const handleBack = () => {
+    const from = location.state?.from;
+    if (from && from.startsWith("/news")) navigate(-1);
+    else navigate("/news");
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -30 }}
-      transition={{ duration: 0.6 }}
-      style={{
-        minHeight: "100vh",
-        background: "linear-gradient(135deg, #080314ff, #130524ff)", // xanh biển -> tím
-        padding: "50px 20px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          background: "rgba(23, 21, 21, 0.95)", // nền trắng bán trong suốt
-          borderRadius: "20px",
-          padding: "40px",
-          boxShadow: "0 12px 40px rgba(0,0,0,0.2)",
-        }}
-      >
-        {/* Header hình ảnh + tiêu đề */}
-        <motion.div
-          initial={{ scale: 0.95, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          style={{ textAlign: "center", marginBottom: "30px" }}
-        >
-          <img
-            src={news.image}
-            alt={news.title}
-            style={{
-              maxWidth: "100%",
-              borderRadius: "15px",
-              marginBottom: "20px",
-              boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
-            }}
-          />
-          <h2 className="fw-bold mb-2" style={{ color: "#9098e1ff" }}>
-            {news.title}
-          </h2>
-          <p style={{ color: "#6c757d" }}>💬 {news.comments} comments</p>
-        </motion.div>
+    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -30 }} transition={{ duration: 0.5 }} className="news-detail-bg">
+      <Container className="news-detail-wrap">
+        <Row className="align-items-center mb-3 g-2">
+          <Col xs="auto">
+            <Button variant="outline-light" className="btn-auth d-inline-flex align-items-center gap-2" onClick={handleBack}>
+              <FaChevronLeft /> Back to News
+            </Button>
+          </Col>
+          <Col className="d-none d-md-block">
+            <div className="crumbs">Home / News / <span>{article.title}</span></div>
+          </Col>
+          <Col xs="auto" className="ms-auto">
+            <Button variant="outline-warning" className="btn-auth d-inline-flex align-items-center gap-2" onClick={() => shareArticle(article)}>
+              <FaShareAlt /> Share
+            </Button>
+          </Col>
+        </Row>
 
-        {/* Nội dung + Sidebar */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr", // nội dung rộng hơn
-            gap: "30px",
-          }}
-        >
-          {/* Nội dung chính */}
-          <div>
-            <p
-              style={{
-                fontSize: "1.15rem",
-                lineHeight: "1.8",
-                color: "#eaeff4ff", 
-                textAlign: "justify", // dàn đều 2 bên
-                whiteSpace: "pre-line",
-              }}
-            >
-              {news.content}
-            </p>
-            <Link to="/">
-              <Button
-                variant="primary"
-                className="mt-4"
-                style={{
-                  padding: "10px 25px",
-                  borderRadius: "10px",
-                  background: "#1d0556ff",
-                  border: "none",
-                }}
-              >
-                ⬅ Back
-              </Button>
-            </Link>
-          </div>
+        <Row className="g-4">
+          <Col lg={8}>
+            <Card className="news-card">
+              <div className="news-hero">
+                <img src={article.image} alt={article.title} />
+                <div className="news-hero-badges">
+                  <Badge bg="" className="badge-glass">{cat}</Badge>
+                  <Badge bg="" className="badge-glass">{minutes} min read</Badge>
+                  <Badge bg="" className="badge-glass"><FaCommentAlt style={{ marginRight: 6 }} />{article.comments}</Badge>
+                </div>
+              </div>
+              <Card.Body className="news-detail-body">
+                <h1 className="news-detail-title">{article.title}</h1>
+                <p className="news-detail-summary">{article.summary}</p>
+                <div className="news-detail-content">{article.content}</div>
 
-          {/* Sidebar gồm Related + Author + Details + Tags */}
-          <div>
-            <Card className="mb-4 shadow-sm sidebar-card" style={{ borderRadius: "15px" }}>
-              <Card.Body>
-                <h5 className="fw-bold">📌 Related News</h5>
-                <ul style={{ paddingLeft: "20px", marginTop: "15px" }}>
-                  {newsData
-                    .filter((item) => item.id !== news.id)
-                    .slice(0, 3)
-                    .map((item) => (
-                      <li key={item.id}>
-                        <Link
-                          to={`/news/${item.id}`}
-                          style={{ textDecoration: "none" }}
-                        >
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
-                </ul>
-              </Card.Body>
-            </Card>
-
-            <Card className="mb-4 shadow-sm sidebar-card" style={{ borderRadius: "15px" }}>
-              <Card.Body>
-                <h5 className="fw-bold">👤 Author</h5>
-                <p style={{ marginTop: "10px", color: "#6c757d" }}>
-                  Written by <b>{news.author || "Admin"}</b>
-                </p>
-                <p className="small">
-                  {news.authorBio ||
-                    "Professional writer, sharing sports updates daily."}
-                </p>
-              </Card.Body>
-            </Card>
-
-            <Card className="mb-4 shadow-sm sidebar-card" style={{ borderRadius: "15px" }}>
-              <Card.Body>
-                <h5 className="fw-bold">📊 Details</h5>
-                <p>Category: <b>{news.category || "Sports"}</b></p>
-                <p>Date: <b>{news.date || "2025-09-18"}</b></p>
-                <p>Views: <b>{news.views || "1,000+"}</b></p>
-              </Card.Body>
-            </Card>
-
-            <Card className="shadow-sm sidebar-card" style={{ borderRadius: "15px" }}>
-              <Card.Body>
-                <h5 className="fw-bold">🏷 Tags</h5>
-                <div style={{ marginTop: "10px" }}>
-                  {(news.tags || ["Football", "Premier League"]).map(
-                    (tag, index) => (
-                      <span
-                        key={index}
-                        className="badge bg-secondary me-2 mb-2"
-                        style={{ fontSize: "0.9rem" }}
-                      >
-                        {tag}
-                      </span>
-                    )
-                  )}
+                <div className="prev-next">
+                  <div className="nav-item">
+                    {prev ? (
+                      <Link className="arrow-link" to={`/news/${prev.id}`} state={{ from: "/news" }}>
+                        <FaAngleLeft /> <span>{prev.title}</span>
+                      </Link>
+                    ) : <span className="disabled">Start of list</span>}
+                  </div>
+                  <div className="nav-item text-end">
+                    {next ? (
+                      <Link className="arrow-link" to={`/news/${next.id}`} state={{ from: "/news" }}>
+                        <span>{next.title}</span> <FaAngleRight />
+                      </Link>
+                    ) : <span className="disabled">End of list</span>}
+                  </div>
                 </div>
               </Card.Body>
             </Card>
-          </div>
-        </div>
-      </div>
+          </Col>
+
+          <Col lg={4}>
+            <div className="sidebar-sticky">{/* wrapper sticky cho cột phải */}
+              <Card className="mb-4 shadow-sm sidebar-card">
+                <Card.Body>
+                  <h5 className="fw-bold">📌 Related News</h5>
+                  <ul className="related-list">
+                    {list.filter((it) => it.id !== article.id).slice(0, 5).map((it) => (
+                      <li key={it.id}>
+                        <Link to={`/news/${it.id}`} state={{ from: "/news" }}>
+                          <img src={it.image} alt={it.title} />
+                          <span>{it.title}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </Card.Body>
+              </Card>
+
+              <Card className="mb-4 shadow-sm sidebar-card">
+                <Card.Body>
+                  <h5 className="fw-bold">👤 Author</h5>
+                  <p className="muted">Written by <b>{article.author || "Admin"}</b></p>
+                  <p className="muted small">{article.authorBio || "Professional writer, sharing sports updates daily."}</p>
+                </Card.Body>
+              </Card>
+
+              <Card className="mb-4 shadow-sm sidebar-card">
+                <Card.Body>
+                  <h5 className="fw-bold">📊 Details</h5>
+                  <p className="muted">Category: <b>{article.category || cat}</b></p>
+                  <p className="muted">Date: <b>{article.date || "2025-09-18"}</b></p>
+                  <p className="muted">Views: <b>{article.views || "1,000+"}</b></p>
+                </Card.Body>
+              </Card>
+
+              <Card className="shadow-sm sidebar-card">
+                <Card.Body>
+                  <h5 className="fw-bold">🏷 Tags</h5>
+                  <div className="tags">
+                    {(article.tags || ["Football", "Premier League"]).map((tag, i) => (
+                      <span key={i} className="badge tag">{tag}</span>
+                    ))}
+                  </div>
+                </Card.Body>
+              </Card>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </motion.div>
   );
 }
-
-export default NewsDetailPage;
