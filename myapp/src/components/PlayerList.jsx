@@ -14,7 +14,6 @@ const PlayerList = ({ clubId }) => {
                 const auth = getAuth();
                 const token = auth?.token;
 
-                // nếu có clubId thì fetch theo club, không thì fetch tất cả
                 const url = clubId
                     ? `http://localhost:8080/api/clubs/${clubId}/players`
                     : `http://localhost:8080/api/players`;

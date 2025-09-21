@@ -23,7 +23,6 @@ const TeamDetail = () => {
     <div className="team-detail-page">
       <div className="background-image-container"></div>
 
-      {/* ====== PHẦN THÔNG TIN ĐỘI ====== */}
       <Container className="team-detail-container">
         <div className="content-wrapper">
           <h1 className="team-detail-name">{team.name}</h1>

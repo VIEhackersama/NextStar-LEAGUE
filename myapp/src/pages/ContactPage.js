@@ -57,7 +57,6 @@ function ContactPage() {
 
     try {
       setLoading(true);
-      // Demo: lưu localStorage như một "ticket"
       const all = JSON.parse(localStorage.getItem("ns_contact_msgs") || "[]");
       all.push({ id: Date.now(), ...form });
       localStorage.setItem("ns_contact_msgs", JSON.stringify(all));
