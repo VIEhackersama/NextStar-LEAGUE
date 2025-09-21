@@ -1,5 +1,16 @@
-/* ===== App layout (keep this) ===== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root { --header-h: 72px; }   /* sẽ được Header cập nhật đúng chiều cao thực tế */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
 
 html, body, #root { height: 100%; }
 body {

@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -33,14 +35,12 @@ public class Role {
 
     @Column(name = "role_name", nullable = false, unique = true, length = 50)
     private String roleName;
-     @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "roles")
+    @JsonIgnore
+
     private List<Account> accounts = new ArrayList<>();
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "role_privileges",
-            joinColumns = @JoinColumn(name = "role_id"),
-            inverseJoinColumns = @JoinColumn(name = "privilege_id")
-    )
+    @JoinTable(name = "role_privileges", joinColumns = @JoinColumn(name = "role_id"), inverseJoinColumns = @JoinColumn(name = "privilege_id"))
     private Set<Privilege> privileges = new HashSet<>();
 }
