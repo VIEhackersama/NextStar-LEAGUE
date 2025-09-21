@@ -33,7 +33,8 @@
 
 /* Badge tags */
 .sidebar-card .badge {
-  background-color: #981717 !important;
+
+  background-color: #333 !important;
   color: #eee !important;
   font-weight: 500;
   border-radius: 12px;
