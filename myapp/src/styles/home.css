@@ -34,13 +34,11 @@
 @keyframes tickerMove{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
 /* ---------- Carousel ---------- */
-.carousel-item{ max-height:520px }
-.carousel-item img{ max-height:520px; width:100%; object-fit:cover; filter:brightness(.9) }
-.carousel-caption{
-  background:rgba(0,0,0,.35);
-  border:1px solid var(--border);
-  border-radius:12px;
-  backdrop-filter:blur(4px);
+.carousel-item::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(0deg, rgba(0,0,0,.18), rgba(0,0,0,.18));
+  mix-blend-mode: multiply; /* tăng độ đậm mà không làm mềm ảnh */
 }
 
 /* ---------- Spotlight ---------- */

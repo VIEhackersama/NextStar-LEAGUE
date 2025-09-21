@@ -1,42 +1,84 @@
-/* Nền xanh dương cho trang NewsPage */
-.news-container {
-  min-height: 100vh;
-  background: linear-gradient(to right, #0d1630); /* xanh dương đậm */
-  padding: 40px 0;
+:root{
+  --nc-text:#E6EDF3; --nc-text-2:#A8B3C7; --nc-border:rgba(88,166,255,.25);
+  --nc-glass:rgba(255,255,255,.08); --nc-brand:#ffc107;
 }
 
-/* Card tin tức */
-.news-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Trang list News */
+.news-container{
+  min-height:100vh;
+  background:radial-gradient(1200px 600px at 10% -10%, rgba(88,166,255,.12), transparent),
+             radial-gradient(800px 400px at 95% 10%, rgba(255,193,7,.12), transparent),
+             linear-gradient(135deg,#0d1630,#0c1327,#0a1121);
+  padding: 28px 0 60px; /* header đã được chừa ở .app-main */
+  color:var(--nc-text);
 }
 
-.news-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
-}
+/* top bar */
+.topbar{ margin-bottom:18px }
+.search-wrap{ display:flex; align-items:center; gap:.6rem; background:#0c1220; border:1px solid #22304a; border-radius:14px; padding:.6rem .9rem }
+.search-input{ flex:1; background:transparent; border:0; outline:none; color:var(--nc-text) }
+.select-control{ color:var(--nc-text); background:#0c1220; border:1px solid #22304a; border-radius:12px }
+.select-control:focus{ border-color:var(--nc-brand); box-shadow:0 0 0 .2rem rgba(255,193,7,.2) }
 
-/* Tiêu đề & chữ tin tức */
-.news-card .card-title {
-  font-size: 1.1rem;
-  color: #f8f9fa;
-}
+/* section */
+.section-title{ font-weight:800; letter-spacing:.2px; margin:8px 0 14px }
 
-.news-card .card-text {
-  font-size: 0.9rem;
-  color: #dee2e6;
-}
+/* cards */
+.news-card{ background:var(--nc-glass); border:1px solid var(--nc-border); border-radius:16px; box-shadow:0 14px 30px rgba(0,0,0,.35); overflow:hidden; transition:transform .25s, box-shadow .25s, border-color .25s }
+.news-card:hover{ transform:translateY(-4px); box-shadow:0 24px 44px rgba(0,0,0,.45); border-color:rgba(88,166,255,.45) }
+.news-thumb-wrap{ position:relative; aspect-ratio:16/9; overflow:hidden }
+.news-thumb{ width:100%; height:100%; object-fit:cover; display:block }
+.news-thumb-badges{ position:absolute; left:10px; top:10px; display:flex; gap:8px }
+.badge-glass{ color:var(--nc-text-2); border:1px solid var(--nc-border); background:rgba(13,18,32,.55); border-radius:999px; padding:.2rem .55rem }
 
-/* Bảng xếp hạng giữ style Bootstrap */
-.standings-table {
-  border-radius: 8px;
-  overflow: hidden;
-}
-.news-detail-container {
-  background-color: #aca5cf;
-  min-height: 100vh; 
-  padding: 2rem;
-}
+.news-title{ color:#e9f1ff; font-weight:800; margin-top:.3rem }
+.news-summary{ color:#a8b3c7; margin:.35rem 0 .6rem }
+.news-meta{ display:flex; align-items:center; gap:16px; color:var(--nc-text-2) }
+.share-btn{ background:transparent; border:0; color:var(--nc-text); opacity:.85 }
+.bookmark-btn{ position:absolute; right:10px; top:10px; width:36px; height:36px; border-radius:999px; border:1px solid var(--nc-border); background:rgba(13,18,32,.6); color:#fff; display:flex; align-items:center; justify-content:center }
 
+/* 2 nút đồng bộ */
+.news-actions{ display:flex; gap:.6rem; margin-top:.6rem; align-items:stretch }
+.news-actions .btn{ height:40px; padding:0 14px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-weight:700; letter-spacing:.15px; line-height:1 }
+.news-actions .btn.btn-outline-warning{ border-width:2px }
+
+/* sidebar wrapper sticky (đặt trong JSX) */
+.sidebar-sticky{ position:sticky; top:18px }
+
+/* standings card */
+.standings-card{
+  border:1px solid var(--nc-border);
+  background:rgba(13,18,32,.88);      /* OPAQUE hơn để chữ rõ */
+  border-radius:16px; box-shadow:0 14px 30px rgba(0,0,0,.35);
+  margin-bottom:14px; overflow:hidden;
+}
+.standings-header{
+  padding:12px 14px; border-bottom:1px solid var(--nc-border);
+  font-weight:800; letter-spacing:.2px; color:#e9f1ff; /* 👈 chữ sáng */
+}
+.standings-scroll{ max-height:540px; overflow:auto }
+.standings-table thead th{
+  position:sticky; top:0;
+  background:#0b1427;                   /* 👈 nền đặc (không mờ) */
+  color:#e9f1ff; z-index:1;
+  border-bottom:1px solid var(--nc-border);
+}
+.standings-table thead th:first-child{ border-top-left-radius:16px }
+.standings-table thead th:last-child{ border-top-right-radius:16px }
+.standings-table tbody tr:hover{ background:rgba(88,166,255,.08) }
+
+/* ticker dưới standings, không đè */
+.mini-ticker{
+  position:relative; z-index:0;
+  display:flex; align-items:center; gap:.6rem;
+  border:1px solid var(--nc-border); background:rgba(13,18,32,.55);
+  border-radius:14px; padding:.35rem .6rem; margin-top:14px;
+}
+.mini-ticker-label{ font-weight:800; color:#111; background:linear-gradient(135deg,#ffc107,#ffd75a); border-radius:999px; padding:.18rem .55rem }
+.mini-ticker-track{ overflow:hidden; flex:1 }
+.mini-ticker-inner{ display:inline-flex; gap:2rem; white-space:nowrap; animation:miniMove 22s linear infinite }
+.mini-ticker-inner span{ color:var(--nc-text-2) }
+@keyframes miniMove{ from{ transform:translateX(0) } to{ transform:translateX(-50%) } }
+
+/* table reset */
+.table > :not(caption) > * > *{ background:transparent; color:var(--nc-text) }

@@ -1,8 +1,16 @@
-import "./App.css";
-import Layout from "./layout/layout";
+import React from "react";
+import Header from "./components/header";
+import Routers from "../src/router/router";
+import Footer from "./components/footer";
 
-function App() {
-  return <Layout/>;
+export default function App() {
+  return (
+    <>
+      <Header />
+      <main id="app-main" className="app-main">
+        <Routers />
+      </main>
+      <Footer />
+    </>
+  );
 }
-
-export default App;
