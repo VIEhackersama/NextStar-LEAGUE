@@ -16,6 +16,7 @@ import ForgotPasswordPage from "../pages/ForgotPasswordPage";
 import ContactPage from "../pages/ContactPage";
 import PlayerList from '../components/PlayerList';
 import PlayersPage from '../pages/PlayerPage';
+import PostFeed from '../pages/PostFeed';
 
 
 const Routers = () => {
@@ -36,6 +37,7 @@ return (
     <Route path="/forgot-password" element={<ForgotPasswordPage />} />
     <Route path="/contact" element={<ContactPage />} />
     <Route path='/players' element={<PlayersPage></PlayersPage>}></Route>
+    <Route path='/feed' element={<PostFeed></PostFeed>}></Route>
     </Routes>
     </AnimatePresence>
 );
