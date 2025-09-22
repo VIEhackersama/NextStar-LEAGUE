@@ -1,5 +1,5 @@
-// import { motion } from 'framer-motion'
-
+import { motion } from 'framer-motion'
+import '../styles/header.css'
 export default function Abouthero() {
     return (
         <div>
@@ -20,12 +20,14 @@ export default function Abouthero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="position-relative text-center" style={{ zIndex: 2 }}>
-                    <img style={{ filter: "" }} className="p-3 img-fluid" src='http://localhost:3000/image/logo.png'></img>
-                    <p className="container text-white fs-3">
-                        <div className="dm-serif-text-regular text-white fs-1">NEXTSTAR LEAGUE</div>
+                    <div className='d-flex'>
+                        <img style={{ filter: "" }} className="py-3 img-fluid" src='http://localhost:3000/image/logo.png'></img>
+                        <div style={{fontSize:"75px"}} className="px-5 dm-serif-text-regular text-white brand">NEXTSTAR LEAGUE</div>
+                    </div>
+                    <div className="container nav-link text-white fs-3">
                         Not just about a ball and 22 players. It's about continuing the lagacy of a lengendary.<br></br>
                         NextStar League, becoming the next star!
-                    </p>
+                    </div>
                     <a href='/contact' className="btn btn-danger my-4 px-5 btn-lg" style={{ borderRadius: '30px' }}>
                         <span style={{ color: "" }}>Learn more!</span>
                     </a>
