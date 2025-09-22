@@ -45,6 +45,7 @@ export default function Routers() {
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/players" element={<PlayersPage />} />
+          <Route path='/feed' element={<PostFeed></PostFeed>}></Route>
         </Routes>
       </AnimatePresence>
     </>
