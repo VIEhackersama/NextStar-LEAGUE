@@ -11,7 +11,13 @@ export default function Header() {
   const { pathname } = useLocation();
 
   const [auth, setAuth] = useState(getAuth());
-
+  const isAdminLike =
+    !!auth &&
+    (
+      auth?.user?.isAdmin === true ||                                     // nếu BE trả về isAdmin
+      auth?.user?.email === "admin@example.com" ||                        // fallback theo email
+      (auth?.user?.username || "").toLowerCase() === "true admin"         // yêu cầu: tên = True Admin
+    );
   useLayoutEffect(() => {
     const applyHeaderHeight = () => {
       const h = navRef.current?.offsetHeight || 72;
@@ -72,6 +78,12 @@ export default function Header() {
             <Nav.Link as={Link} to="/news">News</Nav.Link>
             <Nav.Link as={Link} to="/feed">Feed</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+            {isAdminLike && (
+              <Nav.Link as={Link} to="/admin">Admin portal</Nav.Link>
+            )}
+            {isAdminLike && (
+              <Nav.Link as={Link} to="/postadmin">Post admin</Nav.Link>
+            )}
           </Nav>
 
           <Nav className="ms-auto align-items-lg-center mt-2 mt-lg-0">
