@@ -1,4 +1,3 @@
-// src/pages/AdminPortal.jsx
 import React, { useEffect, useState } from "react";
 import { AdminAPI } from "../components/adminapi";
 import { getAuth, logout } from "../services/auth";
