@@ -15,3 +15,92 @@
   gap: 1.5rem;
   padding: 1rem;
 }
+/* ===== Tooltip cho stat (hover/focus) ===== */
+.player-attrs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+.player-stat-row {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 8px 10px;
+  color: #e8ecff;
+  display: flex; align-items: center; justify-content: space-between;
+  cursor: default;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.player-stat-row:hover,
+.player-stat-row:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 212, 77, 0.35);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Tooltip bubble */
+.stat-tip::after {
+  content: attr(data-tip);
+  pointer-events: none;
+  position: absolute;
+  left: 50%; bottom: calc(100% + 8px);
+  transform: translateX(-50%) translateY(6px);
+  opacity: 0;
+  width: 220px;
+  background: rgba(15, 18, 48, 0.95);
+  color: #eaf0ff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.35;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  transition: opacity .16s ease, transform .16s ease;
+  z-index: 5;
+  text-align: center;
+  white-space: normal;
+}
+
+.stat-tip::before {
+  content: "";
+  position: absolute;
+  left: 50%; bottom: 100%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(255,255,255,0.15); /* viền nhỏ */
+  filter: drop-shadow(0 -1px 0 rgba(255,255,255,0.15));
+}
+
+.stat-tip:hover::after,
+.stat-tip:focus::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== Nút giá tiền nổi bật nhưng hợp tông ===== */
+.player-price-wrap {
+  margin-top: 12px;
+  display: flex; justify-content: flex-start;
+}
+
+.btn-authish {
+  font-weight: 800;
+  border-radius: 14px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 212, 77, 0.35);
+  box-shadow: 0 2px 0 rgba(0,0,0,.25);
+}
+
+/* Gradient vàng cam dịu để không lạc quẻ với nền xanh tím */
+.price-btn {
+  background: linear-gradient(135deg, #f6c644 0%, #ff9f2f 50%, #f2c94c 100%);
+  color: #112;
+  letter-spacing: 0.2px;
+}
+.price-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+.price-btn:active { transform: translateY(0); }
+
+.price-btn .coin { margin-right: 8px; }

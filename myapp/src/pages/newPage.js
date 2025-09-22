@@ -159,7 +159,7 @@ export default function NewsPage() {
           </Col>
 
           <Col lg={4}>
-            {/* 👇 Bọc cả standings + ticker trong wrapper sticky */}
+          <br></br><br></br>
             <div className="sidebar-sticky">
               <StandingsCard standings={data.standings || []} />
 

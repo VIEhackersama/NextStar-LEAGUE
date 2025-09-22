@@ -77,6 +77,7 @@ export default function Header() {
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/news">News</Nav.Link>
             <Nav.Link as={Link} to="/feed">Feed</Nav.Link>
+            <Nav.Link as={Link} to='/prediction'>Prediction</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
             {isAdminLike && (
               <Nav.Link as={Link} to="/admin">Admin portal</Nav.Link>

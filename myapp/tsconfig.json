@@ -2,10 +2,10 @@
   "compilerOptions": {
     /* Cơ bản */
     "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-
+     "resolveJsonModule": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler", // nếu dùng Vite; CRA thì dùng "Node"
     /* React */
     "jsx": "react-jsx", // React 17+
     "allowJs": true, // Cho phép dùng .js song song với TS

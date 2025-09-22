@@ -19,6 +19,7 @@ import PlayersPage from '../pages/PlayerPage';
 import PostFeed from '../pages/PostFeed';
 import AdminPortal from "../pages/Adminportal";
 import PostAdmin from "../pages/postadmin";
+import PredictionsPage from "../pages/PredictionPage";
 
 
 function ScrollToTop() {
@@ -50,6 +51,7 @@ export default function Routers() {
           <Route path="/admin" element={<AdminPortal />} /> 
           <Route path='/feed' element={<PostFeed></PostFeed>}></Route>
           <Route path="/postadmin" element={<PostAdmin/>} />   
+          <Route path="/prediction" element={<PredictionsPage></PredictionsPage>}></Route>
         </Routes>
       </AnimatePresence>
     </>

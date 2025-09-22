@@ -96,3 +96,42 @@
   font-weight: 700;
   box-shadow: 0 2px 0 rgba(0,0,0,.25);
 }
+/* src/styles/postfeed.css — bổ sung composer */
+.pf-composer.card {
+  background: #0b0b2b;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.pf-composer .form-label { color: #dfe6ff; }
+.pf-composer .form-control,
+.pf-composer .form-control:focus {
+  background: #0f1140;
+  color: #fff;
+  border-color: rgba(255,255,255,0.12);
+}
+.pf-composer .help {
+  color: #9aa4c1; font-size: 0.85rem;
+}
+.pf-composer .preview {
+  position: relative; overflow: hidden; border-radius: 14px;
+  background: #0f1140; border: 1px dashed rgba(255,255,255,.15);
+}
+.pf-composer .preview img {
+  width: 100%; height: 240px; object-fit: cover;
+}
+.pf-composer .badge-glass {
+  --glass-bg: rgba(255,255,255,.12);
+  --glass-bd: rgba(255,255,255,.22);
+  color: #fff; background: var(--glass-bg); border: 1px solid var(--glass-bd);
+  backdrop-filter: blur(6px); border-radius: 999px; padding: 6px 10px; font-size: 12px;
+}
+/* Placeholder màu trắng trong composer */
+.pf-composer .form-control::placeholder { color: #fff; opacity: .7; }
+.pf-composer .form-control::-webkit-input-placeholder { color: #fff; opacity: .7; } /* Chrome/Safari */
+.pf-composer .form-control::-moz-placeholder { color: #fff; opacity: .7; }        /* Firefox */
+.pf-composer .form-control:-ms-input-placeholder { color: #fff; opacity: .7; }     /* IE 10-11 */
+.pf-composer .form-control::-ms-input-placeholder { color: #fff; opacity: .7; }    /* Edge legacy */
+
+/* Tuỳ chọn: khi focus, làm placeholder mờ hơn một chút */
+.pf-composer .form-control:focus::placeholder { opacity: .45; }
