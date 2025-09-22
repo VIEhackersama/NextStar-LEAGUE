@@ -7,7 +7,7 @@ export default function Abouthero() {
                 <div
                     className="position-absolute top-0 start-0 w-100 h-100"
                     style={{
-                        backgroundImage: `url(https://media.discordapp.net/attachments/1399744388967563288/1413501305900630027/Full-table.png?ex=68cf46ec&is=68cdf56c&hm=2c643bea540137dab486cc431b69c27c05c8b79cad4b535cf6f1dac47ff6b529&=&format=webp&quality=lossless&width=1604&height=902)`,
+                        backgroundImage: `url(${process.env.PUBLIC_URL}/image/history2.png)`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
