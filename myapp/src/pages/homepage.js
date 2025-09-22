@@ -1,55 +1,9 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import {
-  Carousel,
-  Container,
-  Row,
-  Col,
-  Card,
-  Form,
-  Badge,
-  Button,
-  Offcanvas,
-} from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Carousel, Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import teamsData from "../assets/data/Premier.json";
-import "../styles/home.css";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaHeart,
-  FaRegHeart,
-  FaChevronLeft,
-  FaChevronRight,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import Abouthero from "../components/homehero";
-/* ---------- favorites helpers ---------- */
-const FAVE_KEY = "ns_faves";
-const loadFaves = () => {
-  try {
-    return JSON.parse(localStorage.getItem(FAVE_KEY) || "[]");
-  } catch {
-    return [];
-  }
-};
-const saveFaves = (ids) => localStorage.setItem(FAVE_KEY, JSON.stringify(ids));
-
-/* ---------- demo fixtures (nhiều trận) ---------- */
-const demoFixtures = [
-  { id: 1, homeId: 1, awayId: 2, time: "2025-09-20T19:00:00Z" },
-  { id: 2, homeId: 3, awayId: 4, time: "2025-09-21T13:30:00Z" },
-  { id: 3, homeId: 5, awayId: 6, time: "2025-09-22T16:30:00Z" },
-  { id: 4, homeId: 7, awayId: 8, time: "2025-09-23T18:45:00Z" },
-  { id: 5, homeId: 9, awayId: 10, time: "2025-09-24T14:00:00Z" },
-  { id: 6, homeId: 11, awayId: 12, time: "2025-09-25T19:00:00Z" },
-  { id: 7, homeId: 13, awayId: 14, time: "2025-09-26T13:30:00Z" },
-  { id: 8, homeId: 15, awayId: 16, time: "2025-09-27T16:30:00Z" },
-  { id: 9, homeId: 17, awayId: 18, time: "2025-09-28T18:45:00Z" },
-  { id: 10, homeId: 19, awayId: 20, time: "2025-09-29T14:00:00Z" },
-  { id: 11, homeId: 2, awayId: 5, time: "2025-10-01T19:00:00Z" },
-  { id: 12, homeId: 8, awayId: 11, time: "2025-10-03T17:30:00Z" },
-];
+import "../styles/home.css";
 
 /* ---------- news ticker demo ---------- */
 const demoNews = [
@@ -69,9 +23,7 @@ function NewsTicker({ items = [] }) {
       <div className="ticker-track">
         <div className="ticker-inner">
           {items.concat(items).map((t, i) => (
-            <span className="ticker-item" key={i}>
-              {t}
-            </span>
+            <span className="ticker-item" key={i}>{t}</span>
           ))}
         </div>
       </div>
@@ -101,251 +53,8 @@ function BackToTop() {
   );
 }
 
-
-function CompareOffcanvas({ show, onHide, teams }) {
-  const [aId, setAId] = useState("");
-  const [bId, setBId] = useState("");
-
-  useEffect(() => {
-    if (show && teams.length) {
-      setAId(String(teams[0].id));
-      setBId(String(teams[1]?.id || teams[0].id));
-    }
-  }, [show, teams]);
-
-  const byId = useMemo(() => {
-    const m = new Map();
-    teams.forEach((t) => m.set(String(t.id), t));
-    return m;
-  }, [teams]);
-
-  const A = byId.get(aId);
-  const B = byId.get(bId);
-  const age = (y) => (Number.isFinite(y) ? new Date().getFullYear() - y : "-");
-
-  return (
-    
-    <Offcanvas show={show} onHide={onHide} placement="end" className="compare-offcanvas">
-      <Offcanvas.Header closeButton closeVariant="white">
-        <Offcanvas.Title>Compare clubs</Offcanvas.Title>
-      </Offcanvas.Header>
-      <Offcanvas.Body>
-        <Form className="mb-3">
-          <Row className="g-2">
-            <Col xs={12} md={6}>
-              <Form.Label>Club A</Form.Label>
-              <Form.Select value={aId} onChange={(e) => setAId(e.target.value)}>
-                {teams.map((t) => (
-                  <option value={t.id} key={`a-${t.id}`}>{t.name}</option>
-                ))}
-              </Form.Select>
-            </Col>
-            <Col xs={12} md={6}>
-              <Form.Label>Club B</Form.Label>
-              <Form.Select value={bId} onChange={(e) => setBId(e.target.value)}>
-                {teams.map((t) => (
-                  <option value={t.id} key={`b-${t.id}`}>{t.name}</option>
-                ))}
-              </Form.Select>
-            </Col>
-          </Row>
-        </Form>
-
-        {A && B && (
-          <Row className="g-3">
-            {[A, B].map((T) => (
-              <Col md={6} key={T.id}>
-                <Card className="compare-card h-100">
-                  <div className="compare-logo-wrap">
-                    <img src={T.image} alt={T.name} />
-                  </div>
-                  <Card.Body>
-                    <Card.Title className="mb-1">{T.name}</Card.Title>
-                    <div className="cmp-line"><span>Country:</span><strong>{T.country || "-"}</strong></div>
-                    <div className="cmp-line"><span>Stadium:</span><strong>{T.stadium || "-"}</strong></div>
-                    <div className="cmp-line"><span>Founded:</span><strong>{T.founded || "-"}</strong></div>
-                    <div className="cmp-line"><span>Club age:</span><strong>{age(T.founded)} yrs</strong></div>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        )}
-      </Offcanvas.Body>
-    </Offcanvas>
-  );
-}
-
-function FixturesStrip({ fixtures, byId }) {
-  // SỬA: scroller là fixtures-scroll, không phải track
-  const scrollerRef = useRef(null);
-  const [canLeft, setCanLeft] = useState(false);
-  const [canRight, setCanRight] = useState(true);
-
-  const fmt = (iso) =>
-    new Date(iso).toLocaleString(undefined, {
-      weekday: "short",
-      hour: "2-digit",
-      minute: "2-digit",
-      day: "2-digit",
-      month: "short",
-    });
-
-  // cập nhật trạng thái mũi tên
-  useEffect(() => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const update = () => {
-      const { scrollLeft, scrollWidth, clientWidth } = el;
-      setCanLeft(scrollLeft > 0);
-      setCanRight(scrollLeft + clientWidth < scrollWidth - 2);
-    };
-    update();
-    el.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-    // chạy lại sau render để chắc chắn (ảnh/logo load xong)
-    const raf = requestAnimationFrame(update);
-    return () => {
-      el.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
-
-  const slide = (dir) => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const step = Math.round(el.clientWidth * 0.9);
-    el.scrollBy({ left: dir * step, behavior: "smooth" });
-  };
-
-  if (!fixtures.length) return null;
-
-  return (
-    <div className="fixtures-strip">
-      <div className="fixtures-title">Upcoming fixtures</div>
-
-      <button
-        type="button"
-        className={`arrow-btn left ${canLeft ? "" : "disabled"}`}
-        onClick={() => slide(-1)}
-        aria-label="Scroll left"
-        disabled={!canLeft}
-      >
-        <FaChevronLeft />
-      </button>
-      <button
-        type="button"
-        className={`arrow-btn right ${canRight ? "" : "disabled"}`}
-        onClick={() => slide(1)}
-        aria-label="Scroll right"
-        disabled={!canRight}
-      >
-        <FaChevronRight />
-      </button>
-
-      <div className="fixtures-scroll" ref={scrollerRef}>
-        <div className="fixtures-track">
-          {fixtures.map((fx) => {
-            const H = byId.get(String(fx.homeId));
-            const A = byId.get(String(fx.awayId));
-            return (
-              <div className="fixture-card" key={fx.id} title={`${H?.name} vs ${A?.name}`}>
-                <div className="fixture-team">
-                  <img src={H?.image} alt={H?.name} />
-                  <span>{H?.name || "Home"}</span>
-                </div>
-                <div className="fixture-vs">VS</div>
-                <div className="fixture-team">
-                  <img src={A?.image} alt={A?.name} />
-                  <span>{A?.name || "Away"}</span>
-                </div>
-                <div className="fixture-meta">{fmt(fx.time)}</div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* ======================== MAIN PAGE ======================== */
-function Homepage() {
-  const [search, setSearch] = useState("");
-  const [country, setCountry] = useState("All");
-  const [sortBy, setSortBy] = useState("name"); // name | foundedAsc | foundedDesc
-  const [favoritesOnly, setFavoritesOnly] = useState(false);
-  const [faves, setFaves] = useState(loadFaves());
-  const [showCompare, setShowCompare] = useState(false);
-
-  const teams = teamsData.premier_league_teams || [];
-
-  const byId = useMemo(() => {
-    const m = new Map();
-    teams.forEach((t) => m.set(String(t.id), t));
-    return m;
-  }, [teams]);
-
-  const countries = useMemo(() => {
-    const set = new Set(teams.map((t) => t.country).filter(Boolean));
-    return ["All", ...Array.from(set).sort()];
-  }, [teams]);
-
-  const filteredTeams = useMemo(() => {
-    let list = teams.filter((t) =>
-      t.name.toLowerCase().includes(search.toLowerCase())
-    );
-    if (country !== "All") list = list.filter((t) => t.country === country);
-    if (favoritesOnly) list = list.filter((t) => faves.includes(t.id));
-
-    switch (sortBy) {
-      case "foundedAsc":
-        list.sort((a, b) => (a.founded || 0) - (b.founded || 0));
-        break;
-      case "foundedDesc":
-        list.sort((a, b) => (b.founded || 0) - (a.founded || 0));
-        break;
-      default:
-        list.sort((a, b) => a.name.localeCompare(b.name));
-    }
-    return list;
-  }, [teams, search, country, sortBy, favoritesOnly, faves]);
-
-  const stats = useMemo(() => {
-    const total = teams.length;
-    const cset = new Set(teams.map((t) => t.country));
-    const years = teams.map((t) => t.founded).filter((y) => Number.isFinite(y));
-    const avg = years.length
-      ? Math.round(years.reduce((s, y) => s + y, 0) / years.length)
-      : "-";
-    return { total, countries: cset.size, avgFounded: avg };
-  }, [teams]);
-
-  // spotlight auto-rotate
-  const [spotlightIndex, setSpotlightIndex] = useState(0);
-  useEffect(() => {
-    setSpotlightIndex(0);
-    if (!filteredTeams.length) return;
-    const id = setInterval(
-      () => setSpotlightIndex((i) => (i + 1) % Math.min(filteredTeams.length, 12)),
-      5000
-    );
-    return () => clearInterval(id);
-  }, [filteredTeams]);
-  const spotlight = filteredTeams[spotlightIndex] || teams[0];
-
-  // toggle favorite
-  const toggleFav = (id) => {
-    setFaves((prev) => {
-      const next = prev.includes(id)
-        ? prev.filter((x) => x !== id)
-        : [...prev, id];
-      saveFaves(next);
-      return next;
-    });
-  };
-
+export default function Homepage() {
   return (
     <motion.div
       className="homepage-bg"
@@ -353,153 +62,128 @@ function Homepage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9 }}
     >
-      {/* 0) News ticker */}
+      {/* News ticker */}
       <NewsTicker items={demoNews} />
 
-      {/* 👇 Hero mới thêm vào */}
+      {/* Hero */}
       <Abouthero />
 
-      {/* 1) Hero / Carousel */}
-      
-
-      {/* 2) Spotlight */}
-      {spotlight && (
-        <Container className="py-4">
-          <motion.div
-            className="spotlight-card"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Row className="g-3 align-items-center">
-              <Col md={3}>
-                <img src={spotlight.image} alt={spotlight.name} className="spotlight-logo" loading="lazy" />
-              </Col>
-              <Col md={9}>
-                <h3 className="mb-1">{spotlight.name}</h3>
-                <p className="mb-2 spotlight-meta">
-                  <Badge bg="" className="badge-soft">🏟 {spotlight.stadium}</Badge>
-                  <Badge bg="" className="badge-soft ms-2">📅 {spotlight.founded}</Badge>
-                  <Badge bg="" className="badge-soft ms-2">🌍 {spotlight.country}</Badge>
-                </p>
-                <Button as={Link} to={`/team/${spotlight.id}`} variant="outline-warning" className="btn-auth">
-                  View club
-                </Button>
-              </Col>
-            </Row>
-          </motion.div>
-        </Container>
-      )}
-
-      {/* 3) Fixtures strip */}
-      <Container className="pb-3">
-        <FixturesStrip fixtures={demoFixtures} byId={byId} />
-      </Container>
-
-      {/* 4) Filters + stats + compare */}
-      <Container className="pt-2 pb-4">
-        <Row className="g-3 align-items-end filter-bar">
-          <Col md={6}>
-            <Form.Control
-              type="text"
-              placeholder="🔍 Search for a club..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="shadow search-bar"
-            />
-          </Col>
-          <Col xs={6} md={3}>
-            <Form.Select value={country} onChange={(e) => setCountry(e.target.value)}>
-              {countries.map((c) => (
-                <option value={c} key={c}>{c}</option>
-              ))}
-            </Form.Select>
-          </Col>
-          <Col xs={6} md={3}>
-            <Form.Select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-              <option value="name">Sort: Name (A→Z)</option>
-              <option value="foundedAsc">Sort: Founded (oldest)</option>
-              <option value="foundedDesc">Sort: Founded (newest)</option>
-            </Form.Select>
-          </Col>
-
-          <Col xs={12} className="d-flex flex-wrap gap-2 stats-wrap">
-            <div className="stat-pill">Teams: <strong>{stats.total}</strong></div>
-            <div className="stat-pill">Countries: <strong>{stats.countries}</strong></div>
-            <div className="stat-pill">Avg founded: <strong>{stats.avgFounded}</strong></div>
-            <Form.Check
-              type="switch"
-              id="fav-switch"
-              label="Favorites only"
-              checked={favoritesOnly}
-              onChange={(e) => setFavoritesOnly(e.target.checked)}
-            />
-            <Button variant="outline-warning" className="btn-auth ms-auto" onClick={() => setShowCompare(true)}>
-              Compare clubs
-            </Button>
-          </Col>
+      {/* === Transfer Snapshot (thống kê nhanh) === */}
+      <Container className="py-4">
+        <Row className="g-3">
+          {[
+            { k: "rumours", label: "Tin đồn", value: 128 },
+            { k: "done",    label: "Hoàn tất", value: 34 },
+            { k: "fee",     label: "Tổng phí hôm nay", value: "$412M" },
+            { k: "top",     label: "Top fee", value: "$95M" },
+          ].map((m, i) => (
+            <Col key={m.k} xs={6} md={3}>
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 * i, duration: .35 }}
+              >
+                <Card className={`snap-card tone-${m.k}`}>
+                  <Card.Body>
+                    <div className="snap-label">{m.label}</div>
+                    <div className="snap-value">{m.value}</div>
+                  </Card.Body>
+                </Card>
+              </motion.div>
+            </Col>
+          ))}
         </Row>
       </Container>
 
-      {/* 5) Club grid */}
-      <Container className="pb-5">
+      {/* === Hot Transfers (minh hoạ 4 thương vụ) === */}
+      <Container className="py-2">
+        <div className="section-head">
+          <h3 className="mb-0">🔥 Hot Transfers</h3>
+          <span className="badge-soft">Minh hoạ</span>
+        </div>
         <Row className="g-4">
-          {filteredTeams.map((club, index) => {
-            const fav = faves.includes(club.id);
-            return (
-              <Col md={4} lg={3} key={club.id}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ delay: 0.04 * index, duration: 0.4 }}
-                >
-                  <Card className="club-card h-100">
-                    <div className="club-logo-wrap">
-                      <Card.Img variant="top" src={club.image} alt={club.name} className="club-logo" loading="lazy" />
-                      <button
-                        className={`fav-btn ${fav ? "is-fav" : ""}`}
-                        onClick={(e) => { e.preventDefault(); toggleFav(club.id); }}
-                        aria-label={fav ? "Remove favorite" : "Add favorite"}
-                        title={fav ? "Remove favorite" : "Add favorite"}
-                        type="button"
-                      >
-                        {fav ? <FaHeart size={18} /> : <FaRegHeart size={18} />}
-                      </button>
-                    </div>
-                    <Card.Body className="text-center">
-                      <Card.Title className="club-title">{club.name}</Card.Title>
-                      <Card.Text className="club-info">
-                        <span className="chip">🏟 {club.stadium}</span>
-                        <span className="chip">📅 {club.founded}</span>
-                        <span className="chip">🌍 {club.country}</span>
-                      </Card.Text>
-                      <Button as={Link} to={`/team/${club.id}`} size="sm" variant="outline-warning" className="btn-auth">
-                        Details
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </motion.div>
-              </Col>
-            );
-          })}
+          {[
+            { id: 1, name: "V. Gyökeres → Arsenal", fee: "$95M", status: "Talks advanced", img: "/image/image1231312312.png" },
+            { id: 2, name: "Osimhen → Chelsea",     fee: "$120M", status: "Rumour",         img: "/image/image11224411.png" },
+            { id: 3, name: "De Ligt → Man Utd",     fee: "$70M",  status: "Medical booked", img: "/image/image123666.png" },
+            { id: 4, name: "Yamal → (Stay)",        fee: "N/A",   status: "New contract",   img: "/image/image6666.png" },
+          ].map((t, i) => (
+            <Col key={t.id} md={6} lg={3}>
+              <motion.div
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.06 * i, duration: .4 }}
+              >
+                <Card className="tf-card h-100">
+                  <div className="tf-thumb">
+                    <img src={t.img} alt={t.name} onError={(e)=>{e.currentTarget.style.display='none';}} />
+                    <span className="tf-fee">{t.fee}</span>
+                  </div>
+                  <Card.Body>
+                    <Card.Title className="tf-title">{t.name}</Card.Title>
+                    <div className="text-secondary small">{t.status}</div>
+                  </Card.Body>
+                </Card>
+              </motion.div>
+            </Col>
+          ))}
         </Row>
       </Container>
 
+      {/* === Rumour Meter (độ tin cậy tin đồn) === */}
+      <Container className="py-2">
+        <div className="section-head">
+          <h3 className="mb-0">🧪 Rumour Meter</h3>
+          <span className="badge-soft">Minh hoạ</span>
+        </div>
+        <Row className="g-3">
+          {[
+            { id: 11, title: "Kvaratskhelia → PSG", reliability: 72, source: "L'Equipe" },
+            { id: 12, title: "Bruno F. → Barcelona", reliability: 41, source: "Catalan Media" },
+            { id: 13, title: "Rashford → Bayern", reliability: 58, source: "Kicker" },
+            { id: 14, title: "Sancho → Juventus", reliability: 80, source: "Many outlets" },
+          ].map((r, i) => (
+            <Col key={r.id} md={6} lg={3}>
+              <motion.div
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 * i, duration: .35 }}
+              >
+                <Card className="rm-card h-100">
+                  <Card.Body>
+                    <div className="d-flex justify-content-between align-items-start mb-1">
+                      <div className="rm-title">{r.title}</div>
+                      <span className="rm-badge">{r.reliability}%</span>
+                    </div>
+                    <div className="small text-secondary mb-2">Nguồn: {r.source}</div>
+                    <div className="rm-bar">
+                      <div className="rm-bar-fill" style={{ width: `${r.reliability}%` }} />
+                    </div>
+                  </Card.Body>
+                </Card>
+              </motion.div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
 
+      {/* Banner carousel */}
       <h1 className="text-center">Nothing is unnoticable!</h1>
       <div className="container">
         <Carousel fade interval={2600}>
-        <Carousel.Item>
-          <img className="d-block w-100" src="/image/image91923.jpg" alt="Premier League" />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src="/image/background.avif" alt="Clubs" />
-        </Carousel.Item>
-      </Carousel>
+          <Carousel.Item>
+            <img className="d-block w-100" src="/image/image91923.jpg" alt="Premier League" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="/image/background.avif" alt="Clubs" />
+          </Carousel.Item>
+        </Carousel>
       </div>
-      
-      {/* 6) Members */}
+
+      {/* Members */}
       <Container fluid className="py-5">
         <h2 className="text-center mb-5 fw-bold">👥 Our Team Members</h2>
         {[
@@ -555,10 +239,39 @@ function Homepage() {
                     <Card.Title className="fs-4 fw-bold">{m.name}</Card.Title>
                     <Card.Text className="role-text">{m.role}</Card.Text>
                     <Card.Text className="desc-text">{m.desc}</Card.Text>
+
+                    {/* Icons */}
                     <div className="d-flex gap-3">
-                      <a href={m.fb} target="_blank" rel="noopener noreferrer" className="social-icon fb" aria-label="Facebook"><FaFacebook size={20} /></a>
-                      <a href={m.ig} target="_blank" rel="noopener noreferrer" className="social-icon ig" aria-label="Instagram"><FaInstagram size={20} /></a>
-                      <a href={m.tw} target="_blank" rel="noopener noreferrer" className="social-icon tw" aria-label="Twitter"><FaTwitter size={20} /></a>
+                      <a
+                        href={m.fb}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icon fb"
+                        aria-label="Facebook"
+                        title="Facebook"
+                      >
+                        <FaFacebook size={20} />
+                      </a>
+                      <a
+                        href={m.ig}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icon ig"
+                        aria-label="Instagram"
+                        title="Instagram"
+                      >
+                        <FaInstagram size={20} />
+                      </a>
+                      <a
+                        href={m.tw}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="social-icon tw"
+                        aria-label="Twitter/X"
+                        title="Twitter/X"
+                      >
+                        <FaTwitter size={20} />
+                      </a>
                     </div>
                   </Card.Body>
                 </Card>
@@ -568,7 +281,7 @@ function Homepage() {
         ))}
       </Container>
 
-      {/* 7) Newsletter CTA */}
+      {/* Newsletter */}
       <Container className="pb-5">
         <Card className="newsletter-card">
           <Card.Body className="d-flex flex-column flex-lg-row align-items-center gap-3">
@@ -586,13 +299,8 @@ function Homepage() {
         </Card>
       </Container>
 
-      {/* Compare Offcanvas */}
-      <CompareOffcanvas show={showCompare} onHide={() => setShowCompare(false)} teams={teams} />
-
       {/* Back to top */}
       <BackToTop />
     </motion.div>
   );
 }
-
-export default Homepage;
