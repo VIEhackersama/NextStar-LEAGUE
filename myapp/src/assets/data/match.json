@@ -1,14 +1,206 @@
 [
   {
     "id": "ucl-final-2025",
-    "teamA": { "name": "Real Madrid", "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/893px-Real_Madrid_CF.svg.png" },
-    "teamB": { "name": "Manchester City", "img": "https://upload.wikimedia.org/wikipedia/vi/thumb/1/1d/Manchester_City_FC_logo.svg/1200px-Manchester_City_FC_logo.svg.png" },
+    "teamA": {
+      "name": "Manchester United",
+      "img": "https://upload.wikimedia.org/wikipedia/vi/a/a1/Man_Utd_FC_.svg"
+    },
+    "teamB": {
+      "name": "Manchester City",
+      "img": "https://upload.wikimedia.org/wikipedia/vi/thumb/1/1d/Manchester_City_FC_logo.svg/1200px-Manchester_City_FC_logo.svg.png"
+    },
     "endAt": "2025-10-05T20:00:00Z"
   },
   {
     "id": "pl-ars-che-2025-10-10",
-    "teamA": { "name": "Arsenal", "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1021px-Arsenal_FC.svg.png" },
-    "teamB": { "name": "Chelsea", "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png" },
+    "teamA": {
+      "name": "Arsenal",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1021px-Arsenal_FC.svg.png"
+    },
+    "teamB": {
+      "name": "Chelsea",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
+    },
     "endAt": "2025-10-10T16:30:00Z"
+  },
+  {
+    "id": "pl-liv-tot-2025-10-12",
+    "teamA": {
+      "name": "Liverpool",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/200px-Liverpool_FC.svg.png"
+    },
+    "teamB": {
+      "name": "Tottenham Hotspur",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/584px-Tottenham_Hotspur.svg.png"
+    },
+    "endAt": "2025-10-12T15:00:00Z"
+  },
+  {
+    "id": "pl-avl-lei-2025-10-15",
+    "teamA": {
+      "name": "Aston Villa",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Aston_Villa_F.C._logo.svg/250px-Aston_Villa_F.C._logo.svg.png"
+    },
+    "teamB": {
+      "name": "Leicester City",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Leicester_City_crest.svg/1200px-Leicester_City_crest.svg.png"
+    },
+    "endAt": "2025-10-15T18:30:00Z"
+  },
+  {
+    "id": "pl-new-whu-2025-10-18",
+    "teamA": {
+      "name": "Newcastle United",
+      "img": "https://upload.wikimedia.org/wikipedia/vi/a/a1/Man_Utd_FC_.svg"
+    },
+    "teamB": {
+      "name": "West Ham United",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/1079px-West_Ham_United_FC_logo.svg.png"
+    },
+    "endAt": "2025-10-18T20:00:00Z"
+  },
+  {
+    "id": "pl-bha-ful-2025-10-21",
+    "teamA": {
+      "name": "Brighton",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Brighton_and_Hove_Albion_FC_crest.svg/1200px-Brighton_and_Hove_Albion_FC_crest.svg.png"
+    },
+    "teamB": {
+      "name": "Fulham",
+      "img": "https://upload.wikimedia.org/wikipedia/en/e/eb/Fulham_FC_%28shield%29.svg"
+    },
+    "endAt": "2025-10-21T17:00:00Z"
+  },
+  {
+    "id": "pl-wol-pal-2025-10-25",
+    "teamA": {
+      "name": "Wolves",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Wolverhampton_Wanderers_FC_crest.svg/1200px-Wolverhampton_Wanderers_FC_crest.svg.png"
+    },
+    "teamB": {
+      "name": "Crystal Palace",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Crystal_Palace_FC_logo_%282022%29.svg/962px-Crystal_Palace_FC_logo_%282022%29.svg.png"
+    },
+    "endAt": "2025-10-25T19:30:00Z"
+  },
+  {
+    "id": "pl-bre-eve-2025-10-28",
+    "teamA": {
+      "name": "Brentford",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/1200px-Brentford_FC_crest.svg.png"
+    },
+    "teamB": {
+      "name": "Everton",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/1174px-Everton_FC_logo.svg.png"
+    },
+    "endAt": "2025-10-28T14:00:00Z"
+  },
+  {
+    "id": "pl-nfo-sou-2025-11-01",
+    "teamA": {
+      "name": "Nottingham Forest",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_F.C._logo.svg/564px-Nottingham_Forest_F.C._logo.svg.png"
+    },
+    "teamB": {
+      "name": "Southampton",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/FC_Southampton.svg/1051px-FC_Southampton.svg.png"
+    },
+    "endAt": "2025-11-01T16:00:00Z"
+  },
+  {
+    "id": "pl-mci-ars-2025-11-04",
+    "teamA": {
+      "name": "Manchester City",
+      "img": "https://upload.wikimedia.org/wikipedia/vi/thumb/1/1d/Manchester_City_FC_logo.svg/1200px-Manchester_City_FC_logo.svg.png"
+    },
+    "teamB": {
+      "name": "Arsenal",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1021px-Arsenal_FC.svg.png"
+    },
+    "endAt": "2025-11-04T20:00:00Z"
+  },
+  {
+    "id": "pl-che-liv-2025-11-08",
+    "teamA": {
+      "name": "Chelsea",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
+    },
+    "teamB": {
+      "name": "Liverpool",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/200px-Liverpool_FC.svg.png"
+    },
+    "endAt": "2025-11-08T18:00:00Z"
+  },
+  {
+    "id": "pl-mun-new-2025-11-12",
+    "teamA": {
+      "name": "Manchester United",
+      "img": "https://upload.wikimedia.org/wikipedia/vi/a/a1/Man_Utd_FC_.svg"
+    },
+    "teamB": {
+      "name": "Newcastle United",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/1192px-Newcastle_United_Logo.svg.png"
+    },
+    "endAt": "2025-11-12T17:30:00Z"
+  },
+  {
+    "id": "pl-tot-avl-2025-11-16",
+    "teamA": {
+      "name": "Tottenham Hotspur",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/584px-Tottenham_Hotspur.svg.png"
+    },
+    "teamB": {
+      "name": "Aston Villa",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Aston_Villa_F.C._logo.svg/250px-Aston_Villa_F.C._logo.svg.png"
+    },
+    "endAt": "2025-11-16T14:00:00Z"
+  },
+  {
+    "id": "pl-whu-bha-2025-11-20",
+    "teamA": {
+      "name": "West Ham United",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/1079px-West_Ham_United_FC_logo.svg.png"
+    },
+    "teamB": {
+      "name": "Brighton",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Brighton_and_Hove_Albion_FC_crest.svg/1200px-Brighton_and_Hove_Albion_FC_crest.svg.png"
+    },
+    "endAt": "2025-11-20T19:00:00Z"
+  },
+  {
+    "id": "pl-eve-pal-2025-11-23",
+    "teamA": {
+      "name": "Everton",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/1174px-Everton_FC_logo.svg.png"
+    },
+    "teamB": {
+      "name": "Crystal Palace",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Crystal_Palace_FC_logo_%282022%29.svg/962px-Crystal_Palace_FC_logo_%282022%29.svg.png"
+    },
+    "endAt": "2025-11-23T15:00:00Z"
+  },
+  {
+    "id": "pl-ful-nfo-2025-11-27",
+    "teamA": {
+      "name": "Fulham",
+      "img": "https://upload.wikimedia.org/wikipedia/en/e/eb/Fulham_FC_%28shield%29.svg"
+    },
+    "teamB": {
+      "name": "Nottingham Forest",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_F.C._logo.svg/564px-Nottingham_Forest_F.C._logo.svg.png"
+    },
+    "endAt": "2025-11-27T20:00:00Z"
+  },
+  {
+    "id": "pl-sou-wol-2025-12-01",
+    "teamA": {
+      "name": "Southampton",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/FC_Southampton.svg/1051px-FC_Southampton.svg.png"
+    },
+    "teamB": {
+      "name": "Wolves",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Wolverhampton_Wanderers_FC_crest.svg/1200px-Wolverhampton_Wanderers_FC_crest.svg.png"
+    },
+    "endAt": "2025-12-01T18:00:00Z"
   }
 ]
