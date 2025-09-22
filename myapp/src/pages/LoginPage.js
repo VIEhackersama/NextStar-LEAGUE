@@ -162,7 +162,6 @@ function LoginPage() {
               </Card.Body>
             </Card>
           </Col>
-
         </Row>
       </Container>
     </div>
