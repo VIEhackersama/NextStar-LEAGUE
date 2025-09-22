@@ -1,0 +1,14 @@
+[
+  {
+    "id": "ucl-final-2025",
+    "teamA": { "name": "Real Madrid", "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/893px-Real_Madrid_CF.svg.png" },
+    "teamB": { "name": "Manchester City", "img": "https://upload.wikimedia.org/wikipedia/vi/thumb/1/1d/Manchester_City_FC_logo.svg/1200px-Manchester_City_FC_logo.svg.png" },
+    "endAt": "2025-10-05T20:00:00Z"
+  },
+  {
+    "id": "pl-ars-che-2025-10-10",
+    "teamA": { "name": "Arsenal", "img": "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1021px-Arsenal_FC.svg.png" },
+    "teamB": { "name": "Chelsea", "img": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png" },
+    "endAt": "2025-10-10T16:30:00Z"
+  }
+]

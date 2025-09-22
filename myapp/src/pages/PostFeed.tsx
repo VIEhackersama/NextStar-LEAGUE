@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { getAuth } from "../services/auth";
 import { FaCommentAlt } from "react-icons/fa";
 import "../styles/postfeed.css";
+import PostComposer from "../components/PostComposer";
 
 interface Post {
   postId: number;
@@ -37,6 +38,23 @@ const PostFeed: React.FC = () => {
       .then((res) => setPosts(res.data))
       .catch((err) => console.error("Error fetching posts:", err));
   }, []);
+  function handleCreated(dtoLike: Post) {
+    setPosts((prev) => [dtoLike, ...prev]);
+    setExpanded(dtoLike.postId); // mở rộng xem full
+  }
+  const items = useMemo(
+    () =>
+      posts.map((p) => ({
+        ...p,
+        minutes: readingTime(p.fullText),
+        dateText: new Date(p.createdAt).toLocaleDateString(),
+        excerpt:
+          p.fullText.length > 180
+            ? p.fullText.slice(0, 180).trim() + "…"
+            : p.fullText,
+      })),
+    [posts]
+  );
 
   const items = useMemo(
     () =>
@@ -60,7 +78,11 @@ const PostFeed: React.FC = () => {
       className="pf-bg"
     >
       <Container className="pf-wrap">
-        <h2 className="pf-title text-center">Share your thought on favorite players! With feed, everyone has the right of judgement, love and admire</h2>
+        <h2 className="pf-title text-center">
+          Share your thought on favorite players!<br></br> With feed, everyone
+          has the right of judgement, love and admire
+        </h2>
+        <PostComposer onCreated={handleCreated} />
         <Row className="g-4">
           {items.map((post) => (
             <Col key={post.postId} xs={12} md={6}>
