@@ -1,8 +1,11 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
-:root { --header-h: 72px; }   /* sẽ được Header cập nhật đúng chiều cao thực tế */
-
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+body, html {
+  font-family: 'Tektur', sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -26,5 +29,3 @@ body {
   min-height: 100%;
 }
 
-/* ===== XÓA các style demo CRA để không ảnh hưởng layout ===== */
-/* (Đừng dùng .App, .App-header, .App-logo, ... nữa) */

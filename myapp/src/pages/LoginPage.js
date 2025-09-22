@@ -67,17 +67,15 @@ function LoginPage() {
   return (
     <div className="auth-page">
       <Container>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center align-items-center">
           <Col xs={12} md={8} lg={6} xl={5}>
             <Card className="auth-card shadow-xl border-0 rounded-4 fade-in">
-              <Card.Body className="p-4 p-md-5">
-                {/* Header */}
+              <Card.Body className="p-md-4">
                 <div className="text-center mb-4">
                   <h2 className="fw-bold mb-1">Sign in</h2>
                   <p className="text-muted mb-0">Welcome back to NextStar League</p>
                 </div>
 
-                {/* Error */}
                 {error && (
                   <div className="alert alert-danger py-2" role="alert">
                     {error}
@@ -157,6 +155,7 @@ function LoginPage() {
               </Card.Body>
             </Card>
           </Col>
+          
         </Row>
       </Container>
     </div>

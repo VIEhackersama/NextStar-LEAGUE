@@ -9,7 +9,7 @@ import ClubsPage from "../pages/ClubsPage";
 import StarsPage from "../pages/StarsPage";
 import NewsPage from "../pages/newPage";
 import NewsDetailPage from "../pages/NewsDetailPage";
-import LoginPage from "../pages/LoginPage";
+import LoginPage from "../pages/LoginPage"; 
 import RegisterPage from "../pages/RegisterPage";
 import ForgotPasswordPage from "../pages/ForgotPasswordPage";
 import ContactPage from "../pages/ContactPage";
@@ -18,29 +18,6 @@ import PlayerList from '../components/PlayerList';
 import PlayersPage from '../pages/PlayerPage';
 import PostFeed from '../pages/PostFeed';
 
-
-const Routers = () => {
-const location = useLocation(); 
-return (
-    <AnimatePresence mode="wait">
-    <Routes location={location} key={location.pathname}>
-    <Route path="/" element={<Navigate to="/home" replace />} />
-    <Route path="/home" element={<Homepage />} />
-    <Route path="/team/:teamId" element={<TeamDetail />} /> 
-    <Route path="/history" element={<HistoryPage />} />
-    <Route path="/clubs" element={<ClubsPage />} />
-    <Route path="/stars" element={<StarsPage />} />
-    <Route path="/news" element={<NewsPage/>} />
-    <Route path="/news/:id" element={<NewsDetailPage />} />
-    <Route path="/login" element={<LoginPage />} />
-    <Route path="/register" element={<RegisterPage />} />
-    <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-    <Route path="/contact" element={<ContactPage />} />
-    <Route path='/players' element={<PlayersPage></PlayersPage>}></Route>
-    <Route path='/feed' element={<PostFeed></PostFeed>}></Route>
-    </Routes>
-    </AnimatePresence>
-);
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -68,6 +45,7 @@ export default function Routers() {
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/players" element={<PlayersPage />} />
+          <Route path='/feed' element={<PostFeed></PostFeed>}></Route>
         </Routes>
       </AnimatePresence>
     </>
