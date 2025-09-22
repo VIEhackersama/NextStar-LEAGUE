@@ -14,12 +14,20 @@
 }
 
 /* ---------- News ticker ---------- */
-.news-ticker{
-  display:flex; align-items:center; gap:.6rem;
-  border-bottom:1px solid var(--border);
-  background:rgba(13,18,32,.45); backdrop-filter:blur(4px);
-  padding:.35rem .75rem;
+.news-ticker {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(13, 18, 32, 0.45);
+
+  /* Hỗ trợ Safari */
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+
+  padding: .35rem .75rem;
 }
+
 .ticker-label{
   font-weight:800; color:#111;
   background:linear-gradient(135deg,#ffc107,#ffd75a);
