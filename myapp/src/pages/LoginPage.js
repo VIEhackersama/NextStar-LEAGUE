@@ -140,7 +140,7 @@ function LoginPage() {
                       onChange={handleChange}
                       label="Remember me"
                     />
-                    <Link to="/forgot-password">Forgot password?</Link>
+                    {/* <Link to="/forgot-password">Forgot password?</Link> */}
                   </div>
 
                   <div className="d-grid">

@@ -9,6 +9,7 @@ import {
   timeLeftText,
   PickValue,
 } from "../services/prediction";
+import { getAuth } from "../services/auth"; // <-- thêm
 import matches from "../assets/data/match.json";
 import "../styles/prediction.css";
 
@@ -22,12 +23,12 @@ type Match = {
 export default function PredictionsPage() {
   const [picks, setPicks] = useState<Record<string, PickValue>>({});
   const [now, setNow] = useState(Date.now());
+  const [auth, setAuth] = useState(getAuth()); // <-- thêm
 
   useEffect(() => {
     setPicks(readPicks());
   }, []);
 
-  // tick mỗi 30s để cập nhật countdown
   useEffect(() => {
     const t = setInterval(() => setNow(Date.now()), 30000);
     return () => clearInterval(t);
@@ -44,6 +45,51 @@ export default function PredictionsPage() {
     clearAllPicks();
     setPicks({});
   }
+
+  // =================== GUARD: yêu cầu đăng nhập ===================
+  if (!auth) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35 }}
+        className="pred-bg"
+      >
+        <Container className="pred-wrap">
+          <Card
+            className="pf-composer card shadow-sm" /* tái dùng style composer để đồng bộ */
+          >
+            <Card.Body className="d-flex align-items-center justify-content-between">
+              <div>
+                <h5
+                  style={{ color: "#ffd34d", fontWeight: 700 }}
+                  className="mb-1"
+                >
+                  Match Predictions
+                </h5>
+                <div className="muted">
+                  You need to sign in to make predictions.
+                </div>
+              </div>
+              <div className="d-flex gap-2">
+                <Button href="/login" variant="warning" className="btn-auth">
+                  Sign in
+                </Button>
+                {/* <Button
+                  href="/register"
+                  variant="outline-light"
+                  className="btn-auth"
+                >
+                  Create account
+                </Button> */}
+              </div>
+            </Card.Body>
+          </Card>
+        </Container>
+      </motion.div>
+    );
+  }
+  // ===============================================================
 
   return (
     <motion.div
@@ -70,13 +116,12 @@ export default function PredictionsPage() {
           {list.map((m) => {
             const ended = isExpired(m.endAt);
             const left = timeLeftText(m.endAt);
-            const myPick = picks[m.id]; // A | B | D
+            const myPick = picks[m.id];
             return (
               <Col key={m.id} xs={12} md={6} xl={4}>
                 <Card
                   className={`pred-card shadow-sm ${ended ? "is-closed" : ""}`}
                 >
-                  {/* header */}
                   <div className="pred-hero">
                     <div className="team">
                       <img src={m.teamA.img} alt={m.teamA.name} />

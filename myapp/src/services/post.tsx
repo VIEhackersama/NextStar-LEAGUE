@@ -9,7 +9,6 @@ export type CreatePostPayload = {
 };
 
 export async function createPost(payload: CreatePostPayload) {
-    // axios đã có Authorization từ auth.js (defaults.headers.common.Authorization)
     const res = await axios.post(`${BASE}/post`, payload);
     return res.data; // server trả về Post entity
 }
