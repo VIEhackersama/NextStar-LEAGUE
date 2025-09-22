@@ -56,6 +56,20 @@ const PostFeed: React.FC = () => {
     [posts]
   );
 
+  const items = useMemo(
+    () =>
+      posts.map((p) => ({
+        ...p,
+        minutes: readingTime(p.fullText),
+        dateText: new Date(p.createdAt).toLocaleDateString(),
+        excerpt:
+          p.fullText.length > 180
+            ? p.fullText.slice(0, 180).trim() + "…"
+            : p.fullText,
+      })),
+    [posts]
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}

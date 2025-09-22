@@ -96,7 +96,6 @@
   font-weight: 700;
   box-shadow: 0 2px 0 rgba(0,0,0,.25);
 }
-/* src/styles/postfeed.css — bổ sung composer */
 .pf-composer.card {
   background: #0b0b2b;
   border: 1px solid rgba(255,255,255,0.06);
@@ -135,3 +134,4 @@
 
 /* Tuỳ chọn: khi focus, làm placeholder mờ hơn một chút */
 .pf-composer .form-control:focus::placeholder { opacity: .45; }
+

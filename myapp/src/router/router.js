@@ -22,6 +22,7 @@ import PostAdmin from "../pages/postadmin";
 import PredictionsPage from "../pages/PredictionPage";
 
 
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
@@ -52,6 +53,7 @@ export default function Routers() {
           <Route path='/feed' element={<PostFeed></PostFeed>}></Route>
           <Route path="/postadmin" element={<PostAdmin/>} />   
           <Route path="/prediction" element={<PredictionsPage></PredictionsPage>}></Route>
+
         </Routes>
       </AnimatePresence>
     </>
