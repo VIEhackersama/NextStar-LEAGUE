@@ -14,9 +14,9 @@ export default function Header() {
   const isAdminLike =
     !!auth &&
     (
-      auth?.user?.isAdmin === true ||                                     // nếu BE trả về isAdmin
-      auth?.user?.email === "admin@example.com" ||                        // fallback theo email
-      (auth?.user?.username || "").toLowerCase() === "true admin"         // yêu cầu: tên = True Admin
+      auth?.user?.isAdmin === true ||                                     
+      auth?.user?.email === "admin@example.com" ||                        
+      (auth?.user?.username || "").toLowerCase() === "true admin"         
     );
   useLayoutEffect(() => {
     const applyHeaderHeight = () => {
@@ -75,6 +75,7 @@ export default function Header() {
         <Navbar.Collapse id="main-navbar">
           <Nav className="me-auto nav-links">
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/clubs-explore">ClubsExplore</Nav.Link>
             <Nav.Link as={Link} to="/news">News</Nav.Link>
             <Nav.Link as={Link} to="/feed">Feed</Nav.Link>
             <Nav.Link as={Link} to='/prediction'>Prediction</Nav.Link>

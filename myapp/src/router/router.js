@@ -20,6 +20,8 @@ import PostFeed from '../pages/PostFeed';
 import AdminPortal from "../pages/Adminportal";
 import PostAdmin from "../pages/postadmin";
 import PredictionsPage from "../pages/PredictionPage";
+import ClubsExplore from "../pages/ClubsExplore";   // ⬅️ thêm
+
 
 
 
@@ -38,6 +40,7 @@ export default function Routers() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Homepage />} />
+          <Route path="/clubs-explore" element={<ClubsExplore />} />
           <Route path="/team/:teamId" element={<TeamDetail />} />
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/clubs" element={<ClubsPage />} />
