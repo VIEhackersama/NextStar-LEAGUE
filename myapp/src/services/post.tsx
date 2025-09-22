@@ -10,5 +10,5 @@ export type CreatePostPayload = {
 
 export async function createPost(payload: CreatePostPayload) {
     const res = await axios.post(`${BASE}/post`, payload);
-    return res.data; // server trả về Post entity
+    return res.data; 
 }
