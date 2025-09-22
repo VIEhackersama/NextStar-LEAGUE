@@ -487,8 +487,9 @@ function Homepage() {
       </Container>
 
 
-      <h1>MEDIA</h1>
-      <Carousel fade interval={2600}>
+      <h1 className="text-center">Nothing is unnoticable!</h1>
+      <div className="container">
+        <Carousel fade interval={2600}>
         <Carousel.Item>
           <img className="d-block w-100" src="/image/image91923.jpg" alt="Premier League" />
         </Carousel.Item>
@@ -496,6 +497,8 @@ function Homepage() {
           <img className="d-block w-100" src="/image/background.avif" alt="Clubs" />
         </Carousel.Item>
       </Carousel>
+      </div>
+      
       {/* 6) Members */}
       <Container fluid className="py-5">
         <h2 className="text-center mb-5 fw-bold">👥 Our Team Members</h2>

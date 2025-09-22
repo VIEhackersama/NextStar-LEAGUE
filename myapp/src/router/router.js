@@ -17,6 +17,8 @@ import ContactPage from "../pages/ContactPage";
 import PlayerList from '../components/PlayerList';
 import PlayersPage from '../pages/PlayerPage';
 import PostFeed from '../pages/PostFeed';
+import AdminPortal from "../pages/Adminportal";
+import PostAdmin from "../pages/postadmin";
 
 
 function ScrollToTop() {
@@ -45,7 +47,9 @@ export default function Routers() {
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/players" element={<PlayersPage />} />
+          <Route path="/admin" element={<AdminPortal />} /> 
           <Route path='/feed' element={<PostFeed></PostFeed>}></Route>
+          <Route path="/postadmin" element={<PostAdmin/>} />   
         </Routes>
       </AnimatePresence>
     </>

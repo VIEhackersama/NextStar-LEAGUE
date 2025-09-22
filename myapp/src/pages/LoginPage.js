@@ -56,7 +56,14 @@ function LoginPage() {
         remember: form.remember,
       });
       // Success → go home (or wherever you want)
-      navigate("/");
+      const auth = JSON.parse(
+        localStorage.getItem("ns_auth") || sessionStorage.getItem("ns_auth") || "null"
+      );
+      if (auth?.user?.email === "admin@example.com") {
+        navigate("/admin");
+      } else {
+        navigate("/");
+      }
     } catch (err) {
       setError(err?.message || "Login failed. Please try again.");
     } finally {
@@ -155,7 +162,6 @@ function LoginPage() {
               </Card.Body>
             </Card>
           </Col>
-          
         </Row>
       </Container>
     </div>

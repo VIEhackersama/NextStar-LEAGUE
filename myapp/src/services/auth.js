@@ -14,6 +14,16 @@ export async function register({ username, email, password }) {
   return res.data; // "User registered successfully with role USER"
 }
 
+// Khi load module, nếu có token thì gắn sẵn header Authorization
+(function bootstrapAuthHeader() {
+  const raw = localStorage.getItem(STORAGE_AUTH) || sessionStorage.getItem(STORAGE_AUTH);
+  if (raw) {
+    try {
+      const { token } = JSON.parse(raw);
+      if (token) axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+    } catch { }
+  }
+})();
 // ========== Login ==========
 export async function login({ email, password, remember }) {
   const res = await axios.post(`${API_URL}/login`, { email, password });
@@ -23,6 +33,8 @@ export async function login({ email, password, remember }) {
     user: {
       email: res.data.email,
       username: res.data.username,
+     isAdmin: res.data.isAdmin ?? (res.data.email === "admin@example.com") // fallback
+
     },
   };
 
@@ -31,6 +43,7 @@ export async function login({ email, password, remember }) {
   } else {
     sessionStorage.setItem(STORAGE_AUTH, JSON.stringify(payload));
   }
+  axios.defaults.headers.common.Authorization = `Bearer ${payload.token}`;
 
   return payload;
 }
