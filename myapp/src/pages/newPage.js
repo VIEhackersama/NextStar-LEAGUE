@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaSearch } from "react-icons/fa";
 
@@ -9,7 +9,8 @@ import StandingsCard from "../components/StandingsCard";
 
 import data from "../assets/data/new.json";
 import "../styles/new.css";
-import "../styles/quickview.css"; 
+import "../styles/quickview.css";
+import { getAuth } from "../services/auth";
 
 const BOOKMARK_KEY = "news_bookmarks_v1";
 const readBookmarks = () => { try { return JSON.parse(localStorage.getItem(BOOKMARK_KEY) || "[]"); } catch { return []; } };
@@ -32,7 +33,7 @@ export default function NewsPage() {
   const [onlyBookmarks, setOnlyBookmarks] = useState(false);
   const [limit, setLimit] = useState(8);
   const [quickView, setQuickView] = useState({ open: false, item: null });
-
+  const [auth, setAuth] = useState(getAuth());
   useEffect(() => { setBookmarks(readBookmarks()); }, []);
 
   const categories = useMemo(() => {
@@ -78,7 +79,50 @@ export default function NewsPage() {
     return () => io.disconnect();
   }, [processed.length]);
 
-  return (
+  if (!auth) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35 }}
+        className="pred-bg"
+      >
+        <Container className="pred-wrap">
+          <h2 className="pf-title text-center">
+            Getting the latest news of the tournament<br></br> Faster than lightning with an account!
+          </h2>
+          <Card className="pf-composer card shadow-sm">
+            <Card.Body className="d-flex align-items-center justify-content-between">
+              <div>
+                <h5
+                  style={{ color: "#ffd34d", fontWeight: 700 }}
+                  className="mb-1"
+                >
+                  Match Predictions
+                </h5>
+                <div className="muted">
+                  You need to sign in to make predictions.
+                </div>
+              </div>
+              <div className="d-flex gap-2">
+                <Button href="/login" variant="warning" className="btn-auth">
+                  Sign in
+                </Button>
+                {/* <Button
+                    href="/register"
+                    variant="outline-light"
+                    className="btn-auth"
+                  >
+                    Create account
+                  </Button> */}
+              </div>
+            </Card.Body>
+          </Card>
+        </Container>
+      </motion.div>
+    );
+  }
+  else return (
     <div className="news-container">
       <Container className="topbar">
         <Row className="g-2 align-items-center">
@@ -159,7 +203,7 @@ export default function NewsPage() {
           </Col>
 
           <Col lg={4}>
-          <br></br><br></br>
+            <br></br><br></br>
             <div className="sidebar-sticky">
               <StandingsCard standings={data.standings || []} />
 

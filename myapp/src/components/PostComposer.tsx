@@ -32,10 +32,9 @@ export default function PostComposer({ onCreated }: Props) {
         imageUrl: imageUrl.trim() || undefined,
         fullText: fullText.trim(),
       });
-      // server trả về Post (không phải DTO). Chuyển sang kiểu feed đang dùng.
       const now = new Date().toISOString();
       const dtoLike = {
-        postId: data?.postId ?? Math.random(), // fallback nếu server không trả
+        postId: data?.postId ?? Math.random(),
         title,
         imageUrl,
         fullText,

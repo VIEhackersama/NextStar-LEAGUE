@@ -40,7 +40,7 @@ const PostFeed: React.FC = () => {
   }, []);
   function handleCreated(dtoLike: Post) {
     setPosts((prev) => [dtoLike, ...prev]);
-    setExpanded(dtoLike.postId); // mở rộng xem full
+    setExpanded(dtoLike.postId); 
   }
 
   const items = useMemo(
@@ -74,15 +74,14 @@ const PostFeed: React.FC = () => {
           {items.map((post) => (
             <Col key={post.postId} xs={12} md={6}>
               <Card className="pf-card shadow-sm">
-                {/* Hero */}
                 {post.imageUrl && (
                   <div className="pf-hero">
                     <img src={post.imageUrl} alt={post.title} />
                     <div className="pf-hero-gradient" />
                     <div className="pf-hero-badges">
-                      <Badge bg="" className="badge-glass">
+                      {/* <Badge bg="" className="badge-glass">
                         {post.minutes} min read
-                      </Badge>
+                      </Badge> */}
                       <Badge bg="" className="badge-glass">
                         <FaCommentAlt style={{ marginRight: 6 }} />0
                       </Badge>
@@ -119,7 +118,6 @@ const PostFeed: React.FC = () => {
                   )}
                 </Card.Body>
 
-                {/* Footer actions */}
                 <div className="pf-actions">
                   <Button size="sm" className="btn-auth" variant="warning">
                     ↑ Upvote
