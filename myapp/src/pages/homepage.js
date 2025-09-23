@@ -72,9 +72,9 @@ export default function Homepage() {
       <Container className="py-4">
         <Row className="g-3">
           {[
-            { k: "rumours", label: "Tin đồn", value: 128 },
-            { k: "done",    label: "Hoàn tất", value: 34 },
-            { k: "fee",     label: "Tổng phí hôm nay", value: "$412M" },
+            { k: "rumours", label: "Rumours", value: 128 },
+            { k: "done",    label: "Done", value: 34 },
+            { k: "fee",     label: "Fee", value: "$412M" },
             { k: "top",     label: "Top fee", value: "$95M" },
           ].map((m, i) => (
             <Col key={m.k} xs={6} md={3}>
@@ -100,7 +100,6 @@ export default function Homepage() {
       <Container className="py-2">
         <div className="section-head">
           <h3 className="mb-0">🔥 Hot Transfers</h3>
-          <span className="badge-soft">Minh hoạ</span>
         </div>
         <Row className="g-4">
           {[
@@ -136,7 +135,6 @@ export default function Homepage() {
       <Container className="py-2">
         <div className="section-head">
           <h3 className="mb-0">🧪 Rumour Meter</h3>
-          <span className="badge-soft">Minh hoạ</span>
         </div>
         <Row className="g-3">
           {[
@@ -158,7 +156,7 @@ export default function Homepage() {
                       <div className="rm-title">{r.title}</div>
                       <span className="rm-badge">{r.reliability}%</span>
                     </div>
-                    <div className="small text-secondary mb-2">Nguồn: {r.source}</div>
+                    <div className="small text-secondary mb-2">Source: {r.source}</div>
                     <div className="rm-bar">
                       <div className="rm-bar-fill" style={{ width: `${r.reliability}%` }} />
                     </div>

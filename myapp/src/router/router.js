@@ -42,8 +42,7 @@ export default function Routers() {
           <Route path="/home" element={<Homepage />} />
           <Route path="/clubs-explore" element={<ClubsExplore />} />
           <Route path="/team/:teamId" element={<TeamDetail />} />
-          <Route path="/history" element={<HistoryPage />} />
-          <Route path="/clubs" element={<ClubsPage />} />
+          <Route path="/history" element={<HistoryPage />} /> 
           <Route path="/stars" element={<StarsPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/:id" element={<NewsDetailPage />} />
@@ -52,9 +51,9 @@ export default function Routers() {
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/players" element={<PlayersPage />} />
-          <Route path="/admin" element={<AdminPortal />} /> 
+          <Route path="/admin" element={<AdminPortal />} />
           <Route path='/feed' element={<PostFeed></PostFeed>}></Route>
-          <Route path="/postadmin" element={<PostAdmin/>} />   
+          <Route path="/postadmin" element={<PostAdmin/>} />
           <Route path="/prediction" element={<PredictionsPage></PredictionsPage>}></Route>
 
         </Routes>
