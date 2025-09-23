@@ -4,7 +4,9 @@ import '../styles/playercard.css'
 const PlayersPage = () => {
     return (
         <div className="players-page container">
-            <h1 className="page-title">The super stars</h1>
+            <h2 className="pf-title text-center">
+                Get instant access to deep and detailed information!<br></br> Now with only one account!
+            </h2>
             <PlayerList />
         </div>
     );

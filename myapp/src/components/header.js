@@ -76,6 +76,7 @@ export default function Header() {
           <Nav className="me-auto nav-links">
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/clubs-explore">ClubsExplore</Nav.Link>
+            <Nav.Link as={Link} to="/players">Players list</Nav.Link>
             <Nav.Link as={Link} to="/news">News</Nav.Link>
             <Nav.Link as={Link} to="/feed">Feed</Nav.Link>
             <Nav.Link as={Link} to='/prediction'>Prediction</Nav.Link>
@@ -84,7 +85,7 @@ export default function Header() {
               <Nav.Link as={Link} to="/admin">Admin portal</Nav.Link>
             )}
             {isAdminLike && (
-              <Nav.Link as={Link} to="/postadmin">Post admin</Nav.Link>
+              <Nav.Link as={Link} to="/postadmin">Manage feed</Nav.Link>
             )}
           </Nav>
 

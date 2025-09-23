@@ -17,13 +17,13 @@ type Match = {
   id: string;
   teamA: { name: string; img: string };
   teamB: { name: string; img: string };
-  endAt: string; // ISO
+  endAt: string; 
 };
 
 export default function PredictionsPage() {
   const [picks, setPicks] = useState<Record<string, PickValue>>({});
   const [now, setNow] = useState(Date.now());
-  const [auth, setAuth] = useState(getAuth()); // <-- thêm
+  const [auth, setAuth] = useState(getAuth()); 
 
   useEffect(() => {
     setPicks(readPicks());
@@ -46,7 +46,6 @@ export default function PredictionsPage() {
     setPicks({});
   }
 
-  // =================== GUARD: yêu cầu đăng nhập ===================
   if (!auth) {
     return (
       <motion.div
@@ -56,9 +55,10 @@ export default function PredictionsPage() {
         className="pred-bg"
       >
         <Container className="pred-wrap">
-          <Card
-            className="pf-composer card shadow-sm" /* tái dùng style composer để đồng bộ */
-          >
+          <h2 className="pf-title text-center">
+            Become the master of sport prediction<br></br> Easier than ever with an account!
+          </h2>
+          <Card className="pf-composer card shadow-sm">
             <Card.Body className="d-flex align-items-center justify-content-between">
               <div>
                 <h5
