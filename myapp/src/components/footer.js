@@ -52,8 +52,8 @@ export default function Footer() {
               <Col>
                 <Nav className="flex-column ns-links">
                   <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                  <Nav.Link as={Link} to="/clubs">Clubs</Nav.Link>
                   <Nav.Link as={Link} to="/stars">Stars</Nav.Link>
+                  <Nav.Link as={Link} to="/feed">Feed</Nav.Link>
                 </Nav>
               </Col>
               <Col>

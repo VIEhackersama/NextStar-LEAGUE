@@ -66,7 +66,7 @@ const TeamDetail = () => {
       {/* ====== PHẦN CẦU THỦ ====== */}
       <section className="players-section-outer">
         <div className="players-width">
-          <h2 className="players-title">ĐỘI HÌNH & CHỈ SỐ</h2>
+          <h2 className="players-title">Lineup and Player Ratings</h2>
           <PlayerList clubId={teamId} />
         </div>
       </section>
