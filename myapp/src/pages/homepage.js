@@ -180,6 +180,27 @@ export default function Homepage() {
           <Carousel.Item>
             <img className="d-block w-100" src="/image/background.avif" alt="Clubs" />
           </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="https://www.usanetwork.com/sites/usablog/files/2024/10/epl-manchester-chelsea3.jpg" alt="Clubs" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="https://www.thesouthafrican.com/wp-content/uploads/2019/12/b68c53f2-epl-latest-scores-fixtures-results-26-december-2019.jpg.optimal.jpg" alt="Clubs" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="https://static01.nyt.com/athletic/uploads/wp/2025/09/17112753/GettyImages-2235217102-scaled.jpg" alt="Clubs" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="https://content.api.news/v3/images/bin/6bea1831d375e55742b0583088fa9dc2" alt="Clubs" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="https://www.usanetwork.com/sites/usablog/files/2024/10/epl-manchester-chelsea3.jpg" alt="Clubs" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="https://content.api.news/v3/images/bin/6bea1831d375e55742b0583088fa9dc2" alt="Clubs" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="https://www.usanetwork.com/sites/usablog/files/2024/10/epl-manchester-chelsea3.jpg" alt="Clubs" />
+          </Carousel.Item>
         </Carousel>
       </div>
 
