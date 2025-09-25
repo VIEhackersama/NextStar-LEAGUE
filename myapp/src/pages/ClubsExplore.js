@@ -138,33 +138,42 @@ export default function ClubsExplore() {
   if (!auth) {
     return (
       <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
-      <Container>
+        <Container>
           <h2 className="pf-title m-4 text-center">
             Get rich and exclusive intel<br></br> Fast and efficient with one account!
           </h2>
-        <Card className="pf-composer card shadow-sm m-5 mb-4">
-          <Card.Body>
-            <div className="d-flex align-items-center justify-content-between">
-              <div>
-                <h5
-                  className="mb-1"
-                  style={{ color: "#ffd34d", fontWeight: 700 }}
-                >
-                  Explore your favorite players easy and fast, with an account!
-                </h5>
-                <div className="help">You need to sign in to post.</div>
+          <Card className="pf-composer card shadow-sm m-5 mb-4">
+            <Card.Body>
+              <div className="d-flex align-items-center justify-content-between">
+                <div>
+                  <h5
+                    className="mb-1"
+                    style={{ color: "#ffd34d", fontWeight: 700 }}
+                  >
+                    Explore your favorite players easy and fast, with an account!
+                  </h5>
+                  <div className="help">You need to sign in to post.</div>
+                </div>
+                <Button className="btn-auth" variant="warning" href="/login">
+                  Sign in
+                </Button>
               </div>
-              <Button className="btn-auth" variant="warning" href="/login">
-                Sign in
-              </Button>
-            </div>
-          </Card.Body>
-        </Card></Container></motion.div>
+            </Card.Body>
+          </Card></Container></motion.div>
     );
   }
   else return (
     <motion.div className="clubs-bg" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
-      {/* Spotlight (ảnh 1) */}
+      <div className="container d-flex py-2 justify-content-center">
+        <img className="text-center" style={{ maxWidth: "900px", maxHeight: "600px" }} src='https://e0.365dm.com/21/07/2048x1152/skysports-premier-league-graphic_5458724.jpg?20210726090016'></img>
+        <div className="p-3">
+          <h2 className="p-2 pf-title text-center">
+            Every legend starts with a club, regardless the actual size!
+          </h2>
+          <p>Over that span, 51 teams have played in the Premier League, two of which (Cardiff City and Swansea City) are located in Wales; they play in the English football league system for practical and historical reasons.<br></br>
+            Eleven of the 22 founder members of the Premier League will compete in the 2025–26 season. Six (Arsenal, Chelsea, Everton, Liverpool, Manchester United, and Tottenham Hotspur) have contested every season of the Premier League. The remaining five (Aston Villa, Crystal Palace, Leeds United, Manchester City and Nottingham Forest), were also founder members, though each team has been relegated at least once in the past. Two clubs, Brighton & Hove Albion and Brentford, are not founding members of the Premier League, but have not been relegated since making their debuts in the Premier League after promotion in 2017 and 2021, respectively.</p>
+        </div>
+      </div>
       {spotlight && (
         <Container className="py-4">
           <motion.div className="spotlight-card" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .5 }}>

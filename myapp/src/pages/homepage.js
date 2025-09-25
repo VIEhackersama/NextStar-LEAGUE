@@ -62,14 +62,14 @@ export default function Homepage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9 }}
     >
-      {/* News ticker */}
       <NewsTicker items={demoNews} />
 
-      {/* Hero */}
       <Abouthero />
 
       {/* === Transfer Snapshot (thống kê nhanh) === */}
       <Container className="py-4">
+        <h2 className="pf-title text-center">Get instant intel about the latest season, even some may sound "spicy"!</h2>
+        <p className="text-center">The competition was founded as the FA Premier League on 20 February 1992, following the decision of clubs from the First Division (the top tier since 1888) to break away from the English Football League. Teams are still promoted and relegated to and from the EFL Championship each season. The Premier League is a corporation managed by a chief executive, with member clubs as shareholders. Our mission is to full cover every single corner of the tournament, no one will be left behind!</p>
         <Row className="g-3">
           {[
             { k: "rumours", label: "Rumours", value: 128 },
@@ -169,7 +169,10 @@ export default function Homepage() {
       </Container>
 
       {/* Banner carousel */}
-      <h1 className="text-center">Nothing is unnoticable!</h1>
+      <div className="container">
+        <h1 className="text-center pf-title pt-5">Nothing is unnoticable!</h1>
+        <p className="text-center">The Premier League is the most-watched football league in the world, broadcast in 212 territories to 643 million homes and a potential TV audience of 4.7 billion people. The Premier League's production arm, Premier League Productions, is operated by IMG Productions and produces content for its international television partners</p>
+      </div>
       <div className="container">
         <Carousel fade interval={2600}>
           <Carousel.Item>
@@ -204,7 +207,9 @@ export default function Homepage() {
 
       {/* Members */}
       <Container fluid className="py-5">
-        <h2 className="text-center mb-5 fw-bold">👥 Our Team Members</h2>
+        <h2 className="text-center pf-title">Meet Our Team Members</h2>
+        <p className=" text-center">The enthusiast crowd who made all of these happened!
+        </p>
         {[
           {
             id: 1,

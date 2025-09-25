@@ -96,11 +96,13 @@ export default function PredictionsPage() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="pred-bg"
+      className="clubs-bg"
     >
       <Container className="pred-wrap">
         <div className="pred-header">
-          <h2 className="pred-title">Match Predictions</h2>
+          <h2 className="pred-title text-center">
+            Match Predictions or track your sense of result forecast!
+          </h2>
           <div className="pred-actions">
             <Button
               variant="outline-light"
