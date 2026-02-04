@@ -1,0 +1,106 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Onana gets double salary after leaving Man Utd",
+      "image": "/image/onana.webp",
+      "summary": "André Onana has officially completed his move away from Manchester United. The Cameroonian goalkeeper will now earn almost double his salary compared to what he received at Old Trafford.",
+      "content": "André Onana has officially left Manchester United and joined a new club with a contract that doubles his previous salary. His departure raises questions about United’s strategy in the transfer market.",
+      "comments": 47
+    },
+    {
+      "id": 2,
+      "title": "Man Utd consider sending Onana to Turkey",
+      "image": "/image/onana2.webp",
+      "summary": "Manchester United are reportedly in talks with Turkish clubs regarding André Onana.",
+      "content": "Reports suggest Manchester United officials are considering sending Onana to Turkey on loan. This is seen as an opportunity for him to get regular playing time and rebuild his form.",
+      "comments": 14
+    },
+    {
+      "id": 3,
+      "title": "Premier League faces record-breaking transfer window",
+      "image": "/image/new3.webp",
+      "summary": "The Premier League is once again at the center of the football world with a record-breaking transfer window.",
+      "content": "The 2024 summer transfer window in the Premier League has been one of the busiest in recent years. Top clubs have made major signings to ensure they remain competitive.",
+      "comments": 107
+    },
+    {
+      "id": 4,
+      "title": "Arsenal sign rising star midfielder",
+      "image": "/image/image12313.png",
+      "summary": "Arsenal have completed the signing of a young midfielder who is expected to be the future of the club.",
+      "content": "Arsenal officially announced the signing of 19-year-old sensation Lucas Silva for a fee of £45m. Fans are excited to see him in the Premier League.Arsenal have agreed a deal for Shamrock Rovers midfielder Victor Ozhianvuna, in a transfer which is expected to constitute an Irish record.The 16-year-old, who is already playing first-team football in the League of Ireland’s Premier Division, will sign a pre-contract with Arsenal which means he will join when he turns 18 in January 2027.",
+      "comments": 33
+    },
+    {
+      "id": 5,
+      "title": "Chelsea sack manager after poor results",
+      "image": "/image/chelsea1.webp",
+      "summary": "Chelsea’s board has decided to part ways with their head coach after a disappointing run of results.",
+      "content": "Following a string of losses, Chelsea’s management has terminated the contract of their head coach. The search for a replacement is already underway.",
+      "comments": 89
+    },
+    {
+      "id": 6,
+      "title": "Liverpool extend Salah’s contract",
+      "image": "/image/salah1.webp",
+      "summary": "Liverpool have successfully extended Mohamed Salah’s contract until 2027.",
+      "content": "The Egyptian King has agreed to stay at Anfield until 2027, ending speculation about his future. Fans celebrated the news across social media.",
+      "comments": 145
+    },
+    {
+      "id": 7,
+      "title": "Manchester City unveil new stadium plans",
+      "image": "/image/manchestercity.png",
+      "summary": "Manchester City have revealed their ambitious plans to expand the Etihad Stadium.",
+      "content": "The new expansion will increase capacity to 70,000 seats and include state-of-the-art facilities for fans.",
+      "comments": 62
+    },
+    {
+      "id": 8,
+      "title": "Cristiano Ronaldo breaks another record",
+      "image": "/image/Ronaldo.jpg",
+      "summary": "Cristiano Ronaldo has set another record in his illustrious career.",
+      "content": "Ronaldo scored his 850th career goal in a league match, further solidifying his status as one of the greatest of all time.",
+      "comments": 200
+    },
+    {
+      "id": 9,
+      "title": "Lionel Messi wins 9th Ballon d’Or",
+      "image": "/image/messi.webp",
+      "summary": "Lionel Messi has claimed his 9th Ballon d’Or after an incredible season in MLS and international football.",
+      "content": "Messi continues to defy age, winning another Ballon d’Or and inspiring a new generation of footballers.",
+      "comments": 320
+    },
+    {
+      "id": 10,
+      "title": "Tottenham eye shock move for Real Madrid star",
+      "image": "/image/tot2.avif",
+      "summary": "Tottenham Hotspur are reportedly interested in signing a Real Madrid star to strengthen their squad.",
+      "content": "Spurs have made contact with Real Madrid over a potential transfer deal. The move is expected to cost around £70m.",
+      "comments": 58
+    }
+  ],
+  "standings": [
+    { "rank": 1, "club": "Manchester City", "played": 38, "wins": 28, "draws": 7, "losses": 3, "points": 91 },
+    { "rank": 2, "club": "Arsenal", "played": 38, "wins": 27, "draws": 6, "losses": 5, "points": 87 },
+    { "rank": 3, "club": "Liverpool", "played": 38, "wins": 24, "draws": 10, "losses": 4, "points": 82 },
+    { "rank": 4, "club": "Aston Villa", "played": 38, "wins": 20, "draws": 8, "losses": 10, "points": 68 },
+    { "rank": 5, "club": "Tottenham Hotspur", "played": 38, "wins": 20, "draws": 6, "losses": 12, "points": 66 },
+    { "rank": 6, "club": "Chelsea", "played": 38, "wins": 18, "draws": 9, "losses": 11, "points": 63 },
+    { "rank": 7, "club": "Newcastle United", "played": 38, "wins": 18, "draws": 6, "losses": 14, "points": 60 },
+    { "rank": 8, "club": "Manchester United", "played": 38, "wins": 18, "draws": 6, "losses": 14, "points": 60 },
+    { "rank": 9, "club": "West Ham United", "played": 38, "wins": 14, "draws": 10, "losses": 14, "points": 52 },
+    { "rank": 10, "club": "Crystal Palace", "played": 38, "wins": 13, "draws": 10, "losses": 15, "points": 49 },
+    { "rank": 11, "club": "Brighton", "played": 38, "wins": 12, "draws": 12, "losses": 14, "points": 48 },
+    { "rank": 12, "club": "Bournemouth", "played": 38, "wins": 13, "draws": 9, "losses": 16, "points": 48 },
+    { "rank": 13, "club": "Fulham", "played": 38, "wins": 13, "draws": 8, "losses": 17, "points": 47 },
+    { "rank": 14, "club": "Wolves", "played": 38, "wins": 13, "draws": 7, "losses": 18, "points": 46 },
+    { "rank": 15, "club": "Everton", "played": 38, "wins": 13, "draws": 9, "losses": 16, "points": 40 },
+    { "rank": 16, "club": "Brentford", "played": 38, "wins": 10, "draws": 9, "losses": 19, "points": 39 },
+    { "rank": 17, "club": "Nottingham Forest", "played": 38, "wins": 9, "draws": 9, "losses": 20, "points": 32 },
+    { "rank": 18, "club": "Luton Town", "played": 38, "wins": 6, "draws": 8, "losses": 24, "points": 26 },
+    { "rank": 19, "club": "Burnley", "played": 38, "wins": 5, "draws": 9, "losses": 24, "points": 24 },
+    { "rank": 20, "club": "Sheffield United", "played": 38, "wins": 3, "draws": 7, "losses": 28, "points": 16 }
+  ]
+}

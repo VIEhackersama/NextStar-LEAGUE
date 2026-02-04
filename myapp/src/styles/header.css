@@ -1,0 +1,72 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+:root {
+  --header-h: 72px;
+}
+
+.custom-navbar {
+  background: #01002b;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  padding: .9rem 1rem;
+  z-index: 1000;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: "DM Serif Text", serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: .3px;
+  color: #fff !important;
+}
+
+.nav-links .nav-link {
+  color: #ffffff !important;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  margin-right: .75rem;
+  transition: color .25s ease, opacity .25s ease;
+}
+.nav-links .nav-link:hover { color: #58a6ff !important }
+.nav-links .nav-link.active { color: #ffc107 !important }
+
+.btn-auth {
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 700;
+  letter-spacing: .15px;
+  box-shadow: 0 6px 14px rgba(4, 12, 100, 0.25);
+  border-width: 2px;
+}
+.btn-auth:hover { transform: translateY(-1px) }
+
+/* Responsive fix cho collapse */
+@media (max-width: 991.98px) {
+  #main-navbar {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+
+  /* Nav links xếp dọc */
+  .nav-links .nav-link {
+    display: block;
+    margin: .4rem 0;
+  }
+
+  /* Các nút auth nằm riêng phía dưới */
+  .navbar-collapse .btn-auth,
+  .navbar-collapse .dropdown {
+    display: block;
+    width: 100%;
+    margin-top: .5rem;
+    text-align: center;
+  }
+
+  .navbar-collapse .btn-auth + .btn-auth {
+    margin-left: 0;
+  }
+}

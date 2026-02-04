@@ -1,0 +1,70 @@
+/* Modal nổi cao hơn header */
+.quick-modal.modal { z-index: 2000; }
+.quick-backdrop.modal-backdrop { z-index: 1990; }
+
+/* Header */
+.quick-header{
+  background:#0b1427;
+  color:#E6EDF3;
+  border-bottom:1px solid rgba(88,166,255,.25);
+}
+.quick-title{ font-weight:800; letter-spacing:.2px }
+
+/* Body */
+.quick-body{
+  background:linear-gradient(165deg, rgba(22,29,47,.96), rgba(15,21,36,.96));
+  color:#E6EDF3;
+  max-height:70vh;       /* không tràn màn hình */
+  overflow:auto;
+  padding-bottom: 12px;
+}
+
+/* Ảnh sắc nét + bo góc + overlay */
+.quick-hero{
+  position:relative; border-radius:14px; overflow:hidden;
+  margin-bottom:12px;
+}
+.quick-hero img{
+  width:100%; height:280px; object-fit:cover; display:block;
+  filter:none !important;
+  image-rendering:-webkit-optimize-contrast; image-rendering:auto;
+  backface-visibility:hidden; transform:translateZ(0);
+}
+.quick-hero.elevated{ box-shadow:0 14px 34px rgba(0,0,0,.35) }
+.quick-hero .img-overlay{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.08));
+}
+
+.quick-badges{ position:absolute; left:10px; top:10px; display:flex; gap:8px }
+.quick-badge{
+  color:#A8B3C7;
+  border:1px solid rgba(88,166,255,.35);
+  background:rgba(13,18,32,.55);
+  border-radius:999px; padding:.18rem .55rem;
+}
+
+/* Text */
+.quick-summary{ color:#a8b3c7; margin-bottom:6px }
+.quick-content{ color:#e6edf3; line-height:1.65; white-space:pre-line }
+
+/* Footer + Buttons */
+.quick-footer{
+  background:#0b1427;
+  border-top:1px solid rgba(88,166,255,.25);
+}
+.quick-actions{ width:100%; display:flex; justify-content:flex-end; gap:.6rem }
+
+/* Nút đồng bộ chiều cao + icon spacing */
+.ns-btn{
+  height:42px; padding:0 16px; border-radius:12px;
+  display:inline-flex; align-items:center; gap:8px;
+  font-weight:800; letter-spacing:.15px; line-height:1;
+}
+.ns-btn .icon{ font-size:1.05rem }
+.ns-btn-ghost{ border-width:2px }
+.ns-btn-primary{
+  border-width:2px;
+  box-shadow:0 10px 24px rgba(255,193,7,.25);
+}
+.ns-btn-primary:hover{ transform:translateY(-1px) }
